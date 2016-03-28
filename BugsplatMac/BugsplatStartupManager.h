@@ -1,6 +1,6 @@
 //
 //  BugsplatStartupManager.h
-//  Bugsplat
+//  BugsplatMac
 //
 //  Created by Geoff Raeder on 2/8/16.
 //  Copyright © 2016 Bugsplat. All rights reserved.

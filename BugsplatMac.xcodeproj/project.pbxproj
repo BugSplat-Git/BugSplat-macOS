@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */ = {isa = PBXBuildFile; fileRef = A961B08C1C89BDCC004D212F /* upload-archive.sh */; };
-		A9FCA9101C68CF530012D025 /* Bugsplat.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA90F1C68CF530012D025 /* Bugsplat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA90F1C68CF530012D025 /* BugsplatMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A961B08C1C89BDCC004D212F /* upload-archive.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "upload-archive.sh"; path = "../upload-archive.sh"; sourceTree = "<group>"; };
-		A9FCA90C1C68CF530012D025 /* Bugsplat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bugsplat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9FCA90F1C68CF530012D025 /* Bugsplat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bugsplat.h; sourceTree = "<group>"; };
+		A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugsplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FCA90F1C68CF530012D025 /* BugsplatMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugsplatMac.h; sourceTree = "<group>"; };
 		A9FCA9111C68CF530012D025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManager.h; sourceTree = "<group>"; };
 		A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsplatStartupManager.m; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		A9FCA9021C68CF530012D025 = {
 			isa = PBXGroup;
 			children = (
-				A9FCA90E1C68CF530012D025 /* Bugsplat */,
+				A9FCA90E1C68CF530012D025 /* BugsplatMac */,
 				A9FCA91A1C68CFD50012D025 /* Frameworks */,
 				A9FCA90D1C68CF530012D025 /* Products */,
 			);
@@ -45,21 +45,21 @@
 		A9FCA90D1C68CF530012D025 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9FCA90C1C68CF530012D025 /* Bugsplat.framework */,
+				A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A9FCA90E1C68CF530012D025 /* Bugsplat */ = {
+		A9FCA90E1C68CF530012D025 /* BugsplatMac */ = {
 			isa = PBXGroup;
 			children = (
-				A9FCA90F1C68CF530012D025 /* Bugsplat.h */,
+				A9FCA90F1C68CF530012D025 /* BugsplatMac.h */,
 				A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */,
 				A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */,
 				A961B08C1C89BDCC004D212F /* upload-archive.sh */,
 				A9FCA9111C68CF530012D025 /* Info.plist */,
 			);
-			path = Bugsplat;
+			path = BugsplatMac;
 			sourceTree = "<group>";
 		};
 		A9FCA91A1C68CFD50012D025 /* Frameworks */ = {
@@ -78,16 +78,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */,
-				A9FCA9101C68CF530012D025 /* Bugsplat.h in Headers */,
+				A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A9FCA90B1C68CF530012D025 /* Bugsplat */ = {
+		A9FCA90B1C68CF530012D025 /* BugsplatMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "Bugsplat" */;
+			buildConfigurationList = A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "BugsplatMac" */;
 			buildPhases = (
 				A9FCA9071C68CF530012D025 /* Sources */,
 				A9FCA9081C68CF530012D025 /* Frameworks */,
@@ -98,9 +98,9 @@
 			);
 			dependencies = (
 			);
-			name = Bugsplat;
+			name = BugsplatMac;
 			productName = Bugsplat;
-			productReference = A9FCA90C1C68CF530012D025 /* Bugsplat.framework */;
+			productReference = A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9FCA9061C68CF530012D025 /* Build configuration list for PBXProject "Bugsplat" */;
+			buildConfigurationList = A9FCA9061C68CF530012D025 /* Build configuration list for PBXProject "BugsplatMac" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -129,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9FCA90B1C68CF530012D025 /* Bugsplat */,
+				A9FCA90B1C68CF530012D025 /* BugsplatMac */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +260,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.Bugsplat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -283,7 +283,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.Bugsplat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -291,7 +291,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9FCA9061C68CF530012D025 /* Build configuration list for PBXProject "Bugsplat" */ = {
+		A9FCA9061C68CF530012D025 /* Build configuration list for PBXProject "BugsplatMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9FCA9121C68CF530012D025 /* Debug */,
@@ -300,7 +300,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "Bugsplat" */ = {
+		A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "BugsplatMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9FCA9151C68CF530012D025 /* Debug */,
