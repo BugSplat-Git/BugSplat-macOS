@@ -4,25 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BugsplatMac.xcscheme</key>
+		<key>BugsplatTester.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>uploader.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A956E21D1C80FE940000D041</key>
+		<key>A9236DF81B822C0100435C06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9FCA90B1C68CF530012D025</key>
+		<key>A9236E0B1B822C0100435C06</key>
 		<dict>
 			<key>primary</key>
 			<true/>

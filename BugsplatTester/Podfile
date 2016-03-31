@@ -1,0 +1,7 @@
+source 'https://github.com/BugSplatGit/BugsplatMac.git'
+source 'https://github.com/BugSplatGit/BugsplatPodSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'BugsplatTester' do
+  pod 'BugsplatMac'
+end
