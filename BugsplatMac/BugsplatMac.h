@@ -7,6 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Bugsplat/BugsplatStartupManager.h>
+#import <BugsplatMac/BugsplatStartupManager.h>
 
 
