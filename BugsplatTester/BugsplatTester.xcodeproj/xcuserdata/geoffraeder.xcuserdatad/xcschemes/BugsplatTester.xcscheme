@@ -116,7 +116,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "/Users/geoffraeder/Workspace/BugsplatTester/Frameworks/Bugsplat.framework/Versions/A/Resources/upload-archive.sh">
+               scriptText = "${PROJECT_DIR}/Frameworks/Bugsplat.framework/Versions/A/Resources/upload-archive.sh">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
