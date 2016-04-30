@@ -19,9 +19,7 @@
 
 /*!
  *  Configures and starts crash reporting service
- *
- *  @param appIdentifier Bugsplat application identifier
  */
-- (void)startupWithAppIdentifier:(NSString *)appIdentifier;
+- (void)start;
 
 @end

@@ -20,7 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [[BugsplatStartupManager sharedManager] startupWithAppIdentifier:@"b0cf675cb9334a3e96eda0764f95e38c"];
+    [[BugsplatStartupManager sharedManager] start];
 }
 
 - (void)performCrash

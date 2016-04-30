@@ -10,6 +10,7 @@
 #import <HockeySDK/HockeySDK.h>
 
 NSString *const kBugsplatServerURL = @"https://bugsplatsoftware.com/";
+NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38e";  // Just to satisfy Hockey since this is required
 
 @implementation BugsplatStartupManager
 
@@ -26,11 +27,11 @@ NSString *const kBugsplatServerURL = @"https://bugsplatsoftware.com/";
     return sharedInstance;
 }
 
-- (void)startupWithAppIdentifier:(NSString *)appIdentifier
+- (void)start
 {
     NSString *serverURL = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"BugsplatServerURL"] ?: kBugsplatServerURL;
     [[BITHockeyManager sharedHockeyManager] setServerURL:serverURL];
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:appIdentifier];
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
     [[BITHockeyManager sharedHockeyManager] startManager];
 }
 
