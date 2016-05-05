@@ -28,6 +28,10 @@ cd "${ARCHIVE_DIR}/${ARCHIVE}"
 /usr/bin/zip -r "/tmp/${PRODUCT_NAME}.xcarchive.zip" *
 cd -
 
+UUID_CMD_OUT=$(xcrun dwarfdump --uuid "${APP}/Contents/MacOS/${PRODUCT_NAME}")
+UUID_CMD_OUT=$([[ "${UUID_CMD_OUT}" =~ ^(UUID: )([0-9a-zA-Z\-]+) ]] && echo ${BASH_REMATCH[2]})
+echo "UUID found: ${UUID_CMD_OUT}" > $LOG 2>&1
+
 echo "Signing into bugsplat and storing session cookie for use in upload" >> $LOG 2>&1
 
 COOKIEPATH="/tmp/bugsplat-cookie.txt"
@@ -37,4 +41,4 @@ curl -b "${COOKIEPATH}" -c "${COOKIEPATH}" --data "currusername=${BUGSPLAT_USER}
 
 echo "Uploading /tmp/${PRODUCT_NAME}.xcarchive.zip to ${UPLOAD_URL}" >> $LOG 2>&1
 
-curl -i -b "${COOKIEPATH}" -c "${COOKIEPATH}" -F filedata=@"/tmp/${PRODUCT_NAME}.xcarchive.zip" -F appName="${PRODUCT_NAME}" -F appVer="${APP_VERSION}" -F database="${DATABASE}" $UPLOAD_URL >> $LOG 2>&1
+curl -i -b "${COOKIEPATH}" -c "${COOKIEPATH}" -F filedata=@"/tmp/${PRODUCT_NAME}.xcarchive.zip" -F appName="${PRODUCT_NAME}" -F appVer="${APP_VERSION}" -F database="${DATABASE}" -F buildId="${UUID_CMD_OUT}" $UPLOAD_URL >> $LOG 2>&1
