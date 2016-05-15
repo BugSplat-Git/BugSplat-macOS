@@ -3,14 +3,28 @@
 # (Above line comes out when placing in Xcode scheme)
 #
 
-DATABASE=""
-BUGSPLAT_USER=""
-BUGSPLAT_PASS=""
-#BUGSPLAT_DOMAIN="${DATABASE}.bugsplatsoftware.com"
-BUGSPLAT_DOMAIN="oban.bugsplatsoftware.com"
-UPLOAD_URL="https://${BUGSPLAT_DOMAIN}/post/plCrashReporter/symbol/"
-
 LOG="/tmp/bugsplat-upload.log"
+
+if [ ! -f "${HOME}/.bugsplat.conf" ]
+then
+    echo "Missing bugsplat config file: ~/.bugsplat.conf" >> $LOG 2>&1
+    exit
+fi
+
+source "${HOME}/.bugsplat.conf"
+
+if [ -z "${BUGSPLAT_USER}" ]
+then
+    echo "BUGSPLAT_USER must be set in ~/.bugsplat.conf" >> $LOG 2>&1
+    exit
+fi
+
+if [ -z "${BUGSPLAT_PASS}" ]
+then
+    echo "BUGSPLAT_PASS must be set in ~/.bugsplat.conf" >> $LOG 2>&1
+    exit
+fi
+
 DATE=$( /bin/date +"%Y-%m-%d" )
 ARCHIVE_DIR="${HOME}/Library/Developer/Xcode/Archives/${DATE}"
 ARCHIVE=$( /bin/ls -t "${ARCHIVE_DIR}" | /usr/bin/grep xcarchive | /usr/bin/sed -n 1p )
@@ -19,8 +33,18 @@ echo "Archive: ${ARCHIVE}" > $LOG 2>&1
 
 APP="${ARCHIVE_DIR}/${ARCHIVE}/Products/Applications/${PRODUCT_NAME}.app"
 APP_VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${APP}/Contents/Info.plist")
+DATABASE=$(/usr/libexec/PlistBuddy -c "Print BugsplatAppDatabase" "${APP}/Contents/Info.plist")
+
+
+# temporary:
+BUGSPLAT_DOMAIN="oban.bugsplatsoftware.com"
+#BUGSPLAT_DOMAIN="${DATABASE}.bugsplatsoftware.com"
+
+
+UPLOAD_URL="https://${BUGSPLAT_DOMAIN}/post/plCrashReporter/symbol/"
 
 echo "App version: ${APP_VERSION}" >> $LOG 2>&1
+echo "Bugsplat Database: ${DATABASE}" >> $LOG 2>&1
 echo "Zipping ${ARCHIVE}" >> $LOG 2>&1
 
 /bin/rm "/tmp/${PRODUCT_NAME}.xcarchive.zip"
