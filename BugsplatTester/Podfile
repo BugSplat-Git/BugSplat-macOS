@@ -1,2 +1,3 @@
 target 'BugsplatTester' do
+	pod 'BugsplatMac'
 end
