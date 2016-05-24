@@ -33,18 +33,12 @@ echo "Archive: ${ARCHIVE}" > $LOG 2>&1
 
 APP="${ARCHIVE_DIR}/${ARCHIVE}/Products/Applications/${PRODUCT_NAME}.app"
 APP_VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${APP}/Contents/Info.plist")
-DATABASE=$(/usr/libexec/PlistBuddy -c "Print BugsplatAppDatabase" "${APP}/Contents/Info.plist")
+BUGSPLAT_SERVER_URL=$(/usr/libexec/PlistBuddy -c "Print BugsplatServerURL" "${APP}/Contents/Info.plist")
+BUGSPLAT_SERVER_URL=${BUGSPLAT_SERVER_URL%/}
 
-
-# temporary:
-BUGSPLAT_DOMAIN="oban.bugsplatsoftware.com"
-#BUGSPLAT_DOMAIN="${DATABASE}.bugsplatsoftware.com"
-
-
-UPLOAD_URL="https://${BUGSPLAT_DOMAIN}/post/plCrashReporter/symbol/"
+UPLOAD_URL="${BUGSPLAT_SERVER_URL}/post/plCrashReporter/symbol/"
 
 echo "App version: ${APP_VERSION}" >> $LOG 2>&1
-echo "Bugsplat Database: ${DATABASE}" >> $LOG 2>&1
 echo "Zipping ${ARCHIVE}" >> $LOG 2>&1
 
 /bin/rm "/tmp/${PRODUCT_NAME}.xcarchive.zip"
@@ -65,4 +59,4 @@ curl -b "${COOKIEPATH}" -c "${COOKIEPATH}" --data "currusername=${BUGSPLAT_USER}
 
 echo "Uploading /tmp/${PRODUCT_NAME}.xcarchive.zip to ${UPLOAD_URL}" >> $LOG 2>&1
 
-curl -i -b "${COOKIEPATH}" -c "${COOKIEPATH}" -F filedata=@"/tmp/${PRODUCT_NAME}.xcarchive.zip" -F appName="${PRODUCT_NAME}" -F appVer="${APP_VERSION}" -F database="${DATABASE}" -F buildId="${UUID_CMD_OUT}" $UPLOAD_URL >> $LOG 2>&1
+curl -i -b "${COOKIEPATH}" -c "${COOKIEPATH}" -F filedata=@"/tmp/${PRODUCT_NAME}.xcarchive.zip" -F appName="${PRODUCT_NAME}" -F appVer="${APP_VERSION}" -F buildId="${UUID_CMD_OUT}" $UPLOAD_URL >> $LOG 2>&1
