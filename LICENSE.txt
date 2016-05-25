@@ -1,6 +1,6 @@
 ## Licenses
 
-The Hockey SDK is provided under the following license:
+Bugsplat is provided under the following license:
 
 	The MIT License
 	Copyright (c) 2012-2014 HockeyApp, Bit Stadium GmbH.

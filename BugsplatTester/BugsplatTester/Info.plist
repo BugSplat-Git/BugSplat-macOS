@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BugsplatServerURL</key>
-	<string>https://sdk.hockeyapp.net/</string>
+	<string>https://DATABASE_NAME.bugsplatsoftware.com/</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
