@@ -9,3 +9,5 @@ BugsplatTester/build
 .DS_Store
 BugsplatTester/Carthage
 Carthage
+BugsplatMac.framework.zip
+build
