@@ -11,7 +11,7 @@ The BugsplatMac OS X framework enables posting crash reports from Cocoa applicat
 
 BugsplatMac supports multiple methods for installing the library in a project.
 
-## Installation with CocoaPods
+### Installation with CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like BugsplatMac in your projects. You can install it with the following command:
 
@@ -53,9 +53,8 @@ github "BugsplatGit/BugsplatMac"
 ```
 
 Run `carthage` to build the framework and drag the built `BugsplatMac.framework` into your Xcode project.
-```
 
-####Manual
+### Manual
 
 To use this library in your project manually you may:  
 
