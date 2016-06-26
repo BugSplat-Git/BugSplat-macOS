@@ -1,6 +1,6 @@
 ## Introduction
 
-The BugsplatMac OS X framework enables posting crash reports from Cocoa applications to Bugsplat. Visit http://www.bugsplat.com to sign up. 
+The BugsplatMac OS X framework enables posting crash reports from Cocoa applications to Bugsplat. Visit http://www.bugsplat.com for more information and to sign up for an account. 
 
 ## 1. Requirements
 
@@ -71,7 +71,7 @@ To use this library in your project manually you may:
 - Choose `Frameworks` from the Destination list.
 - Drag `BugsplatMac` from the Project Navigator left sidebar to the list in the new Copy Files phase.
 
-## Usage
+## 3. Usage
 
 ####Configuration
 
@@ -85,12 +85,12 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 ```
 
 2. You must upload an xcarchive containing your app's binary and symbols to the Bugsplat server in order to symbolicate crash reports.  
-    1. Create a ~/.bugsplat.conf file to store your Bugsplat credentials
+    - Create a ~/.bugsplat.conf file to store your Bugsplat credentials
     ```
     BUGSPLAT_USER=<username>
     BUGSPLAT_PASS=<password>
     ```    
-    2. Add the upload-archive.sh script located in Bugsplat.framework/Versions/A/Resources as an Archive post-action in your build scheme. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing.  You can view the script output in `/tmp/bugsplat-upload.log`
+    - Add the upload-archive.sh script located in Bugsplat.framework/Versions/A/Resources as an Archive post-action in your build scheme. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing.  You can view the script output in `/tmp/bugsplat-upload.log`
 
 
 ####Initialization
