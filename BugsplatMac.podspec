@@ -11,5 +11,4 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'Carthage/Build/Mac/BugsplatMac.framework'
   s.resource = 'Carthage/Build/Mac/BugsplatMac.framework'
   s.xcconfig = { 'LD_RUNPATH_SEARCH_PATHS' => '@executable_path/../Frameworks' }
-  s.dependency 'HockeySDK-Mac', '~> 4.0.2'
 end
