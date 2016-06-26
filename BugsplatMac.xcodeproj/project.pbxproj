@@ -10,6 +10,7 @@
 		1CA8A97F04895140F4C03ED7 /* libPods-BugsplatMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C974BC8F26C6028F878B08E1 /* libPods-BugsplatMac.a */; };
 		A940B4721CA9738900D97621 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A940B4711CA9738900D97621 /* Info.plist */; };
 		A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */ = {isa = PBXBuildFile; fileRef = A961B08C1C89BDCC004D212F /* upload-archive.sh */; };
+		A9CBBB521D11BA8100972398 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A9CBBB511D11BA8100972398 /* README.md */; };
 		A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA90F1C68CF530012D025 /* BugsplatMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */; };
@@ -19,6 +20,7 @@
 		851301052389B124101B4790 /* Pods-BugsplatMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsplatMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugsplatMac/Pods-BugsplatMac.release.xcconfig"; sourceTree = "<group>"; };
 		A940B4711CA9738900D97621 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A961B08C1C89BDCC004D212F /* upload-archive.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "upload-archive.sh"; path = "../upload-archive.sh"; sourceTree = "<group>"; };
+		A9CBBB511D11BA8100972398 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugsplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FCA90F1C68CF530012D025 /* BugsplatMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugsplatMac.h; sourceTree = "<group>"; };
 		A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManager.h; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		A9FCA9021C68CF530012D025 = {
 			isa = PBXGroup;
 			children = (
+				A9CBBB511D11BA8100972398 /* README.md */,
 				A9FCA90E1C68CF530012D025 /* BugsplatMac */,
 				A9FCA91A1C68CFD50012D025 /* Frameworks */,
 				A940B4701CA9738900D97621 /* Supporting */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CBBB521D11BA8100972398 /* README.md in Sources */,
 				A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
