@@ -54,7 +54,7 @@ github "BugsplatGit/BugsplatMac"
 
 Run `carthage` to build the framework and drag the built `BugsplatMac.framework` into your Xcode project.
 
-### Manual
+### Manual Setup
 
 To use this library in your project manually you may:  
 
