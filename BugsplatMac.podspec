@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'BugsplatMac'
-  s.version      = '0.9.12'
+  s.version      = '0.9.13'
   s.license      = 'MIT'
   s.homepage	 = 'http://bugsplatsoftware.com'
   s.summary      = 'Bugsplat OS X framework'
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'Carthage/Build/Mac/BugsplatMac.framework'
   s.resource = 'Carthage/Build/Mac/BugsplatMac.framework'
   s.xcconfig = { 'LD_RUNPATH_SEARCH_PATHS' => '@executable_path/../Frameworks' }
-  s.dependency 'HockeySDK-Mac', '~> 3.2.1'
+  s.dependency 'HockeySDK-Mac', '~> 4.0.2'
 end
