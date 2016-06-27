@@ -76,6 +76,7 @@ To use this library in your project manually you may:
 ####Configuration
 
 BugsplatMac requires a few configuration steps in order integrate the framework with your Bugsplat account
+
 1. Add the following key to your app's Info.plist replacing DATABASE_NAME with your account name
 
 ```
