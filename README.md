@@ -4,8 +4,8 @@ The BugsplatMac OS X framework enables posting crash reports from Cocoa applicat
 
 ## 1. Requirements
 
-1. BugsplatMac supports OS X 10.7 and later.
-2. BugsplatMac supports x86_64 applications only.
+* BugsplatMac supports OS X 10.7 and later.
+* BugsplatMac supports x86_64 applications only.
 
 ## 2. Integration
 
@@ -21,7 +21,7 @@ $ gem install cocoapods
 
 #### Podfile
 
-To integrate AFNetworking into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate BugsplatMac into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 target 'TargetName' do
@@ -59,7 +59,7 @@ Run `carthage` to build the framework and drag the built `BugsplatMac.framework`
 To use this library in your project manually you may:  
 
 1. Download the latest release from https://github.com/BugSplatGit/BugsplatMac/releases which is provided as a zip file
-2. Unzip the archive Add BugsplatMac.framework to your Xcode project
+2. Unzip the archive and add BugsplatMac.framework to your Xcode project
 3. Drag & drop `BugsplatMac.framework` from your window in the `Finder` into your project in Xcode and move it to the desired location in the `Project Navigator`
 4. A popup will appear. Select `Create groups for any added folders` and set the checkmark for your target. Then click `Finish`.
 5. Configure the framework to be copied into your app bundle:
@@ -76,7 +76,6 @@ To use this library in your project manually you may:
 ####Configuration
 
 BugsplatMac requires a few configuration steps in order integrate the framework with your Bugsplat account
-
 1. Add the following key to your app's Info.plist replacing DATABASE_NAME with your account name
 
 ```
