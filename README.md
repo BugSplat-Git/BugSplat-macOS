@@ -90,7 +90,8 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
         BUGSPLAT_USER=<username>
         BUGSPLAT_PASS=<password>
         ```    
-    - Add the upload-archive.sh script located in Bugsplat.framework/Versions/A/Resources as an Archive post-action in your build scheme. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing.  You can view the script output in `/tmp/bugsplat-upload.log`
+    - Add the upload-archive.sh script located in Bugsplat.framework/Versions/A/Resources as an Archive post-action in your build scheme. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing.  You can view the script output in `/tmp/bugsplat-upload.log`.  To share amongst your team, be sure to mark the scheme as 'Shared.'
+
         ![Alt text](/BugsplatTester/post-archive-script.png?raw=true)
 
 
