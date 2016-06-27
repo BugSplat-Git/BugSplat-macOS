@@ -79,10 +79,10 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 
 1. Add the following key to your app's Info.plist replacing DATABASE_NAME with your account name
 
-```
-<key>BugsplatServerURL</key>
-<string>https://DATABASE_NAME.bugsplatsoftware.com/</string>
-```
+    ```
+    <key>BugsplatServerURL</key>
+    <string>https://DATABASE_NAME.bugsplatsoftware.com/</string>
+    ```
 
 2. You must upload an xcarchive containing your app's binary and symbols to the Bugsplat server in order to symbolicate crash reports.  
     - Create a ~/.bugsplat.conf file to store your Bugsplat credentials
