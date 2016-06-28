@@ -117,12 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "BugsplatMac" */;
 			buildPhases = (
-				DCD11D07A4344A639D06D2F1 /* 📦 Check Pods Manifest.lock */,
+				DCD11D07A4344A639D06D2F1 /* [CP] Check Pods Manifest.lock */,
 				A9FCA9071C68CF530012D025 /* Sources */,
 				A9FCA9081C68CF530012D025 /* Frameworks */,
 				A9FCA9091C68CF530012D025 /* Headers */,
 				A9FCA90A1C68CF530012D025 /* Resources */,
-				68ECE2D02FBF5E86F8B4ADC8 /* 📦 Copy Pods Resources */,
+				68ECE2D02FBF5E86F8B4ADC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +177,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		68ECE2D02FBF5E86F8B4ADC8 /* 📦 Copy Pods Resources */ = {
+		68ECE2D02FBF5E86F8B4ADC8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,14 +192,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BugsplatMac/Pods-BugsplatMac-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DCD11D07A4344A639D06D2F1 /* 📦 Check Pods Manifest.lock */ = {
+		DCD11D07A4344A639D06D2F1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +325,7 @@
 				INFOPLIST_FILE = Supporting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = YES;
@@ -349,6 +350,7 @@
 				INFOPLIST_FILE = Supporting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = YES;
