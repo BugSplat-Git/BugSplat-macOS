@@ -86,10 +86,11 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 
 2. You must upload an xcarchive containing your app's binary and symbols to the Bugsplat server in order to symbolicate crash reports.  
     - Create a ~/.bugsplat.conf file to store your Bugsplat credentials
-    ```
-    BUGSPLAT_USER="<username>"
-    BUGSPLAT_PASS="<password>"
-    ```    
+
+        ```
+        BUGSPLAT_USER="<username>"
+        BUGSPLAT_PASS="<password>"
+        ```    
     - Add the upload-archive.sh script located in Bugsplat.framework/Versions/A/Resources as an Archive post-action in your build scheme. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing.  You can view the script output in `/tmp/bugsplat-upload.log`.  To share amongst your team, mark the scheme as 'Shared.'
 
         ![Alt text](/BugsplatTester/post-archive-script.png?raw=true)
