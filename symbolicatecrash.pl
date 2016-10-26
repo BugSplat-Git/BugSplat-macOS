@@ -19,6 +19,7 @@ use Math::BigInt;
 use List::MoreUtils qw(uniq);
 use File::Basename qw(basename);
 use File::Glob ':glob';
+use File::Find::Rule;
 use Env qw(DEVELOPER_DIR);
 use Config;
 no warnings "portable";
@@ -132,11 +133,10 @@ sub getSymbolDirPaths {
 sub getSymbolPathFor_searchpaths {
     my ($bin,$path,$build,@extra_search_paths) = @_;
     my @result;
+    
     for my $item (@extra_search_paths)
     {
-        my $glob = "$item"."{$bin,*/$bin,$path}*";
-        print STDERR "\nSearching pattern: [$glob]..." if $opt{v};
-        push(@result, grep { -e && (! -d) } bsd_glob ($glob, GLOB_BRACE));
+    	push(@result, File::Find::Rule->file()->name($bin)->in($item));
     }
     
     print STDERR "\nSearching [@result]..." if $opt{v};
@@ -444,6 +444,7 @@ sub parse_sections {
 }
 
 sub parse_images {
+	print "parsing images";
     my ($log_ref, $report_version) = @_;
     
     my $section = parse_section($log_ref,'Binary Images Description',multiline=>1);
@@ -544,7 +545,7 @@ sub parse_images {
             # Just take the first instance.  That tends to be the app.
             my $bundlename = $image{bundlename};
             $app = $bundlename if (!defined $app && defined $image{plus} && length $image{plus});
-
+            
             # frameworks and apps (and whatever) may share the same name, so disambiguate
             if ( defined($images{$bundlename}) ) {
                 # follow the chain of hash items until the end
@@ -896,7 +897,7 @@ sub symbolize_frames {
         my $base = $base_map{$symbol};
         my $cmd = "$atos -arch $arch -l $base -o '$escapedSymbol' @{[ keys %$frames ]} | ";
         
-        print STDERR "Running $cmd\n" if $opt{v};
+        print "Running $cmd\n" if $opt{v};
         
         open my($ph),$cmd or die $!;
         my @symbolled_frames = map { chomp; $_ } <$ph>;
@@ -976,6 +977,7 @@ sub output_log($) {
 #############
 
 sub symbolicate_log {
+	print "Symbolicating log";
     my ($file,@extra_search_paths) = @_;
     
     print STDERR "Symbolicating...\n" if ( $opt{v} );
@@ -1026,15 +1028,20 @@ sub symbolicate_log {
     }
     
     # sort out just the images needed for this backtrace
+    
+    print "\npruning binary images...\n";
+    
     prune_used_images($images,$bt);
     if ( $opt{v} ) {
-        print STDERR keys(%$images) . " binary images remain after pruning:\n";
+        print keys(%$images) . " binary images remain after pruning:\n";
         foreach my $junk (keys(%$images)) {
             print STDERR $junk;
             print STDERR ", ";
         }
         print STDERR "\n";
     } 
+    
+    print keys(%$images) . " binary images remain after pruning:\n";
     
     @extra_search_paths = (@extra_search_paths, getSymbolDirPaths($version, $build));
     
