@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <HockeySDK/HockeySDK.h>
 
 @interface BugsplatStartupManager : NSObject
 
@@ -21,5 +22,11 @@
  *  Configures and starts crash reporting service
  */
 - (void)start;
+
+/*!
+ *  Returns reference to backing Hockey instance
+ */
+
+@property (readonly, nonatomic) BITHockeyManager *hockeyManager;
 
 @end

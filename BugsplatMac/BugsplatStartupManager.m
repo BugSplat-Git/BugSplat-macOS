@@ -7,7 +7,6 @@
 //
 
 #import "BugsplatStartupManager.h"
-#import <HockeySDK/HockeySDK.h>
 
 NSString *const kBugsplatServerURL = @"https://bugsplatsoftware.com/";
 NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38e";  // Just to satisfy Hockey since this is required
@@ -20,8 +19,7 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     static dispatch_once_t pred;
     
     dispatch_once(&pred, ^{
-        sharedInstance = [BugsplatStartupManager alloc];
-        sharedInstance = [sharedInstance init];
+        sharedInstance = [[BugsplatStartupManager alloc] init];
     });
     
     return sharedInstance;
@@ -33,6 +31,11 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     [[BITHockeyManager sharedHockeyManager] setServerURL:serverURL];
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
     [[BITHockeyManager sharedHockeyManager] startManager];
+}
+
+- (BITHockeyManager *)hockeyManager
+{
+    return [BITHockeyManager sharedHockeyManager];
 }
 
 @end
