@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <HockeySDK/HockeySDK.h>
 
 @interface BugsplatStartupManager : NSObject
 
@@ -24,9 +23,18 @@
 - (void)start;
 
 /*!
- *  Returns reference to backing Hockey instance
+ *  Bundle containing BugsplatMac.framework.  Default is main bundle.
  */
+@property (nonatomic, strong) NSBundle *hostBundle;
 
-@property (readonly, nonatomic) BITHockeyManager *hockeyManager;
+/*!
+ *  Submit crash reports without asking the user
+ *
+ *  _YES_: The crash report will be submitted without asking the user
+ *  _NO_: The user will be asked if the crash report can be submitted (default)
+ *
+ *  Default: _NO_
+ */
+@property (nonatomic, assign, getter=isAutoSubmitCrashReport) BOOL autoSubmitCrashReport;
 
 @end

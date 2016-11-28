@@ -6,6 +6,7 @@
 //  Copyright © 2016 Bugsplat. All rights reserved.
 //
 
+#import <HockeySDK/HockeySDK.h>
 #import "BugsplatStartupManager.h"
 
 NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38e";  // Just to satisfy Hockey since this is required
@@ -26,18 +27,24 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 
 - (void)start
 {
-    NSString *serverURL = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"BugsplatServerURL"];
+    NSString *serverURL = [self.hostBundle objectForInfoDictionaryKey:@"BugsplatServerURL"];
     
-    NSAssert(serverURL != nil, @"No value provided for BugsplatServerURL.  Please add this key/value to the main bundle's Info.plist");
+    NSAssert(serverURL != nil, @"No server url provided.  Please add this key/value to the your bundle's Info.plist");
     
     [[BITHockeyManager sharedHockeyManager] setServerURL:serverURL];
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
+    [[BITHockeyManager sharedHockeyManager].crashManager setAutoSubmitCrashReport:self.autoSubmitCrashReport];
     [[BITHockeyManager sharedHockeyManager] startManager];
 }
 
-- (BITHockeyManager *)hockeyManager
+- (NSBundle *)hostBundle
 {
-    return [BITHockeyManager sharedHockeyManager];
+    if (!_hostBundle)
+    {
+        _hostBundle = [NSBundle mainBundle];
+    }
+    
+    return _hostBundle;
 }
 
 @end
