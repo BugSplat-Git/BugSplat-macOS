@@ -34,6 +34,7 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     [[BITHockeyManager sharedHockeyManager] setServerURL:serverURL];
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
     [[BITHockeyManager sharedHockeyManager].crashManager setAutoSubmitCrashReport:self.autoSubmitCrashReport];
+    [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:self.askUserDetails];
     [[BITHockeyManager sharedHockeyManager] startManager];
 }
 

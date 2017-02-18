@@ -37,4 +37,11 @@
  */
 @property (nonatomic, assign, getter=isAutoSubmitCrashReport) BOOL autoSubmitCrashReport;
 
+/**
+ *  Defines if the build in crash report UI should ask for name and email
+ *
+ *  Default: _YES_
+ */
+@property (nonatomic, assign) BOOL askUserDetails;
+
 @end
