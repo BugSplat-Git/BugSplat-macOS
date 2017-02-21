@@ -95,7 +95,6 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 
         ![Alt text](/BugsplatTester/post-archive-script.png?raw=true)
 
-
 ####Initialization
 ```objc
 @import BugsplatMac;
@@ -106,3 +105,20 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
     [[BugsplatStartupManager sharedManager] start];
 }
 ```
+####Command line utility support
+1. Add "Other Linker Flags" build setting to embed Info.plist
+
+	```
+	-sectcreate __TEXT __info_plist "$(SRCROOT)/BugsplatTesterCLI/Info.plist"
+	```
+
+2. Add ```@executable_path/``` to "Runtime Search Paths" build setting
+3. Follow main configuration steps listed above, however, use upload-archive-cl.sh for uploading archives
+4. Initialize as follows:
+
+	```objc
+	[BugsplatStartupManager sharedManager].autoSubmitCrashReport = YES;
+	[BugsplatStartupManager sharedManager].askUserDetails = NO;
+	[[BugsplatStartupManager sharedManager] start];
+	```
+	
