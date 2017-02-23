@@ -25,6 +25,16 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     return sharedInstance;
 }
 
+- (id)init
+{
+	if (self = [super init])
+	{
+		_autoSubmitCrashReport = NO;
+		_askUserDetails = YES;
+	}
+	return self;
+}
+
 - (void)start
 {
     NSString *serverURL = [self.hostBundle objectForInfoDictionaryKey:@"BugsplatServerURL"];
