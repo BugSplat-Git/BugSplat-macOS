@@ -121,4 +121,5 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 	[BugsplatStartupManager sharedManager].askUserDetails = NO;
 	[[BugsplatStartupManager sharedManager] start];
 	```
+5. Given the "Runtime Search Paths" setting change in step 2, be sure any 3rd party dependencies are located in the same directory as the CLI program so they can be found at runtime.
 	
