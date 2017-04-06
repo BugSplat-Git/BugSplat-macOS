@@ -10,7 +10,7 @@
 
 @import BugsplatMac;
 
-@interface AppDelegate ()
+@interface AppDelegate () <BugsplatStartupManagerDelegate>
 
 @property (weak) IBOutlet NSWindow *window;
 
@@ -20,6 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [BugsplatStartupManager sharedManager].delegate = self;
     [[BugsplatStartupManager sharedManager] start];
 }
 
@@ -32,6 +33,38 @@
 - (IBAction)crash:(id)sender
 {
     [self performCrash];
+}
+
+#pragma mark - BugsplatStartupManagerDelegate
+
+- (NSString *)applicationLogForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager
+{
+    return NSStringFromSelector(_cmd);
+}
+
+- (void)bugsplatStartupManagerWillShowSubmitCrashReportAlert:(BugsplatStartupManager *)bugsplatStartupManager
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)bugsplatStartupManagerWillCancelSendingCrashReport:(BugsplatStartupManager *)bugsplatStartupManager
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)bugsplatStartupManagerWillSendCrashReport:(BugsplatStartupManager *)bugsplatStartupManager
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)bugsplatStartupManagerDidFinishSendingCrashReport:(BugsplatStartupManager *)bugsplatStartupManager
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)bugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager didFailWithError:(NSError *)error
+{
+    NSLog(@"%@, %@", NSStringFromSelector(_cmd), error);
 }
 
 @end

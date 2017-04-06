@@ -12,7 +12,7 @@
 		A9236E041B822C0100435C06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9236E031B822C0100435C06 /* Images.xcassets */; };
 		A9236E071B822C0100435C06 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9236E051B822C0100435C06 /* MainMenu.xib */; };
 		A9236E131B822C0100435C06 /* BugsplatTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9236E121B822C0100435C06 /* BugsplatTesterTests.m */; };
-		BB2DE95CDCC5265B4651C604 /* libPods-BugsplatTester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BD4B95015E6D465299B12B /* libPods-BugsplatTester.a */; };
+		BB2DE95CDCC5265B4651C604 /* libPods-BugsplatTester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BD4B95015E6D465299B12B /* libPods-BugsplatTester.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		5D81977D207ED9719BE847F3 /* Pods-BugsplatTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsplatTester.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BugsplatTester/Pods-BugsplatTester.debug.xcconfig"; sourceTree = "<group>"; };
+		A91E85781E8AA14000C88210 /* BugsplatMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BugsplatMac.framework; path = ../../build/Debug/BugsplatMac.framework; sourceTree = "<group>"; };
 		A9236DF91B822C0100435C06 /* BugsplatTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugsplatTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9236DFD1B822C0100435C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9236DFE1B822C0100435C06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		A90DAED21BB7FADF00875996 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A91E85781E8AA14000C88210 /* BugsplatMac.framework */,
 				E7BD4B95015E6D465299B12B /* libPods-BugsplatTester.a */,
 			);
 			path = Frameworks;
@@ -274,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F8930BEBF16ABA8DB5E08537 /* [CP] Copy Pods Resources */ = {

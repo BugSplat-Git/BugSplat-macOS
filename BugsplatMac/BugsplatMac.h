@@ -8,5 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <BugsplatMac/BugsplatStartupManager.h>
+#import <BugsplatMac/BugsplatStartupManagerDelegate.h>
+#import <BugsplatMac/BugsplatAttachment.h>
 
 

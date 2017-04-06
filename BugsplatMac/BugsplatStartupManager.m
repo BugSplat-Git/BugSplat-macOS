@@ -8,8 +8,15 @@
 
 #import <HockeySDK/HockeySDK.h>
 #import "BugsplatStartupManager.h"
+#import "BugsplatStartupManagerDelegate.h"
+#import "BugsplatAttachment.h"
+
 
 NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38e";  // Just to satisfy Hockey since this is required
+
+@interface BugsplatStartupManager() <BITHockeyManagerDelegate>
+
+@end
 
 @implementation BugsplatStartupManager
 
@@ -25,7 +32,7 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     return sharedInstance;
 }
 
-- (id)init
+- (instancetype)init
 {
 	if (self = [super init])
 	{
@@ -56,6 +63,83 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     }
     
     return _hostBundle;
+}
+
+- (void)setDelegate:(id<BugsplatStartupManagerDelegate>)delegate
+{
+    if (_delegate != delegate)
+    {
+        _delegate = delegate;
+    }
+    
+    [BITHockeyManager sharedHockeyManager].delegate = self;
+}
+
+#pragma mark - BITHockeyManagerDelegate
+
+- (NSString *)applicationLogForCrashManager:(BITCrashManager *)crashManager
+{
+    if ([_delegate respondsToSelector:@selector(applicationLogForBugsplatStartupManager:)])
+    {
+        return [_delegate applicationLogForBugsplatStartupManager:self];
+    }
+    
+    return nil;
+}
+
+//- (BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager;
+//{
+//    if ([_delegate respondsToSelector:@selector(attachmentForBugsplatStartupManager:)])
+//    {
+//        BugsplatAttachment *bugsplatAttachment = [_delegate attachmentForBugsplatStartupManager:self];
+//        BITHockeyAttachment *hockeyAttachment = [[BITHockeyAttachment alloc] initWithFilename:bugsplatAttachment.filename
+//                                                                         hockeyAttachmentData:bugsplatAttachment.attachmentData
+//                                                                                  contentType:bugsplatAttachment.contentType];
+//        
+//        return hockeyAttachment;
+//    }
+//    
+//    return nil;
+//}
+
+- (void)crashManagerWillShowSubmitCrashReportAlert:(BITCrashManager *)crashManager
+{
+    if ([_delegate respondsToSelector:@selector(bugsplatStartupManagerWillShowSubmitCrashReportAlert:)])
+    {
+        [_delegate bugsplatStartupManagerWillShowSubmitCrashReportAlert:self];
+    }
+}
+
+- (void)crashManagerWillCancelSendingCrashReport:(BITCrashManager *)crashManager
+{
+    if ([_delegate respondsToSelector:@selector(bugsplatStartupManagerWillCancelSendingCrashReport:)])
+    {
+        [_delegate bugsplatStartupManagerWillCancelSendingCrashReport:self];
+    }
+}
+
+- (void)crashManagerWillSendCrashReport:(BITCrashManager *)crashManager
+{
+    if ([_delegate respondsToSelector:@selector(bugsplatStartupManagerWillSendCrashReport:)])
+    {
+        [_delegate bugsplatStartupManagerWillSendCrashReport:self];
+    }
+}
+
+- (void)crashManager:(BITCrashManager *)crashManager didFailWithError:(NSError *)error
+{
+    if ([_delegate respondsToSelector:@selector(bugsplatStartupManager:didFailWithError:)])
+    {
+        [_delegate bugsplatStartupManager:self didFailWithError:error];
+    }
+}
+
+- (void)crashManagerDidFinishSendingCrashReport:(BITCrashManager *)crashManager
+{
+    if ([_delegate respondsToSelector:@selector(bugsplatStartupManagerDidFinishSendingCrashReport:)])
+    {
+        [_delegate bugsplatStartupManagerDidFinishSendingCrashReport:self];
+    }
 }
 
 @end

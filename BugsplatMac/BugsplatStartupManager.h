@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol BugsplatStartupManagerDelegate;
+
 @interface BugsplatStartupManager : NSObject
 
 /*!
@@ -43,5 +45,14 @@
  *  Default: _YES_
  */
 @property (nonatomic, assign) BOOL askUserDetails;
+
+/**
+ * Set the delegate
+ *
+ * Defines the class that implements the optional protocol `BugsplatStartupManagerDelegate`.
+ *
+ * @see BugsplatStartupManagerDelegate
+ */
+@property (weak, nonatomic) id<BugsplatStartupManagerDelegate> delegate;
 
 @end

@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1CA8A97F04895140F4C03ED7 /* libPods-BugsplatMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C974BC8F26C6028F878B08E1 /* libPods-BugsplatMac.a */; };
+		A91E85481E883EAE00C88210 /* BugsplatAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = A91E85461E883EAE00C88210 /* BugsplatAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A91E85491E883EAE00C88210 /* BugsplatAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E85471E883EAE00C88210 /* BugsplatAttachment.m */; };
 		A940B4721CA9738900D97621 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A940B4711CA9738900D97621 /* Info.plist */; };
+		A95B96B91E882BAA00314A10 /* BugsplatStartupManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */ = {isa = PBXBuildFile; fileRef = A961B08C1C89BDCC004D212F /* upload-archive.sh */; };
 		A9A57AA41E58DCC500AE61D8 /* upload-archive-cl.sh in Resources */ = {isa = PBXBuildFile; fileRef = A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */; };
 		A9CBBB521D11BA8100972398 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A9CBBB511D11BA8100972398 /* README.md */; };
@@ -19,7 +22,10 @@
 
 /* Begin PBXFileReference section */
 		851301052389B124101B4790 /* Pods-BugsplatMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsplatMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugsplatMac/Pods-BugsplatMac.release.xcconfig"; sourceTree = "<group>"; };
+		A91E85461E883EAE00C88210 /* BugsplatAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatAttachment.h; sourceTree = "<group>"; };
+		A91E85471E883EAE00C88210 /* BugsplatAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsplatAttachment.m; sourceTree = "<group>"; };
 		A940B4711CA9738900D97621 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManagerDelegate.h; sourceTree = "<group>"; };
 		A961B08C1C89BDCC004D212F /* upload-archive.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "upload-archive.sh"; path = "../upload-archive.sh"; sourceTree = "<group>"; };
 		A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-archive-cl.sh"; sourceTree = SOURCE_ROOT; };
 		A9CBBB511D11BA8100972398 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 				A9FCA90F1C68CF530012D025 /* BugsplatMac.h */,
 				A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */,
 				A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */,
+				A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */,
+				A91E85461E883EAE00C88210 /* BugsplatAttachment.h */,
+				A91E85471E883EAE00C88210 /* BugsplatAttachment.m */,
 				A961B08C1C89BDCC004D212F /* upload-archive.sh */,
 				A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */,
 			);
@@ -109,6 +118,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */,
+				A91E85481E883EAE00C88210 /* BugsplatAttachment.h in Headers */,
+				A95B96B91E882BAA00314A10 /* BugsplatStartupManagerDelegate.h in Headers */,
 				A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91E85491E883EAE00C88210 /* BugsplatAttachment.m in Sources */,
 				A9CBBB521D11BA8100972398 /* README.md in Sources */,
 				A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */,
 			);
