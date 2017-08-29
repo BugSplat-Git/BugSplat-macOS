@@ -73,7 +73,7 @@ To use this library in your project manually you may:
 
 ## 3. Usage
 
-####Configuration
+#### Configuration
 
 BugsplatMac requires a few configuration steps in order integrate the framework with your Bugsplat account
 
@@ -81,7 +81,7 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 
     ```
     <key>BugsplatServerURL</key>
-    <string>https://DATABASE_NAME.bugsplatsoftware.com/</string>
+    <string>https://DATABASE_NAME.bugsplat.com/</string>
     ```
 
 2. You must upload an xcarchive containing your app's binary and symbols to the Bugsplat server in order to symbolicate crash reports.  
@@ -91,11 +91,11 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
         BUGSPLAT_USER="<username>"
         BUGSPLAT_PASS="<password>"
         ```    
-    - Add the upload-archive.sh script located in Bugsplat.framework/Versions/A/Resources as an Archive post-action in your build scheme. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing.  You can view the script output in `/tmp/bugsplat-upload.log`.  To share amongst your team, mark the scheme as 'Shared.'
+    - Add the upload-archive.sh script located in `${PROJECT_DIR}/Pods/BugsplatMac/BugsplatMac/Bugsplat.framework/Versions/A/Resources` as an Archive post-action in your build scheme. Set the "Provide build settings from" target in the dropdown so that the `${PROJECT_DIR}` environment variable can be used to locate upload-archive.sh. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing. You can view the script output in `/tmp/bugsplat-upload.log`.  To share amongst your team, mark the scheme as 'Shared'.
 
         ![Alt text](/BugsplatTester/post-archive-script.png?raw=true)
 
-####Initialization
+#### Initialization
 ```objc
 @import BugsplatMac;
 ```
@@ -105,14 +105,14 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
     [[BugsplatStartupManager sharedManager] start];
 }
 ```
-####Command line utility support
+#### Command line utility support
 1. Add "Other Linker Flags" build setting to embed Info.plist
 
 	```
 	-sectcreate __TEXT __info_plist "$(SRCROOT)/BugsplatTesterCLI/Info.plist"
 	```
 
-2. Add ```@executable_path/``` to "Runtime Search Paths" build setting
+2. Add `@executable_path/` to "Runtime Search Paths" build setting
 3. Follow main configuration steps listed above, however, use upload-archive-cl.sh for uploading archives
 4. Initialize as follows:
 
