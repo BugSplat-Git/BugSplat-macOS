@@ -38,8 +38,7 @@ pushd "${APP_DIR}"
 
 INFO_PLIST="/tmp/${PRODUCT_NAME}-Info.plist"
 rm ${INFO_PLIST}
-otool -X -s __TEXT __info_plist ${PRODUCT_NAME} | xxd -r >> $INFO_PLIST 2>&1
-sed -i .bak '1s/^[^<]*//' ${INFO_PLIST} 
+otool -X -s __TEXT __info_plist ${PRODUCT_NAME} | sed 's/Contents.*//' | xxd -r >> $INFO_PLIST 2>&1
 
 APP_VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${INFO_PLIST}")
 BUGSPLAT_SERVER_URL=$(/usr/libexec/PlistBuddy -c "Print BugsplatServerURL" "${INFO_PLIST}")
