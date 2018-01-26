@@ -35,6 +35,8 @@ Then, run the following command:
 $ pod install
 ```
 
+The pod install command creates an xcworkspace file next to your application's xcodeproj file. Open the xcworkspace file in lieu of the xcodeproj file to ensure BugsplatMac.framework is included in your build.
+
 ### Installation with Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
