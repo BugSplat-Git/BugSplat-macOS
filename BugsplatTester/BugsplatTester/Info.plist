@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BugsplatServerURL</key>
-	<string>https://geoffraeder_me_com.bugsplat.com/</string>
+	<string>https://fred.bugsplat.com/</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,7 +27,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015 BugSplat. All rights reserved.</string>
+	<string>Copyright © 2018 BugSplat. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
