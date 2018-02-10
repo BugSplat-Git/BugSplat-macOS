@@ -135,6 +135,7 @@
 				A9FCA9081C68CF530012D025 /* Frameworks */,
 				A9FCA9091C68CF530012D025 /* Headers */,
 				A9FCA90A1C68CF530012D025 /* Resources */,
+				A9ED2300202F627900B7FDE4 /* ShellScript */,
 				A9B572A820180AA0002F9448 /* Copy Frameworks */,
 			);
 			buildRules = (
@@ -188,6 +189,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A9ED2300202F627900B7FDE4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -rf ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks/HockeySDK.framework\ncp -R ${BUILD_DIR}/${CONFIGURATION}/HockeySDK.framework ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks/";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9FCA9071C68CF530012D025 /* Sources */ = {
