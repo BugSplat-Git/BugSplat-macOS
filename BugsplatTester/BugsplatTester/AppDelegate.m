@@ -21,7 +21,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [BugsplatStartupManager sharedManager].delegate = self;
-    [[BugsplatStartupManager sharedManager] setBannerImage:[NSImage imageNamed:@"bugsplat-logo"]];
     [[BugsplatStartupManager sharedManager] start];
 }
 

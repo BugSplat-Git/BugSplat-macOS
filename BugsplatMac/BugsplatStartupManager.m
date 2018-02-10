@@ -40,6 +40,13 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 		_askUserDetails = YES;
         
         [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
+        
+        NSImage *bannerImage = [NSImage imageNamed:@"bugsplat-logo"];
+        
+        if (bannerImage)
+        {
+            self.bannerImage = bannerImage;
+        }
 	}
     
 	return self;
@@ -47,7 +54,7 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 
 - (void)start
 {
-    //NSLog(@"Initializing Bugsplat");
+    NSLog(@"Initializing Bugsplat");
     NSString *serverURL = [self.hostBundle objectForInfoDictionaryKey:@"BugsplatServerURL"];
     
     NSAssert(serverURL != nil, @"No server url provided.  Please add this key/value to the your bundle's Info.plist");
