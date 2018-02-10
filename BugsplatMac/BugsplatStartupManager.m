@@ -38,20 +38,21 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 	{
 		_autoSubmitCrashReport = NO;
 		_askUserDetails = YES;
+        
+        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
 	}
+    
 	return self;
 }
 
 - (void)start
 {
+    //NSLog(@"Initializing Bugsplat");
     NSString *serverURL = [self.hostBundle objectForInfoDictionaryKey:@"BugsplatServerURL"];
     
     NSAssert(serverURL != nil, @"No server url provided.  Please add this key/value to the your bundle's Info.plist");
     
     [[BITHockeyManager sharedHockeyManager] setServerURL:serverURL];
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
-    [[BITHockeyManager sharedHockeyManager].crashManager setAutoSubmitCrashReport:self.autoSubmitCrashReport];
-    [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:self.askUserDetails];
     [[BITHockeyManager sharedHockeyManager] startManager];
 }
 
@@ -63,6 +64,24 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     }
     
     return _hostBundle;
+}
+
+- (void)setBannerImage:(NSImage *)bannerImage
+{
+    _bannerImage = bannerImage;
+    [[BITHockeyManager sharedHockeyManager].crashManager setBannerImage:self.bannerImage];
+}
+
+- (void)setAskUserDetails:(BOOL)askUserDetails
+{
+    _askUserDetails = askUserDetails;
+    [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:self.askUserDetails];
+}
+
+- (void)setAutoSubmitCrashReport:(BOOL)autoSubmitCrashReport
+{
+    _autoSubmitCrashReport = autoSubmitCrashReport;
+    [[BITHockeyManager sharedHockeyManager].crashManager setAutoSubmitCrashReport:self.autoSubmitCrashReport];
 }
 
 - (void)setDelegate:(id<BugsplatStartupManagerDelegate>)delegate
@@ -87,20 +106,20 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     return nil;
 }
 
-//- (BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager;
-//{
-//    if ([_delegate respondsToSelector:@selector(attachmentForBugsplatStartupManager:)])
-//    {
-//        BugsplatAttachment *bugsplatAttachment = [_delegate attachmentForBugsplatStartupManager:self];
-//        BITHockeyAttachment *hockeyAttachment = [[BITHockeyAttachment alloc] initWithFilename:bugsplatAttachment.filename
-//                                                                         hockeyAttachmentData:bugsplatAttachment.attachmentData
-//                                                                                  contentType:bugsplatAttachment.contentType];
-//        
-//        return hockeyAttachment;
-//    }
-//    
-//    return nil;
-//}
+- (BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager;
+{
+    if ([_delegate respondsToSelector:@selector(attachmentForBugsplatStartupManager:)])
+    {
+        BugsplatAttachment *bugsplatAttachment = [_delegate attachmentForBugsplatStartupManager:self];
+        BITHockeyAttachment *hockeyAttachment = [[BITHockeyAttachment alloc] initWithFilename:bugsplatAttachment.filename
+                                                                         hockeyAttachmentData:bugsplatAttachment.attachmentData
+                                                                                  contentType:bugsplatAttachment.contentType];
+        
+        return hockeyAttachment;
+    }
+    
+    return nil;
+}
 
 - (void)crashManagerWillShowSubmitCrashReportAlert:(BITCrashManager *)crashManager
 {

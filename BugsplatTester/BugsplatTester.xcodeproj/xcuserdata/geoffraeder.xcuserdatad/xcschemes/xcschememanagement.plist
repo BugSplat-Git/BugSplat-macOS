@@ -4,35 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BugsplatTester.xcscheme_^#shared#^_</key>
+		<key>BugsplatTester.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>BugsplatTesterDevelopment.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A91E854D1E8A9E4300C88210</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A91E85621E8AA0B100C88210</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A9236DF81B822C0100435C06</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A9236E0B1B822C0100435C06</key>
+		<key>A9ED22152020A00E00B7FDE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

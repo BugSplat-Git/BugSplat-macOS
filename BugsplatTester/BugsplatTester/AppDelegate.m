@@ -21,12 +21,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [BugsplatStartupManager sharedManager].delegate = self;
+    [[BugsplatStartupManager sharedManager] setBannerImage:[NSImage imageNamed:@"bugsplat-logo"]];
     [[BugsplatStartupManager sharedManager] start];
 }
 
 - (void)performCrash
 {
-    void (^nilBlock)() = nil;
+    void (^nilBlock)(void) = nil;
     nilBlock();
 }
 
@@ -65,6 +66,16 @@
 - (void)bugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager didFailWithError:(NSError *)error
 {
     NSLog(@"%@, %@", NSStringFromSelector(_cmd), error);
+}
+
+- (BugsplatAttachment *)attachmentForCrashManager:(BugsplatStartupManager *)bugsplatStartupManager {
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"generated" withExtension:@"json"];
+    NSData *data = [NSData dataWithContentsOfURL:fileURL];
+    
+    BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"generated.json.data"
+                                                                   attachmentData:data
+                                                                      contentType:@"application/octet-stream"];
+    return attachment;
 }
 
 @end

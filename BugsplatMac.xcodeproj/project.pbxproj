@@ -7,32 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CA8A97F04895140F4C03ED7 /* libPods-BugsplatMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C974BC8F26C6028F878B08E1 /* libPods-BugsplatMac.a */; };
 		A91E85481E883EAE00C88210 /* BugsplatAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = A91E85461E883EAE00C88210 /* BugsplatAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A91E85491E883EAE00C88210 /* BugsplatAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E85471E883EAE00C88210 /* BugsplatAttachment.m */; };
 		A95B96B91E882BAA00314A10 /* BugsplatStartupManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */ = {isa = PBXBuildFile; fileRef = A961B08C1C89BDCC004D212F /* upload-archive.sh */; };
 		A9A57AA41E58DCC500AE61D8 /* upload-archive-cl.sh in Resources */ = {isa = PBXBuildFile; fileRef = A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */; };
+		A9B572A72017FFEB002F9448 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B572A62017FFEB002F9448 /* HockeySDK.framework */; };
+		A9B572A920180AA9002F9448 /* HockeySDK.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A9B572A62017FFEB002F9448 /* HockeySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA90F1C68CF530012D025 /* BugsplatMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A9B572A820180AA0002F9448 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9B572A920180AA9002F9448 /* HockeySDK.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		851301052389B124101B4790 /* Pods-BugsplatMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsplatMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugsplatMac/Pods-BugsplatMac.release.xcconfig"; sourceTree = "<group>"; };
 		A91E85461E883EAE00C88210 /* BugsplatAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatAttachment.h; sourceTree = "<group>"; };
 		A91E85471E883EAE00C88210 /* BugsplatAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsplatAttachment.m; sourceTree = "<group>"; };
 		A940B4711CA9738900D97621 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManagerDelegate.h; sourceTree = "<group>"; };
 		A961B08C1C89BDCC004D212F /* upload-archive.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "upload-archive.sh"; path = "../upload-archive.sh"; sourceTree = "<group>"; };
 		A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-archive-cl.sh"; sourceTree = SOURCE_ROOT; };
+		A9B572A62017FFEB002F9448 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
 		A9CBBB511D11BA8100972398 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugsplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FCA90F1C68CF530012D025 /* BugsplatMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugsplatMac.h; sourceTree = "<group>"; };
 		A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManager.h; sourceTree = "<group>"; };
 		A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsplatStartupManager.m; sourceTree = "<group>"; };
-		C974BC8F26C6028F878B08E1 /* libPods-BugsplatMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BugsplatMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9DE7B38E3846C732F7AC332 /* Pods-BugsplatMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsplatMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BugsplatMac/Pods-BugsplatMac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,22 +53,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CA8A97F04895140F4C03ED7 /* libPods-BugsplatMac.a in Frameworks */,
+				A9B572A72017FFEB002F9448 /* HockeySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A56F63D08F81370A45DBC43E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F9DE7B38E3846C732F7AC332 /* Pods-BugsplatMac.debug.xcconfig */,
-				851301052389B124101B4790 /* Pods-BugsplatMac.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A940B4701CA9738900D97621 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,15 +68,22 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		A9B572A52017FFEB002F9448 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9B572A62017FFEB002F9448 /* HockeySDK.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9FCA9021C68CF530012D025 = {
 			isa = PBXGroup;
 			children = (
 				A9CBBB511D11BA8100972398 /* README.md */,
 				A9FCA90E1C68CF530012D025 /* BugsplatMac */,
-				A9FCA91A1C68CFD50012D025 /* Frameworks */,
 				A940B4701CA9738900D97621 /* Supporting */,
+				A9B572A52017FFEB002F9448 /* Frameworks */,
 				A9FCA90D1C68CF530012D025 /* Products */,
-				A56F63D08F81370A45DBC43E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,15 +110,6 @@
 			path = BugsplatMac;
 			sourceTree = "<group>";
 		};
-		A9FCA91A1C68CFD50012D025 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C974BC8F26C6028F878B08E1 /* libPods-BugsplatMac.a */,
-			);
-			name = Frameworks;
-			path = Bugsplat/Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -129,12 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "BugsplatMac" */;
 			buildPhases = (
-				DCD11D07A4344A639D06D2F1 /* [CP] Check Pods Manifest.lock */,
 				A9FCA9071C68CF530012D025 /* Sources */,
 				A9FCA9081C68CF530012D025 /* Frameworks */,
 				A9FCA9091C68CF530012D025 /* Headers */,
 				A9FCA90A1C68CF530012D025 /* Resources */,
-				68ECE2D02FBF5E86F8B4ADC8 /* [CP] Copy Pods Resources */,
+				A9B572A820180AA0002F9448 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,45 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		68ECE2D02FBF5E86F8B4ADC8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BugsplatMac/Pods-BugsplatMac-resources.sh",
-				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BugsplatMac/Pods-BugsplatMac-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCD11D07A4344A639D06D2F1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BugsplatMac-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9FCA9071C68CF530012D025 /* Sources */ = {
@@ -331,8 +293,8 @@
 		};
 		A9FCA9151C68CF530012D025 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9DE7B38E3846C732F7AC332 /* Pods-BugsplatMac.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -342,6 +304,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",
 					"$(PROJECT_DIR)/Bugsplat/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Supporting/Info.plist;
@@ -355,8 +318,8 @@
 		};
 		A9FCA9161C68CF530012D025 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 851301052389B124101B4790 /* Pods-BugsplatMac.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -366,6 +329,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",
 					"$(PROJECT_DIR)/Bugsplat/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Supporting/Info.plist;
