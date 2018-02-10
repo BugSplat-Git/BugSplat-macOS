@@ -1,0 +1,3 @@
+[submodule "HockeySDK-Mac"]
+	path = HockeySDK-Mac
+	url = git@github.com:geoffraeder/HockeySDK-Mac.git
