@@ -1,8 +1,5 @@
-BugsplatMac.xcworkspace
 Podfile.lock
 Pods
-BugsplatTester/BugsplatTester.xcodeproj/project.xcworkspace
-BugsplatTester/BugsplatTester.xcworkspace
 BugsplatTester/.DS_Store
 BugsplatTester/Cartfile.resolved
 BugsplatTester/build
