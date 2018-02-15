@@ -71,9 +71,9 @@
     NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"generated" withExtension:@"json"];
     NSData *data = [NSData dataWithContentsOfURL:fileURL];
     
-    BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"generated.json.data"
+    BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"generated.json"
                                                                    attachmentData:data
-                                                                      contentType:@"application/octet-stream"];
+                                                                      contentType:@"application/json"];
     return attachment;
 }
 

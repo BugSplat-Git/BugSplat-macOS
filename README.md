@@ -107,6 +107,30 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
     [[BugsplatStartupManager sharedManager] start];
 }
 ```
+####Crash Reporter UI Customization
+1. Custom banner image
+	- Bugsplat provides the ability to configure a custom image to be displayed in the crash reporter UI for branding purposes.  The image view dimensions are 440x110 and will scale down proportionately. There are 2 ways developers can provide an image:
+		1. Set the image property directly on BugsplatStartupManager 
+		2. Provide an image named `bugsplat-logo` in the main app bundle or asset calalog
+
+2. User details
+	- Set `askUserDetails` to `NO` in order to prevent the name and email fields from displaying in the crash reporter UI 
+
+####Attachments
+1. Bugsplat supports uploading attachments with crash reports. There's a delegate method provided by `BugsplatStartupManagerDelegate` that can be implemented to provide an attachment to be uploaded.
+
+	```objc
+	- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager {
+	    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"example" withExtension:@"json"];
+	    NSData *data = [NSData dataWithContentsOfURL:fileURL];
+	    
+	    BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"example.json"
+	                                                                   attachmentData:data
+	                                                                      contentType:@"application/json"];
+	    return attachment;
+	}
+	```	
+
 #### Command line utility support
 1. Add "Other Linker Flags" build setting to embed Info.plist
 

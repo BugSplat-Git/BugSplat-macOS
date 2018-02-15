@@ -10,7 +10,6 @@
 		A9ED221B2020A00E00B7FDE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ED221A2020A00E00B7FDE4 /* AppDelegate.m */; };
 		A9ED22202020A00E00B7FDE4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9ED221E2020A00E00B7FDE4 /* MainMenu.xib */; };
 		A9ED22232020A00E00B7FDE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ED22222020A00E00B7FDE4 /* main.m */; };
-		A9ED222B2020A06800B7FDE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9ED222A2020A06800B7FDE4 /* Images.xcassets */; };
 		A9ED222E2020A0C600B7FDE4 /* BugsplatMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9ED222D2020A0C600B7FDE4 /* BugsplatMac.framework */; };
 		A9ED22FF202F46C000B7FDE4 /* generated.json in Resources */ = {isa = PBXBuildFile; fileRef = A9ED22FE202F46C000B7FDE4 /* generated.json */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		A9ED221F2020A00E00B7FDE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A9ED22212020A00E00B7FDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9ED22222020A00E00B7FDE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A9ED222A2020A06800B7FDE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A9ED222D2020A0C600B7FDE4 /* BugsplatMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BugsplatMac.framework; sourceTree = "<group>"; };
 		A9ED22FE202F46C000B7FDE4 /* generated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generated.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,7 +57,6 @@
 		A9ED22182020A00E00B7FDE4 /* BugsplatTester */ = {
 			isa = PBXGroup;
 			children = (
-				A9ED222A2020A06800B7FDE4 /* Images.xcassets */,
 				A9ED22192020A00E00B7FDE4 /* AppDelegate.h */,
 				A9ED221A2020A00E00B7FDE4 /* AppDelegate.m */,
 				A9ED221E2020A00E00B7FDE4 /* MainMenu.xib */,
@@ -138,7 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9ED22202020A00E00B7FDE4 /* MainMenu.xib in Resources */,
-				A9ED222B2020A06800B7FDE4 /* Images.xcassets in Resources */,
 				A9ED22FF202F46C000B7FDE4 /* generated.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
