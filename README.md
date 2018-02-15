@@ -107,7 +107,7 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
     [[BugsplatStartupManager sharedManager] start];
 }
 ```
-####Crash Reporter UI Customization
+#### Crash Reporter UI Customization
 1. Custom banner image
 	- Bugsplat provides the ability to configure a custom image to be displayed in the crash reporter UI for branding purposes.  The image view dimensions are 440x110 and will scale down proportionately. There are 2 ways developers can provide an image:
 		1. Set the image property directly on BugsplatStartupManager 
@@ -116,7 +116,7 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 2. User details
 	- Set `askUserDetails` to `NO` in order to prevent the name and email fields from displaying in the crash reporter UI 
 
-####Attachments
+#### Attachments
 1. Bugsplat supports uploading attachments with crash reports. There's a delegate method provided by `BugsplatStartupManagerDelegate` that can be implemented to provide an attachment to be uploaded.
 
 	```objc
