@@ -67,7 +67,7 @@
     NSLog(@"%@, %@", NSStringFromSelector(_cmd), error);
 }
 
-- (BugsplatAttachment *)attachmentForCrashManager:(BugsplatStartupManager *)bugsplatStartupManager {
+- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager {
     NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"generated" withExtension:@"json"];
     NSData *data = [NSData dataWithContentsOfURL:fileURL];
     
