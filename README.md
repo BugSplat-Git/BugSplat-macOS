@@ -79,7 +79,7 @@ To use this library in your project manually you may:
 
 BugsplatMac requires a few configuration steps in order integrate the framework with your Bugsplat account
 
-1. Add the following key to your app's Info.plist replacing DATABASE_NAME with your account name
+1. Add the following key to your app's Info.plist replacing DATABASE_NAME with your BugSplat database name
 
     ```
     <key>BugsplatServerURL</key>
@@ -153,20 +153,18 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 
 We have provided BugsplatTester as a sample application for you to test BugSplat. The quickest way to test BugSplat is to do the following:
 
-1. Run [pod install](https://guides.cocoapods.org/using/getting-started.html#getting-started) in the BugsplatTester directory in terminal.
+1. Open the xcworkspace file. Edit the current scheme and uncheck "Debug executable" in the Run section, close the scheme editor and run the application.
 
-2. Open the xcworkspace file. Edit the current scheme and uncheck "Debug executable" in the Run section, close the scheme editor and run the application.
+2. Click the "crash" button when prompted.
 
-3. Click the "crash" button when prompted.
+3. Click the run button a second time in Xcode. The BugSplat crash dialog will appear the next time the app is launched.
 
-4. Click the run button a second time in Xcode. The BugSplat crash dialog will appear the next time the app is launched.
+4. Fill out the crash dialog and submit the crash report.
 
-5. Fill out the crash dialog and submit the crash report.
+5. Visit BugSplat's [All Crash](https://app.bugsplat.com/allcrash/) page. When prompted for credentials enter user "Fred" and password "Flintstone". The crash you posted from BugsplatTester should be at the top of the list of crashes.
 
-6. Visit BugSplat's [All Crash](https://app.bugsplat.com/allcrash/) page. When prompted for credentials enter user "Fred" and password "Flintstone". The crash you posted from BugsplatTester should be at the top of the list of crashes.
+6. Click the link in the "Crash Id" column to view more details about your crash.
 
-7. Click the link in the "Crash Id" column to view more details about your crash.
+7. You will notice there are no function names or line numbers, this is because you need to upload the application's xcarchive. See step 2 in the "Configuration" section above for more information.
 
-8. You will notice there are no function names or line numbers, this is because you need to upload the application's xcarchive. See step 2 in the "Configuration" section above for more information.
-
-9. Repeat this process with the executable from the xcarchive you created with BugsplatTester. To find the executable within the xcarchive, right click the xcarchive in finder and select "Show Package Contents". The executable should be located in .../Products/Applications/. BugSplat will display function names and line numbers for all crashes posted from this executable.
+8. Repeat this process with the executable from the xcarchive you created with BugsplatTester. To find the executable within the xcarchive, right click the xcarchive in finder and select "Show Package Contents". The executable should be located in .../Products/Applications/. BugSplat will display function names and line numbers for all crashes posted from this executable.
