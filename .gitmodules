@@ -1,3 +1,3 @@
 [submodule "HockeySDK-Mac"]
 	path = HockeySDK-Mac
-	url = git@github.com:BugSplatGit/HockeySDK-Mac.git
+	url = https://github.com/BugSplatGit/HockeySDK-Mac.git
