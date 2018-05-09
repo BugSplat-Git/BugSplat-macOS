@@ -18,6 +18,7 @@ use Cwd qw(realpath);
 use List::MoreUtils qw(uniq);
 use File::Basename qw(basename);
 use File::Glob ':glob';
+use File::Find::Rule;
 use Env qw(DEVELOPER_DIR);
 use Config;
 no warnings "portable";
@@ -166,17 +167,8 @@ sub getSymbolPathAndArchFor_searchpaths {
         return undef;
     }
     
-    for my $item (@extra_search_paths) {
-        my $glob = "$item" . "{";
-        if (defined $bin && length($bin)) {
-            $glob .= "$bin,*/$bin,";
-        }
-        if (defined $path && length($path)) {
-            $glob .= "$path,";
-        }
-        $glob .= "}*";
-        #print STDERR "\nSearching pattern: [$glob]...\n" if $opt_verbose;
-        push(@results, grep { -e && (! -d) } bsd_glob ($glob, GLOB_BRACE));
+    for my $item (@extra_search_paths) {    
+        push(@results, File::Find::Rule->file()->name($bin)->in($item));
     }
     
     for my $out_path (@results) {
