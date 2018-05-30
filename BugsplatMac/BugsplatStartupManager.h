@@ -17,7 +17,7 @@
  *
  *  @return shared instance of BugsplatStartupManager
  */
-+ (instancetype)sharedManager;
++ (nonnull instancetype)sharedManager;
 
 /*!
  *  Configures and starts crash reporting service
@@ -27,13 +27,13 @@
 /*!
  *  Bundle containing BugsplatMac.framework.  Default is main bundle.
  */
-@property (nonatomic, strong) NSBundle *hostBundle;
+@property (nonatomic, strong, nullable) NSBundle *hostBundle;
 
 /*!
  *  Provide custom banner image for crash reporter.
  *  Can set directly in code or provide an image named bugsplat-logo in main bundle. Can be in asset catalog.
  */
-@property (nonatomic, strong) NSImage *bannerImage;
+@property (nonatomic, strong, nullable) NSImage *bannerImage;
 
 /*!
  *  Submit crash reports without asking the user
@@ -59,6 +59,6 @@
  *
  * @see BugsplatStartupManagerDelegate
  */
-@property (weak, nonatomic) id<BugsplatStartupManagerDelegate> delegate;
+@property (weak, nonatomic, nullable) id<BugsplatStartupManagerDelegate> delegate;
 
 @end

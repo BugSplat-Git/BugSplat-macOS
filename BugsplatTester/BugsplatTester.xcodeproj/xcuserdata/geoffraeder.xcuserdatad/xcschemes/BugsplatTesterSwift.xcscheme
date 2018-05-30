@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0930"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A9ED22152020A00E00B7FDE4"
-               BuildableName = "BugsplatTester.app"
-               BlueprintName = "BugsplatTester"
+               BlueprintIdentifier = "A977E76520BB29B100169D8B"
+               BuildableName = "BugsplatTesterSwift.app"
+               BlueprintName = "BugsplatTesterSwift"
                ReferencedContainer = "container:BugsplatTester.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9ED22152020A00E00B7FDE4"
-            BuildableName = "BugsplatTester.app"
-            BlueprintName = "BugsplatTester"
+            BlueprintIdentifier = "A977E76520BB29B100169D8B"
+            BuildableName = "BugsplatTesterSwift.app"
+            BlueprintName = "BugsplatTesterSwift"
             ReferencedContainer = "container:BugsplatTester.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9ED22152020A00E00B7FDE4"
-            BuildableName = "BugsplatTester.app"
-            BlueprintName = "BugsplatTester"
+            BlueprintIdentifier = "A977E76520BB29B100169D8B"
+            BuildableName = "BugsplatTesterSwift.app"
+            BlueprintName = "BugsplatTesterSwift"
             ReferencedContainer = "container:BugsplatTester.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9ED22152020A00E00B7FDE4"
-            BuildableName = "BugsplatTester.app"
-            BlueprintName = "BugsplatTester"
+            BlueprintIdentifier = "A977E76520BB29B100169D8B"
+            BuildableName = "BugsplatTesterSwift.app"
+            BlueprintName = "BugsplatTesterSwift"
             ReferencedContainer = "container:BugsplatTester.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,9 +96,9 @@
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "A9ED22152020A00E00B7FDE4"
-                     BuildableName = "BugsplatTester.app"
-                     BlueprintName = "BugsplatTester"
+                     BlueprintIdentifier = "A977E76520BB29B100169D8B"
+                     BuildableName = "BugsplatTesterSwift.app"
+                     BlueprintName = "BugsplatTesterSwift"
                      ReferencedContainer = "container:BugsplatTester.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>

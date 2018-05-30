@@ -18,35 +18,35 @@
  *
  * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
  */
-- (NSString *)applicationLogForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager;
+- (nonnull NSString *)applicationLogForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
 
 /**
  * Invoked before the user is asked to send a crash report, so you can do additional actions.
  *
  * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
  */
-- (void)bugsplatStartupManagerWillShowSubmitCrashReportAlert:(BugsplatStartupManager *)bugsplatStartupManager;
+- (void)bugsplatStartupManagerWillShowSubmitCrashReportAlert:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
 
 /**
  * Invoked after the user did choose _NOT_ to send a crash in the alert
  *
  * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
  */
-- (void)bugsplatStartupManagerWillCancelSendingCrashReport:(BugsplatStartupManager *)bugsplatStartupManager;
+- (void)bugsplatStartupManagerWillCancelSendingCrashReport:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
 
 /**
  * Invoked right before sending crash reports will start
  *
  * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
  */
-- (void)bugsplatStartupManagerWillSendCrashReport:(BugsplatStartupManager *)bugsplatStartupManager;
+- (void)bugsplatStartupManagerWillSendCrashReport:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
 
 /**
  * Invoked after sending crash reports succeeded
  *
  * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
  */
-- (void)bugsplatStartupManagerDidFinishSendingCrashReport:(BugsplatStartupManager *)bugsplatStartupManager;
+- (void)bugsplatStartupManagerDidFinishSendingCrashReport:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
 
 /**
  * Invoked after sending crash reports failed
@@ -54,7 +54,7 @@
  * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
  * @param error The error returned.
  */
-- (void)bugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager didFailWithError:(NSError *)error;
+- (void)bugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager didFailWithError:(nullable NSError *)error;
 
 /** Return a BugsplatAttachment object providing an NSData object the crash report
  being processed should contain
@@ -72,6 +72,6 @@
  
  @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
 */
-- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager;
+- (nonnull BugsplatAttachment *)attachmentForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
 
 @end
