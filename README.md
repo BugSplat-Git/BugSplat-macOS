@@ -151,13 +151,13 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 	
 ## 4. Sample Application
 
-We have provided BugsplatTester as a sample application for you to test BugSplat. The quickest way to test BugSplat is to do the following:
+We have provided BugsplatTester as a sample application for you to test BugSplat. There are 2 targets - an ObjC version and a Swift version. The quickest way to test BugSplat is to do the following:
 
 1. Clone the BugsplatMac repo and run the following: 
 	- `git submodule init`
 	- `git submodule update`
 
-1. Open the BugsplatTester.xcworkspace file. Edit the current scheme and uncheck "Debug executable" in the Run section, close the scheme editor and run the application.
+1. Open the BugsplatTester.xcworkspace file. Select the scheme based on which target you want to run.  Edit the scheme and uncheck "Debug executable" in the Run section, close the scheme editor and run the application.
 
 2. Click the "crash" button when prompted.
 
