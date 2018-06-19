@@ -119,8 +119,16 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 #### Attachments
 1. Bugsplat supports uploading attachments with crash reports. There's a delegate method provided by `BugsplatStartupManagerDelegate` that can be implemented to provide an attachment to be uploaded.
 
-	```objc
-	- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager {
+	```objc	
+	- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+	{
+		//set delegate
+		[BugsplatStartupManager sharedManager].delegate = self
+   		[[BugsplatStartupManager sharedManager] start];
+	}
+
+	- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager 
+	{
 	    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"example" withExtension:@"json"];
 	    NSData *data = [NSData dataWithContentsOfURL:fileURL];
 	    
@@ -129,6 +137,7 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 	                                                                      contentType:@"application/json"];
 	    return attachment;
 	}
+	
 	```	
 
 #### Command line utility support
