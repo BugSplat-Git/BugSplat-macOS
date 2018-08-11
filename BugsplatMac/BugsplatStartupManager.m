@@ -113,6 +113,16 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     return nil;
 }
 
+- (NSString *)applicationKeyForCrashManager:(BITCrashManager *)crashManager exceptionReason:(NSString *)exceptionReason
+{
+    if ([_delegate respondsToSelector:@selector(applicationKeyForBugsplatStartupManager:exceptionReason:)])
+    {
+        return [_delegate applicationKeyForBugsplatStartupManager:self exceptionReason:exceptionReason];
+    }
+    
+    return nil;
+}
+
 - (BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager;
 {
     if ([_delegate respondsToSelector:@selector(attachmentForBugsplatStartupManager:)])
@@ -166,6 +176,26 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     {
         [_delegate bugsplatStartupManagerDidFinishSendingCrashReport:self];
     }
+}
+
+- (NSString *)userNameForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager
+{
+    if ([_delegate respondsToSelector:@selector(userNameForBugsplatStartupManager:)])
+    {
+        return [_delegate userNameForBugsplatStartupManager:self];
+    }
+    
+    return nil;
+}
+
+- (NSString *)userEmailForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager
+{
+    if ([_delegate respondsToSelector:@selector(userEmailForBugsplatStartupManager:)])
+    {
+        return [_delegate userEmailForBugsplatStartupManager:self];
+    }
+    
+    return nil;
 }
 
 @end

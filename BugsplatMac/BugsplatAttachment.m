@@ -7,7 +7,6 @@
 //
 
 #import "BugsplatAttachment.h"
-#import <HockeySDK/HockeySDK.h>
 
 @interface BugsplatAttachment ()
 

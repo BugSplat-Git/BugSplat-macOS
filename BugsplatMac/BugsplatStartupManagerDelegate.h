@@ -20,6 +20,24 @@
  */
 - (nonnull NSString *)applicationLogForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
 
+/** Return any string based data the crash report being processed should contain
+ *
+ * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
+ */
+- (nonnull NSString *)applicationKeyForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager exceptionReason:(NSString *)exceptionReason;
+
+/** Return a default user name to be displayed in the crash reporter UI
+ *
+ * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
+ */
+- (nonnull NSString *)userNameForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
+
+/** Return a default user email to be displayed in the crash reporter UI
+ *
+ * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
+ */
+- (nonnull NSString *)userEmailForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager;
+
 /**
  * Invoked before the user is asked to send a crash report, so you can do additional actions.
  *

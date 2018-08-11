@@ -77,4 +77,19 @@
     return attachment;
 }
 
+- (nonnull NSString *)applicationKeyForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager exceptionReason:(NSString *)exceptionReason
+{
+    return [NSString stringWithFormat:@"Application key: %@", exceptionReason];
+}
+
+- (nonnull NSString *)userNameForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager
+{
+    return @"Default User Name";
+}
+
+- (nonnull NSString *)userEmailForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager
+{
+    return @"Default Email";
+}
+
 @end
