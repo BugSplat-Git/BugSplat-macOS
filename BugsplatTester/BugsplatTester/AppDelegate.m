@@ -77,17 +77,17 @@
     return attachment;
 }
 
-- (NSString *)applicationKeyForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager exceptionReason:(NSString *)exceptionReason
+- (NSString *)applicationKeyForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager exceptionReason:(NSString *)exceptionReason
 {
     return [NSString stringWithFormat:@"Application key: %@", exceptionReason];
 }
 
-- (NSString *)defaultUserNameForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager
+- (NSString *)defaultUserNameForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager
 {
     return @"Default User Name";
 }
 
-- (NSString *)defaultUserEmailForBugsplatStartupManager:(nonnull BugsplatStartupManager *)bugsplatStartupManager
+- (NSString *)defaultUserEmailForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager
 {
     return @"Default Email";
 }
