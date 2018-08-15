@@ -113,11 +113,11 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     return nil;
 }
 
-- (NSString *)applicationKeyForCrashManager:(BITCrashManager *)crashManager exceptionReason:(NSString *)exceptionReason
+- (NSString *)applicationKeyForCrashManager:(BITCrashManager *)crashManager signal:(NSString *)signal exceptionName:(NSString *)exceptionName exceptionReason:(NSString *)exceptionReason
 {
-    if ([_delegate respondsToSelector:@selector(applicationKeyForBugsplatStartupManager:exceptionReason:)])
+    if ([_delegate respondsToSelector:@selector(applicationKeyForBugsplatStartupManager:signal:exceptionName:exceptionReason:)])
     {
-        return [_delegate applicationKeyForBugsplatStartupManager:self exceptionReason:exceptionReason];
+        return [_delegate applicationKeyForBugsplatStartupManager:self signal:signal exceptionName:exceptionName exceptionReason:exceptionReason];
     }
     
     return nil;
@@ -180,9 +180,9 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 
 - (NSString *)userNameForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager
 {
-    if ([_delegate respondsToSelector:@selector(userNameForBugsplatStartupManager:)])
+    if ([_delegate respondsToSelector:@selector(defaultUserNameForBugsplatStartupManager:)])
     {
-        return [_delegate userNameForBugsplatStartupManager:self];
+        return [_delegate defaultUserNameForBugsplatStartupManager:self];
     }
     
     return nil;
@@ -190,9 +190,9 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 
 - (NSString *)userEmailForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager
 {
-    if ([_delegate respondsToSelector:@selector(userEmailForBugsplatStartupManager:)])
+    if ([_delegate respondsToSelector:@selector(defaultUserEmailForBugsplatStartupManager:)])
     {
-        return [_delegate userEmailForBugsplatStartupManager:self];
+        return [_delegate defaultUserEmailForBugsplatStartupManager:self];
     }
     
     return nil;
