@@ -62,7 +62,7 @@ echo "Signing into bugsplat and storing session cookie for use in upload" >> $LO
 
 COOKIEPATH="/tmp/bugsplat-cookie.txt"
 rm "${COOKIEPATH}"
-curl -b "${COOKIEPATH}" -c "${COOKIEPATH}" --data "currusername=${BUGSPLAT_USER}&currpasswd=${BUGSPLAT_PASS}" "${BUGSPLAT_SERVER_URL}/browse/login.php"
+curl -b "${COOKIEPATH}" -c "${COOKIEPATH}" --data-urlencode "currusername=${BUGSPLAT_USER}" --data-urlencode "currpasswd=${BUGSPLAT_PASS}" "${BUGSPLAT_SERVER_URL}/browse/login.php"
 
 echo "Uploading /tmp/${PRODUCT_NAME}.xcarchive.zip to ${UPLOAD_URL}" >> $LOG 2>&1
 
