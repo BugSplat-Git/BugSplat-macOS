@@ -21,9 +21,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [BugsplatStartupManager sharedManager].delegate = self;
-    [BugsplatStartupManager sharedManager].autoSubmitCrashReport = YES;
-    [BugsplatStartupManager sharedManager].userName = @"Geoff Raeder";
-    [BugsplatStartupManager sharedManager].userEmail = @"geoff@bugsplat.com";
     [[BugsplatStartupManager sharedManager] start];
 }
 
