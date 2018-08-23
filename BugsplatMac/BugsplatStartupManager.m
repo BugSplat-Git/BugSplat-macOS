@@ -91,6 +91,18 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     [[BITHockeyManager sharedHockeyManager].crashManager setAutoSubmitCrashReport:self.autoSubmitCrashReport];
 }
 
+- (void)setUserName:(NSString *)userName
+{
+    _userName = userName;
+    [[BITHockeyManager sharedHockeyManager].crashManager setUserName:_userName];
+}
+
+- (void)setUserEmail:(NSString *)userEmail
+{
+    _userEmail = userEmail;
+    [[BITHockeyManager sharedHockeyManager].crashManager setUserEmail:_userEmail];
+}
+
 - (void)setDelegate:(id<BugsplatStartupManagerDelegate>)delegate
 {
     if (_delegate != delegate)
@@ -176,26 +188,6 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     {
         [_delegate bugsplatStartupManagerDidFinishSendingCrashReport:self];
     }
-}
-
-- (NSString *)userNameForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager
-{
-    if ([_delegate respondsToSelector:@selector(defaultUserNameForBugsplatStartupManager:)])
-    {
-        return [_delegate defaultUserNameForBugsplatStartupManager:self];
-    }
-    
-    return nil;
-}
-
-- (NSString *)userEmailForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager
-{
-    if ([_delegate respondsToSelector:@selector(defaultUserEmailForBugsplatStartupManager:)])
-    {
-        return [_delegate defaultUserEmailForBugsplatStartupManager:self];
-    }
-    
-    return nil;
 }
 
 @end

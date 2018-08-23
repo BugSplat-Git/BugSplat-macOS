@@ -53,6 +53,16 @@
 @property (nonatomic, assign) BOOL askUserDetails;
 
 /**
+ *  Represents user's full name
+ */
+@property (nonatomic, copy) NSString *userName;
+
+/**
+ *  Represents user's email address
+ */
+@property (nonatomic, copy) NSString *userEmail;
+
+/**
  * Set the delegate
  *
  * Defines the class that implements the optional protocol `BugsplatStartupManagerDelegate`.

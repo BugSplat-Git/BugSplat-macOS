@@ -31,18 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSString *)applicationKeyForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager signal:(NSString *)signal exceptionName:(NSString *)exceptionName exceptionReason:(NSString *)exceptionReason;
 
-/** Return a default user name to be displayed in the crash reporter UI
- *
- * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
- */
-- (NSString *)defaultUserNameForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager;
-
-/** Return a default user email to be displayed in the crash reporter UI
- *
- * @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
- */
-- (NSString *)defaultUserEmailForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager;
-
 /**
  * Invoked before the user is asked to send a crash report, so you can do additional actions.
  *

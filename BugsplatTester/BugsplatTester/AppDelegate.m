@@ -21,6 +21,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [BugsplatStartupManager sharedManager].delegate = self;
+    [BugsplatStartupManager sharedManager].autoSubmitCrashReport = YES;
+    [BugsplatStartupManager sharedManager].userName = @"Geoff Raeder";
+    [BugsplatStartupManager sharedManager].userEmail = @"geoff@bugsplat.com";
     [[BugsplatStartupManager sharedManager] start];
 }
 
@@ -80,16 +83,6 @@
 - (NSString *)applicationKeyForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager exceptionReason:(NSString *)exceptionReason
 {
     return [NSString stringWithFormat:@"Application key: %@", exceptionReason];
-}
-
-- (NSString *)defaultUserNameForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager
-{
-    return @"Default User Name";
-}
-
-- (NSString *)defaultUserEmailForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager
-{
-    return @"Default Email";
 }
 
 @end
