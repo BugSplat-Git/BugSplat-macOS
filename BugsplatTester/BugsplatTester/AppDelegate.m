@@ -77,9 +77,9 @@
     return attachment;
 }
 
-- (NSString *)applicationKeyForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager exceptionReason:(NSString *)exceptionReason
+- (NSString *)applicationKeyForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager signal:(NSString *)signal exceptionName:(NSString *)exceptionName exceptionReason:(NSString *)exceptionReason;
 {
-    return [NSString stringWithFormat:@"Application key: %@", exceptionReason];
+    return [NSString stringWithFormat:@"Application key: %@, %@, %@", signal, exceptionName, exceptionReason];
 }
 
 @end
