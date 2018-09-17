@@ -135,16 +135,40 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     return nil;
 }
 
-- (BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager;
+- (NSArray<BITHockeyAttachment *> *)attachmentsForCrashManager:(BITCrashManager *)crashManager;
 {
-    if ([_delegate respondsToSelector:@selector(attachmentForBugsplatStartupManager:)])
+    if ([_delegate respondsToSelector:@selector(attachmentsForBugsplatStartupManager:)])
     {
-        BugsplatAttachment *bugsplatAttachment = [_delegate attachmentForBugsplatStartupManager:self];
-        BITHockeyAttachment *hockeyAttachment = [[BITHockeyAttachment alloc] initWithFilename:bugsplatAttachment.filename
-                                                                         hockeyAttachmentData:bugsplatAttachment.attachmentData
-                                                                                  contentType:bugsplatAttachment.contentType];
+        NSMutableArray *attachments = [[NSMutableArray alloc] init];
         
-        return hockeyAttachment;
+        NSArray *bugsplatAttachments = [_delegate attachmentsForBugsplatStartupManager:self];
+        
+        for (BugsplatAttachment *attachment in bugsplatAttachments)
+        {
+            BITHockeyAttachment *hockeyAttachment = [[BITHockeyAttachment alloc] initWithFilename:attachment.filename
+                                                                             hockeyAttachmentData:attachment.attachmentData
+                                                                                      contentType:attachment.contentType];
+            
+            [attachments addObject:hockeyAttachment];
+        }       
+        
+        return [attachments copy];
+    }
+    else if ([_delegate respondsToSelector:@selector(attachmentForBugsplatStartupManager:)])
+    {
+        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        
+        BugsplatAttachment *attachment = [_delegate attachmentForBugsplatStartupManager:self];
+        
+#pragma clang diagnostic pop
+        
+        BITHockeyAttachment *hockeyAttachment = [[BITHockeyAttachment alloc] initWithFilename:attachment.filename
+                                                                         hockeyAttachmentData:attachment.attachmentData
+                                                                                  contentType:attachment.contentType];
+        
+        return @[hockeyAttachment];
     }
     
     return nil;

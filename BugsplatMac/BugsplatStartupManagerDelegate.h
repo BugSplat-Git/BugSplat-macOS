@@ -69,21 +69,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Return a BugsplatAttachment object providing an NSData object the crash report
  being processed should contain
+
+ @deprecated Use attachmentsForBugsplatStartupManager: instead
+ @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
+ */
+- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager DEPRECATED_MSG_ATTRIBUTE("Use attachmentsForBugsplatStartupManager: instead");
+
+/** Return a collection of BugsplatAttachment objects providing an NSData object the crash report
+ being processed should contain
   
  Example implementation:
  
- - (BugsplatAttachment *)attachmentForCrashManager:(BugsplatStartupManager *)bugsplatStartupManager {
-    NSData *data = [NSData dataWithContentsOfURL:@"mydatafile"];
+ NSData *data = [NSData dataWithContentsOfURL:@"mydatafile"];
  
-    BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"myfile.data"
-                                                                   attachmentData:data
-                                                                      contentType:@"application/octet-stream"];
-    return attachment;
- }
+ BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"myfile.data"
+                                                                attachmentData:data
+                                                                   contentType:@"application/octet-stream"];
  
  @param bugsplatStartupManager The `BugsplatStartupManager` instance invoking this delegate
 */
-- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager;
+- (NSArray<BugsplatAttachment *> *)attachmentsForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager;
 
 @end
 

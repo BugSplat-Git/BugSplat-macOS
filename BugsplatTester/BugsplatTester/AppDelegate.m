@@ -67,14 +67,24 @@
     NSLog(@"%@, %@", NSStringFromSelector(_cmd), error);
 }
 
-- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager {
+- (NSArray<BugsplatAttachment *> *)attachmentsForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager
+{
     NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"generated" withExtension:@"json"];
     NSData *data = [NSData dataWithContentsOfURL:fileURL];
     
-    BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"generated.json"
-                                                                   attachmentData:data
-                                                                      contentType:@"application/json"];
-    return attachment;
+    NSMutableArray *attachments = [[NSMutableArray alloc] init];
+    
+    for (NSUInteger i = 0; i < 4; i++)
+    {
+        BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:[NSString stringWithFormat:@"generated%@.json", @(i)]
+                                                                       attachmentData:data
+                                                                          contentType:@"application/json"];
+        
+        [attachments addObject:attachment];
+    }
+    
+    
+    return attachments;
 }
 
 - (NSString *)applicationKeyForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager signal:(NSString *)signal exceptionName:(NSString *)exceptionName exceptionReason:(NSString *)exceptionReason;
