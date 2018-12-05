@@ -117,7 +117,7 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 	- Set `askUserDetails` to `NO` in order to prevent the name and email fields from displaying in the crash reporter UI 
 
 #### Attachments
-1. Bugsplat supports uploading attachments with crash reports. There's a delegate method provided by `BugsplatStartupManagerDelegate` that can be implemented to provide an attachment to be uploaded.
+1. Bugsplat supports uploading attachments with crash reports. There's a delegate method provided by `BugsplatStartupManagerDelegate` that can be implemented to provide attachments to be uploaded.
 
 	```objc	
 	- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -127,15 +127,24 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
    		[[BugsplatStartupManager sharedManager] start];
 	}
 
-	- (BugsplatAttachment *)attachmentForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager 
+	- (NSArray<BugsplatAttachment *> *)attachmentsForBugsplatStartupManager:(BugsplatStartupManager *)bugsplatStartupManager
 	{
-	    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"example" withExtension:@"json"];
+	    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"generated" withExtension:@"json"];
 	    NSData *data = [NSData dataWithContentsOfURL:fileURL];
 	    
-	    BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:@"example.json"
-	                                                                   attachmentData:data
-	                                                                      contentType:@"application/json"];
-	    return attachment;
+	    NSMutableArray *attachments = [[NSMutableArray alloc] init];
+	    
+	    for (NSUInteger i = 0; i < 4; i++)
+	    {
+	        BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:[NSString stringWithFormat:@"generated%@.json", @(i)]
+	                                                                       attachmentData:data
+	                                                                          contentType:@"application/json"];
+	        
+	        [attachments addObject:attachment];
+	    }
+	    
+	    
+	    return attachments;
 	}
 	
 	```	
