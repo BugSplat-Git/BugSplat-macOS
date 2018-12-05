@@ -40,7 +40,19 @@ INFO_PLIST="/tmp/${PRODUCT_NAME}-Info.plist"
 rm ${INFO_PLIST}
 otool -X -s __TEXT __info_plist ${PRODUCT_NAME} | sed 's/Contents.*//' | xxd -r >> $INFO_PLIST 2>&1
 
-APP_VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${INFO_PLIST}")
+APP_MARKETING_VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${INFO_PLIST}")
+APP_BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "${INFO_PLIST}")
+
+echo "App marketing version: ${APP_MARKETING_VERSION}" >> $LOG 2>&1
+echo "App bundle version: ${APP_BUNDLE_VERSION}" >> $LOG 2>&1
+
+APP_VERSION="${APP_MARKETING_VERSION}"
+
+if [ -n "${APP_BUNDLE_VERSION}" ]
+then
+    APP_VERSION="${APP_VERSION} (${APP_BUNDLE_VERSION})"
+fi
+
 BUGSPLAT_SERVER_URL=$(/usr/libexec/PlistBuddy -c "Print BugsplatServerURL" "${INFO_PLIST}")
 BUGSPLAT_SERVER_URL=${BUGSPLAT_SERVER_URL%/}
 
