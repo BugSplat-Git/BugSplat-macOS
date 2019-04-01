@@ -38,6 +38,7 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 	{
 		_autoSubmitCrashReport = NO;
 		_askUserDetails = YES;
+        _expirationTimeInterval = -1;
         
         [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:kHockeyIdentifierPlaceholder];
         
@@ -83,6 +84,18 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 {
     _askUserDetails = askUserDetails;
     [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:self.askUserDetails];
+}
+
+- (void)setPersistUserDetails:(BOOL)persistUserDetails
+{
+    _persistUserDetails = persistUserDetails;
+    [[BITHockeyManager sharedHockeyManager].crashManager setPersistUserInfo:self.persistUserDetails];
+}
+
+- (void)setExpirationTimeInterval:(NSTimeInterval)expirationTimeInterval
+{
+    _expirationTimeInterval = expirationTimeInterval;
+    [[BITHockeyManager sharedHockeyManager].crashManager setExpirationTimeInterval:self.expirationTimeInterval];
 }
 
 - (void)setAutoSubmitCrashReport:(BOOL)autoSubmitCrashReport

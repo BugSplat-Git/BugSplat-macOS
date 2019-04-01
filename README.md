@@ -114,7 +114,53 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 		2. Provide an image named `bugsplat-logo` in the main app bundle or asset calalog
 
 2. User details
-	- Set `askUserDetails` to `NO` in order to prevent the name and email fields from displaying in the crash reporter UI 
+	- Set `askUserDetails` to `NO` in order to prevent the name and email fields from displaying in the crash reporter UI. Defaults to `YES`.
+
+	```objc
+	- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+	{
+		[BugsplatStartupManager sharedManager].delegate = self
+		[BugsplatStartupManager sharedManager].askUserDetails = NO;
+   		[[BugsplatStartupManager sharedManager] start];
+	}
+	```
+	
+
+3. Auto submit
+	- Set `autoSubmitCrashReport` to `YES` in order to send crash reports to the server automatically without presenting the crash reporter dialogue. Defaults to `NO`.
+	
+	```objc
+	- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+	{
+		[BugsplatStartupManager sharedManager].delegate = self
+		[BugsplatStartupManager sharedManager].autoSubmitCrashReport = YES;
+   		[[BugsplatStartupManager sharedManager] start];
+	}
+	```
+
+4. Persist user details
+	- Set `persistUserDetails` to `YES` to save and restore the user's name and email when presenting the crash reporter dialogue. Defaults to `NO`.
+
+	```objc
+	- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+	{
+		[BugsplatStartupManager sharedManager].delegate = self
+		[BugsplatStartupManager sharedManager].persistUserDetails = YES;
+   		[[BugsplatStartupManager sharedManager] start];
+	}
+	```
+
+5. Expiration time
+	- Set `expirationTimeInterval` to a desired value (in seconds) whereby if the difference in time between when the crash occurred and next launch is greater than the set expiration time, auto send the report without presenting the crash reporter dialogue. Defaults to `-1`, which represents no expiration.
+
+	```objc
+	- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+	{
+		[BugsplatStartupManager sharedManager].delegate = self
+		[BugsplatStartupManager sharedManager].expirationTimeInterval = 2200;
+   		[[BugsplatStartupManager sharedManager] start];
+	}
+	```
 
 #### Attachments
 1. Bugsplat supports uploading attachments with crash reports. There's a delegate method provided by `BugsplatStartupManagerDelegate` that can be implemented to provide attachments to be uploaded.

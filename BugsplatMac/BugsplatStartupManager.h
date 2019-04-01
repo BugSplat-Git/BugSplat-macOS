@@ -46,11 +46,26 @@
 @property (nonatomic, assign, getter=isAutoSubmitCrashReport) BOOL autoSubmitCrashReport;
 
 /**
- *  Defines if the build in crash report UI should ask for name and email
+ *  Defines if the crash report UI should ask for name and email
  *
  *  Default: _YES_
  */
 @property (nonatomic, assign) BOOL askUserDetails;
+
+/**
+ *  Defines if user's name and email entered in the crash report UI should be saved to the keychain.
+ *
+ *  Default: _NO_
+ */
+@property (nonatomic, assign) BOOL persistUserDetails;
+
+/**
+ *  Defines if crash reports should be considered "expired" after a certain amount of time (in seconds).
+ *  If expired crash dialogue is not displayed but reports are still uploaded.
+ *
+ *  Default: -1 // No expiration
+ */
+@property (nonatomic, assign) NSTimeInterval expirationTimeInterval;
 
 /**
  *  Represents user's full name
