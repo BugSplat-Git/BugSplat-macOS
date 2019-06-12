@@ -125,7 +125,6 @@ typedef NS_ENUM(NSInteger, BITFeedbackUserDataElement) {
  */
 @property (nonatomic, readwrite) BOOL showAlertOnIncomingMessages;
 
-
 ///-----------------------------------------------------------------------------
 /// @name User Interface
 ///-----------------------------------------------------------------------------

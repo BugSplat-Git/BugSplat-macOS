@@ -30,26 +30,22 @@
  */
 -(NSString *)applicationLogForCrashManager:(BITCrashManager *)crashManager;
 
-/** Return a BITHockeyAttachment object providing an NSData object the crash report
+/** Return any string based data the crash report being processed should contain
+ *
+ * @param crashManager The `BITCrashManager` instance invoking this delegate
+ * @param signal The signal that caused the crash
+ * @param exceptionName The exception name that caused the crash, if the crash was caused by an uncaught exception.
+ * @param exceptionReason The exception reason that caused the crash, if the crash was caused by an uncaught exception.
+ */
+-(NSString *)applicationKeyForCrashManager:(BITCrashManager *)crashManager signal:(NSString *)signal exceptionName:(NSString *)exceptionName exceptionReason:(NSString *)exceptionReason;
+
+/** Return a collection of BITHockeyAttachment objects providing an NSData object the crash report
  being processed should contain
- 
- Please limit your attachments to reasonable files to avoid high traffic costs for your users.
- 
- Example implementation:
- 
-     - (BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager {
-       NSData *data = [NSData dataWithContentsOfURL:@"mydatafile"];
- 
-       BITHockeyAttachment *attachment = [[BITHockeyAttachment alloc] initWithFilename:@"myfile.data"
-                                                                  hockeyAttachmentData:data
-                                                                          contentType:@"'application/octet-stream"];
-       return attachment;
-     }
  
  @param crashManager The `BITCrashManager` instance invoking this delegate
  @see applicationLogForCrashManager:
  */
--(BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager;
+-(NSArray<BITHockeyAttachment*> *)attachmentsForCrashManager:(BITCrashManager *)crashManager;
 
 ///-----------------------------------------------------------------------------
 /// @name Alert
