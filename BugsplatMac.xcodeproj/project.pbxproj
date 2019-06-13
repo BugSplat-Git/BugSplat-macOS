@@ -120,6 +120,7 @@
 				A9FCA9081C68CF530012D025 /* Frameworks */,
 				A9FCA9091C68CF530012D025 /* Headers */,
 				A9FCA90A1C68CF530012D025 /* Resources */,
+				A91B42E922B171FC0074C2BA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -173,6 +174,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A91B42E922B171FC0074C2BA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This should successfully copy over frameworks when building the xcworkspace\nHOCKEY_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}/HockeySDK.framework\nBUGSPLAT_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks/\n\nif [ -d \"$HOCKEY_BUILD_DIR\" ]; then\n  rm -rf ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks\n  mkdir -p ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks\n  echo \"Copying Hockey framework from ${HOCKEY_BUILD_DIR} to ${BUGSPLAT_BUILD_DIR}\"\n  cp -LR ${HOCKEY_BUILD_DIR} ${BUGSPLAT_BUILD_DIR}\n  cp -LR ${HOCKEY_BUILD_DIR} ${PROJECT_DIR}/Frameworks/\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9FCA9071C68CF530012D025 /* Sources */ = {
@@ -313,7 +334,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -336,7 +357,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};

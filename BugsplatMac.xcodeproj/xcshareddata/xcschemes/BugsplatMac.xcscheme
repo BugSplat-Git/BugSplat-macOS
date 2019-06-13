@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A9FCA90B1C68CF530012D025"
+            BuildableName = "BugsplatMac.framework"
+            BlueprintName = "BugsplatMac"
+            ReferencedContainer = "container:BugsplatMac.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
