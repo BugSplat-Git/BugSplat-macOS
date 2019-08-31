@@ -70,12 +70,12 @@
 /**
  *  Represents user's full name
  */
-@property (nonatomic, copy) NSString *userName;
+@property (nonatomic, copy, nullable) NSString *userName;
 
 /**
  *  Represents user's email address
  */
-@property (nonatomic, copy) NSString *userEmail;
+@property (nonatomic, copy, nullable) NSString *userEmail;
 
 /**
  * Set the delegate
