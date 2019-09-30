@@ -194,6 +194,20 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 	}
 	
 	```	
+	
+#### Localization
+The Bugsplat crash dialogue can be localized and supports 8 languages out of the box.
+
+1. English
+2. Finnish
+3. French
+4. German
+5. Italian
+6. Japanese
+7. Norwegian
+8. Swedish
+
+Additional languages may be supported by adding the language bundle and strings file to `BugsplatMac.framework/Versions/A/Frameworks/HockeySDK.framework/Versions/A/Resources/`
 
 #### Command line utility support
 1. Add "Other Linker Flags" build setting to embed Info.plist
