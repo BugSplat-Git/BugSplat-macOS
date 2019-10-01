@@ -191,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This should successfully copy over frameworks when building the xcworkspace\nHOCKEY_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}/HockeySDK.framework\nBUGSPLAT_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks/\n\nif [ -d \"$HOCKEY_BUILD_DIR\" ]; then\n  rm -rf ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks\n  mkdir -p ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks\n  echo \"Copying Hockey framework from ${HOCKEY_BUILD_DIR} to ${BUGSPLAT_BUILD_DIR}\"\n  cp -LR ${HOCKEY_BUILD_DIR} ${BUGSPLAT_BUILD_DIR}\n  cp -LR ${HOCKEY_BUILD_DIR} ${PROJECT_DIR}/Frameworks/\nfi\n";
+			shellScript = "# This should successfully copy over frameworks when building the xcworkspace\nHOCKEY_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}/HockeySDK.framework\nBUGSPLAT_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks/\n\nif [ -d \"$HOCKEY_BUILD_DIR\" ]; then\n  rm -rf ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks\n  mkdir -p ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework/Versions/A/Frameworks\n  echo \"Copying Hockey framework from ${HOCKEY_BUILD_DIR} to ${BUGSPLAT_BUILD_DIR}\"\n  \n  mkdir ${BUGSPLAT_BUILD_DIR}/HockeySDK.framework\n  cp -a ${HOCKEY_BUILD_DIR} ${BUGSPLAT_BUILD_DIR}\n  rm -rf ${PROJECT_DIR}/Frameworks/HockeySDK.framework\n  cp -a ${HOCKEY_BUILD_DIR} ${PROJECT_DIR}/Frameworks/\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

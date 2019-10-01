@@ -116,6 +116,12 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     [[BITHockeyManager sharedHockeyManager].crashManager setUserEmail:_userEmail];
 }
 
+- (void)setPresentModally:(BOOL)presentModally
+{
+    _presentModally = presentModally;
+    [[BITHockeyManager sharedHockeyManager].crashManager setPresentModally:_presentModally];
+}
+
 - (void)setDelegate:(id<BugsplatStartupManagerDelegate>)delegate
 {
     if (_delegate != delegate)

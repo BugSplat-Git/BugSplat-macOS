@@ -78,6 +78,13 @@
 @property (nonatomic, copy, nullable) NSString *userEmail;
 
 /**
+ * Option to present crash reporter dialogue modally
+ *
+ * *Default*:  NO
+ */
+@property (nonatomic, assign) BOOL presentModally;
+
+/**
  * Set the delegate
  *
  * Defines the class that implements the optional protocol `BugsplatStartupManagerDelegate`.

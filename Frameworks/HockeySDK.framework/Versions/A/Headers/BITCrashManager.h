@@ -269,6 +269,13 @@ typedef NS_ENUM(NSUInteger, BITCrashManagerUserInput) {
  */
 @property (nonatomic, readonly) NSTimeInterval timeintervalCrashInLastSessionOccured;
 
+/**
+ * Option to present crash reporter dialogue modally
+ *
+ * *Default*:  NO
+ */
+@property (nonatomic, assign) BOOL presentModally;
+
 
 ///-----------------------------------------------------------------------------
 /// @name Helper
