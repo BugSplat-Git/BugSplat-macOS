@@ -77,49 +77,49 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 - (void)setBannerImage:(NSImage *)bannerImage
 {
     _bannerImage = bannerImage;
-    [[BITHockeyManager sharedHockeyManager].crashManager setBannerImage:self.bannerImage];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setBannerImage:self.bannerImage];
 }
 
 - (void)setAskUserDetails:(BOOL)askUserDetails
 {
     _askUserDetails = askUserDetails;
-    [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:self.askUserDetails];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setAskUserDetails:self.askUserDetails];
 }
 
 - (void)setPersistUserDetails:(BOOL)persistUserDetails
 {
     _persistUserDetails = persistUserDetails;
-    [[BITHockeyManager sharedHockeyManager].crashManager setPersistUserInfo:self.persistUserDetails];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setPersistUserInfo:self.persistUserDetails];
 }
 
 - (void)setExpirationTimeInterval:(NSTimeInterval)expirationTimeInterval
 {
     _expirationTimeInterval = expirationTimeInterval;
-    [[BITHockeyManager sharedHockeyManager].crashManager setExpirationTimeInterval:self.expirationTimeInterval];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setExpirationTimeInterval:self.expirationTimeInterval];
 }
 
 - (void)setAutoSubmitCrashReport:(BOOL)autoSubmitCrashReport
 {
     _autoSubmitCrashReport = autoSubmitCrashReport;
-    [[BITHockeyManager sharedHockeyManager].crashManager setAutoSubmitCrashReport:self.autoSubmitCrashReport];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setAutoSubmitCrashReport:self.autoSubmitCrashReport];
 }
 
 - (void)setUserName:(NSString *)userName
 {
     _userName = userName;
-    [[BITHockeyManager sharedHockeyManager].crashManager setUserName:_userName];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setUserName:_userName];
 }
 
 - (void)setUserEmail:(NSString *)userEmail
 {
     _userEmail = userEmail;
-    [[BITHockeyManager sharedHockeyManager].crashManager setUserEmail:_userEmail];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setUserEmail:_userEmail];
 }
 
 - (void)setPresentModally:(BOOL)presentModally
 {
     _presentModally = presentModally;
-    [[BITHockeyManager sharedHockeyManager].crashManager setPresentModally:_presentModally];
+    [[[BITHockeyManager sharedHockeyManager] crashManager] setPresentModally:_presentModally];
 }
 
 - (void)setDelegate:(id<BugsplatStartupManagerDelegate>)delegate
@@ -129,7 +129,7 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
         _delegate = delegate;
     }
     
-    [BITHockeyManager sharedHockeyManager].delegate = self;
+    [[BITHockeyManager sharedHockeyManager] setDelegate:self];
 }
 
 #pragma mark - BITHockeyManagerDelegate

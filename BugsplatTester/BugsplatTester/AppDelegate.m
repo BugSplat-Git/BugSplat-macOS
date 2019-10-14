@@ -18,9 +18,20 @@
 
 @implementation AppDelegate
 
+- (instancetype)init
+{
+    self = [super init];
+    return self;
+}
+
+- (void)applicationWillFinishLaunching:(NSNotification *)aNotification
+{
+
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [BugsplatStartupManager sharedManager].delegate = self;
+    [[BugsplatStartupManager sharedManager] setDelegate:self];
     [[BugsplatStartupManager sharedManager] start];
 }
 
