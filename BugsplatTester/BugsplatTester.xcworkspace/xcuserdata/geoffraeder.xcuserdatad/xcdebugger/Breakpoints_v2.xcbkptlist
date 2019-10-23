@@ -3,23 +3,4 @@
    uuid = "BBC668B4-194F-475B-BCFB-2D963E2717D6"
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "861F72A8-7BC5-4E4B-9E19-A8C2E9A5043D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../HockeySDK-Mac/Classes/Helper/BITHockeyHelper.m"
-            timestampString = "574818960.205353"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "bit_stringValueFromKeychainForKey"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>
