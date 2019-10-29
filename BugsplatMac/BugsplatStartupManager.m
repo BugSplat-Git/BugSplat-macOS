@@ -6,7 +6,7 @@
 //  Copyright © 2016 Bugsplat. All rights reserved.
 //
 
-#import <HockeySDK/HockeySDK.h>
+#import "HockeySDK.h"
 #import "BugsplatStartupManager.h"
 #import "BugsplatStartupManagerDelegate.h"
 #import "BugsplatAttachment.h"
