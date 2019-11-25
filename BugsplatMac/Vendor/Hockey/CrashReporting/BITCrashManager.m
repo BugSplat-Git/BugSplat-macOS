@@ -1,6 +1,8 @@
 #import "HockeySDK.h"
 #import "HockeySDKPrivate.h"
 
+#import "BITSystemProfile.h"
+
 #import "BITCrashReportUI.h"
 
 #import "BITHockeyBaseManagerPrivate.h"
@@ -1080,10 +1082,6 @@ __attribute__((noreturn)) static void uncaught_cxx_exception_handler(const BITCr
   //  [postBody appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
   [postBody appendData:[BITHockeyAppClient dataWithPostValue:BITHOCKEY_NAME
                                                       forKey:@"sdk"
-                                                    boundary:boundary]];
-  
-  [postBody appendData:[BITHockeyAppClient dataWithPostValue:BITHOCKEY_VERSION
-                                                      forKey:@"sdk_version"
                                                     boundary:boundary]];
   
   [postBody appendData:[BITHockeyAppClient dataWithPostValue:@"no"

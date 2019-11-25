@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A91E85481E883EAE00C88210 /* BugsplatAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = A91E85461E883EAE00C88210 /* BugsplatAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A91E85491E883EAE00C88210 /* BugsplatAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E85471E883EAE00C88210 /* BugsplatAttachment.m */; };
+		A921E3892374F6B5009C6B7E /* BITSystemProfilePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A921E3862374F6B5009C6B7E /* BITSystemProfilePrivate.h */; };
+		A921E38A2374F6B5009C6B7E /* BITSystemProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = A921E3872374F6B5009C6B7E /* BITSystemProfile.m */; };
+		A921E38B2374F6B5009C6B7E /* BITSystemProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = A921E3882374F6B5009C6B7E /* BITSystemProfile.h */; };
 		A95B96B91E882BAA00314A10 /* BugsplatStartupManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */ = {isa = PBXBuildFile; fileRef = A961B08C1C89BDCC004D212F /* upload-archive.sh */; };
 		A969D8E22354972E00F0D3C8 /* BITHockeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8DF2354972E00F0D3C8 /* BITHockeyManager.m */; };
@@ -91,6 +94,9 @@
 /* Begin PBXFileReference section */
 		A91E85461E883EAE00C88210 /* BugsplatAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatAttachment.h; sourceTree = "<group>"; };
 		A91E85471E883EAE00C88210 /* BugsplatAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsplatAttachment.m; sourceTree = "<group>"; };
+		A921E3862374F6B5009C6B7E /* BITSystemProfilePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSystemProfilePrivate.h; sourceTree = "<group>"; };
+		A921E3872374F6B5009C6B7E /* BITSystemProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSystemProfile.m; sourceTree = "<group>"; };
+		A921E3882374F6B5009C6B7E /* BITSystemProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSystemProfile.h; sourceTree = "<group>"; };
 		A940B4711CA9738900D97621 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManagerDelegate.h; sourceTree = "<group>"; };
 		A961B08C1C89BDCC004D212F /* upload-archive.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "upload-archive.sh"; path = "../upload-archive.sh"; sourceTree = "<group>"; };
@@ -185,6 +191,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A921E3852374F6B5009C6B7E /* BetaDistribution */ = {
+			isa = PBXGroup;
+			children = (
+				A921E3862374F6B5009C6B7E /* BITSystemProfilePrivate.h */,
+				A921E3882374F6B5009C6B7E /* BITSystemProfile.h */,
+				A921E3872374F6B5009C6B7E /* BITSystemProfile.m */,
+			);
+			path = BetaDistribution;
+			sourceTree = "<group>";
+		};
 		A940B4701CA9738900D97621 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +221,7 @@
 		A969D8DE2354971000F0D3C8 /* Hockey */ = {
 			isa = PBXGroup;
 			children = (
+				A921E3852374F6B5009C6B7E /* BetaDistribution */,
 				A969D8E82354974200F0D3C8 /* CrashReporting */,
 				A969D8FE2354974200F0D3C8 /* Helper */,
 				A969D8E72354974200F0D3C8 /* HockeySDK.h */,
@@ -367,6 +384,7 @@
 				A969D95B2354976500F0D3C8 /* PLCrashFeatureConfig.h in Headers */,
 				A969D9192354974200F0D3C8 /* BITHockeyAttachment.h in Headers */,
 				A969D92B2354974200F0D3C8 /* BITCrashDetails.h in Headers */,
+				A921E3892374F6B5009C6B7E /* BITSystemProfilePrivate.h in Headers */,
 				A969D9202354974200F0D3C8 /* BITCrashCXXExceptionHandler.h in Headers */,
 				A969D96C2354976500F0D3C8 /* PLCrashReportTextFormatter.h in Headers */,
 				A969D92A2354974200F0D3C8 /* BITCrashManagerPrivate.h in Headers */,
@@ -379,6 +397,7 @@
 				A969D95F2354976500F0D3C8 /* PLCrashReport.h in Headers */,
 				A969D91B2354974200F0D3C8 /* BITCrashManager.h in Headers */,
 				A969D96E2354976500F0D3C8 /* PLCrashReportProcessInfo.h in Headers */,
+				A921E38B2374F6B5009C6B7E /* BITSystemProfile.h in Headers */,
 				A969D93E2354974200F0D3C8 /* BITSDKTextFieldCell.h in Headers */,
 				A969D9622354976500F0D3C8 /* PLCrashReportMachExceptionInfo.h in Headers */,
 				A969D9692354976500F0D3C8 /* PLCrashReportSignalInfo.h in Headers */,
@@ -455,11 +474,11 @@
 			};
 			buildConfigurationList = A9FCA9061C68CF530012D025 /* Build configuration list for PBXProject "BugsplatMac" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = A9FCA9021C68CF530012D025;
 			productRefGroup = A9FCA90D1C68CF530012D025 /* Products */;
@@ -492,6 +511,7 @@
 				A969D9232354974200F0D3C8 /* BITHockeyAttachment.m in Sources */,
 				A969D9252354974200F0D3C8 /* BITCrashManager.m in Sources */,
 				A969D9302354974200F0D3C8 /* BITSDKColoredView.m in Sources */,
+				A921E38A2374F6B5009C6B7E /* BITSystemProfile.m in Sources */,
 				A91E85491E883EAE00C88210 /* BugsplatAttachment.m in Sources */,
 				A969D9152354974200F0D3C8 /* HockeySDKPrivate.m in Sources */,
 				A969D9292354974200F0D3C8 /* BITCrashExceptionApplication.m in Sources */,
@@ -645,7 +665,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BugsplatMac/Vendor/CrashReporter",
+					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
@@ -672,7 +692,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BugsplatMac/Vendor/CrashReporter",
+					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
