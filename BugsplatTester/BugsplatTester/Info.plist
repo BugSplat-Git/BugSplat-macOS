@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BugsplatServerURL</key>
-	<string>https://fred.bugsplat.com/</string>
+	<string>https://geoffraeder_me_com.bugsplat.com/</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

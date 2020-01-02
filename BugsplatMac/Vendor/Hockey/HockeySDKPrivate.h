@@ -20,7 +20,7 @@
 
 #define BITHOCKEY_INTEGRATIONFLOW_TIMESTAMP @"BITIntegrationFlowStartTimestamp"
 
-#define BITHockeyBundle [NSBundle bundleWithIdentifier:BITHOCKEY_IDENTIFIER]
+#define BITHockeyBundle [NSBundle bundleForClass:[self class]]
 #define BITHOCKEYSDK_URL @"https://sdk.hockeyapp.net/"
 extern NSString *const kBITHockeySDKURL;
 

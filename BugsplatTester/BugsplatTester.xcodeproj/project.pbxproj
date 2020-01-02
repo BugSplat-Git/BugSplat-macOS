@@ -10,11 +10,10 @@
 		A977E76920BB29B200169D8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977E76820BB29B200169D8B /* AppDelegate.swift */; };
 		A977E76B20BB29B300169D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A977E76A20BB29B300169D8B /* Assets.xcassets */; };
 		A977E76E20BB29B300169D8B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A977E76C20BB29B300169D8B /* MainMenu.xib */; };
-		A977E77620BB2E7300169D8B /* BugsplatMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A977E77520BB2E7300169D8B /* BugsplatMac.framework */; };
+		A9B27F0C23BEA0C0002F7DBD /* BugsplatMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B27F0B23BEA0C0002F7DBD /* BugsplatMac.framework */; };
 		A9ED221B2020A00E00B7FDE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ED221A2020A00E00B7FDE4 /* AppDelegate.m */; };
 		A9ED22202020A00E00B7FDE4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9ED221E2020A00E00B7FDE4 /* MainMenu.xib */; };
 		A9ED22232020A00E00B7FDE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ED22222020A00E00B7FDE4 /* main.m */; };
-		A9ED222E2020A0C600B7FDE4 /* BugsplatMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9ED222D2020A0C600B7FDE4 /* BugsplatMac.framework */; };
 		A9ED22FF202F46C000B7FDE4 /* generated.json in Resources */ = {isa = PBXBuildFile; fileRef = A9ED22FE202F46C000B7FDE4 /* generated.json */; };
 /* End PBXBuildFile section */
 
@@ -25,14 +24,13 @@
 		A977E76D20BB29B300169D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A977E76F20BB29B300169D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A977E77020BB29B300169D8B /* BugsplatTesterSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BugsplatTesterSwift.entitlements; sourceTree = "<group>"; };
-		A977E77520BB2E7300169D8B /* BugsplatMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BugsplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B27F0B23BEA0C0002F7DBD /* BugsplatMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BugsplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ED22162020A00E00B7FDE4 /* BugsplatTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugsplatTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ED22192020A00E00B7FDE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9ED221A2020A00E00B7FDE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9ED221F2020A00E00B7FDE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A9ED22212020A00E00B7FDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9ED22222020A00E00B7FDE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A9ED222D2020A0C600B7FDE4 /* BugsplatMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BugsplatMac.framework; sourceTree = "<group>"; };
 		A9ED22FE202F46C000B7FDE4 /* generated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generated.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A977E77620BB2E7300169D8B /* BugsplatMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9ED222E2020A0C600B7FDE4 /* BugsplatMac.framework in Frameworks */,
+				A9B27F0C23BEA0C0002F7DBD /* BugsplatMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,13 +65,21 @@
 			path = BugsplatTesterSwift;
 			sourceTree = "<group>";
 		};
+		A9B27F0A23BEA0C0002F7DBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9B27F0B23BEA0C0002F7DBD /* BugsplatMac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9ED220D2020A00D00B7FDE4 = {
 			isa = PBXGroup;
 			children = (
 				A9ED22182020A00E00B7FDE4 /* BugsplatTester */,
 				A977E76720BB29B200169D8B /* BugsplatTesterSwift */,
-				A9ED222C2020A0C600B7FDE4 /* Frameworks */,
 				A9ED22172020A00E00B7FDE4 /* Products */,
+				A9B27F0A23BEA0C0002F7DBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,15 +103,6 @@
 				A9ED22FE202F46C000B7FDE4 /* generated.json */,
 			);
 			path = BugsplatTester;
-			sourceTree = "<group>";
-		};
-		A9ED222C2020A0C600B7FDE4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A977E77520BB2E7300169D8B /* BugsplatMac.framework */,
-				A9ED222D2020A0C600B7FDE4 /* BugsplatMac.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +229,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf ${BUILD_DIR}/${CONFIGURATION}/BugsplatTester.app/Contents/Frameworks &&\nmkdir -p ${BUILD_DIR}/${CONFIGURATION}/BugsplatTester.app/Contents/Frameworks\ncp -R ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework ${BUILD_DIR}/${CONFIGURATION}/BugsplatTester.app/Contents/Frameworks";
+			shellScript = "rm -rf ${BUILD_DIR}/${CONFIGURATION}/BugsplatTester.app/Contents/Frameworks &&\nmkdir -p ${BUILD_DIR}/${CONFIGURATION}/BugsplatTester.app/Contents/Frameworks\ncp -R ${BUILD_DIR}/${CONFIGURATION}/BugsplatMac.framework ${BUILD_DIR}/${CONFIGURATION}/BugsplatTester.app/Contents/Frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -288,6 +284,10 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = BugsplatTesterSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTesterSwift;
@@ -309,6 +309,10 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = BugsplatTesterSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTesterSwift;
@@ -428,10 +432,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BugsplatTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTester;
@@ -446,10 +447,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BugsplatTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTester;

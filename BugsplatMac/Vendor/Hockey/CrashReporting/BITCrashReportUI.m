@@ -167,9 +167,19 @@ static const CGFloat kDetailsHeight = 285;
                   animate: YES];
 }
 
+- (BITCrashMetaData *)crashMetaData {
+    BITCrashMetaData *crashMetaData = [[BITCrashMetaData alloc] init];
+    if (self.showUserDetails) {
+        crashMetaData.userName = [self.nameTextField stringValue];
+        crashMetaData.userEmail = [self.emailTextField stringValue];
+    }
+    crashMetaData.userDescription = [self.descriptionTextField stringValue];
+
+    return crashMetaData;
+}
 
 - (IBAction)cancelReport:(id) __unused sender {
-  [self.crashManager handleUserInput:BITCrashManagerUserInputDontSend withUserProvidedMetaData:nil];
+  [self.crashManager handleUserInput:BITCrashManagerUserInputDontSend withUserProvidedMetaData:[self crashMetaData]];
   
   [self endCrashReporter];
 }
@@ -182,14 +192,9 @@ static const CGFloat kDetailsHeight = 285;
   
   [[self window] makeFirstResponder: nil];
   
-  BITCrashMetaData *crashMetaData = [[BITCrashMetaData alloc] init];
-  if (self.showUserDetails) {
-    crashMetaData.userName = [self.nameTextField stringValue];
-    crashMetaData.userEmail = [self.emailTextField stringValue];
-  }
-  crashMetaData.userDescription = [self.descriptionTextField stringValue];
+
   
-  [self.crashManager handleUserInput:BITCrashManagerUserInputSend withUserProvidedMetaData:crashMetaData];
+  [self.crashManager handleUserInput:BITCrashManagerUserInputSend withUserProvidedMetaData:[self crashMetaData]];
   
   [self endCrashReporter];
 }

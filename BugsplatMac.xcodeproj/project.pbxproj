@@ -86,6 +86,9 @@
 		A969D96F2354976500F0D3C8 /* PLCrashReportSymbolInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9582354976400F0D3C8 /* PLCrashReportSymbolInfo.h */; };
 		A969D9702354976500F0D3C8 /* libCrashReporter-MacOSX-Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A969D9592354976400F0D3C8 /* libCrashReporter-MacOSX-Static.a */; };
 		A9A57AA41E58DCC500AE61D8 /* upload-archive-cl.sh in Resources */ = {isa = PBXBuildFile; fileRef = A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */; };
+		A9B27EF523BE9CD3002F7DBD /* buildnumber.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */; };
+		A9B27F0323BE9FF1002F7DBD /* HockeySDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9B27EF723BE9FF1002F7DBD /* HockeySDK.strings */; };
+		A9B27F0523BE9FF1002F7DBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B27EFF23BE9FF1002F7DBD /* Images.xcassets */; };
 		A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA90F1C68CF530012D025 /* BugsplatMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */; };
@@ -172,6 +175,16 @@
 		A969D9582354976400F0D3C8 /* PLCrashReportSymbolInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportSymbolInfo.h; sourceTree = "<group>"; };
 		A969D9592354976400F0D3C8 /* libCrashReporter-MacOSX-Static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCrashReporter-MacOSX-Static.a"; sourceTree = "<group>"; };
 		A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-archive-cl.sh"; sourceTree = SOURCE_ROOT; };
+		A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
+		A9B27EF823BE9FF1002F7DBD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/HockeySDK.strings; sourceTree = "<group>"; };
+		A9B27EF923BE9FF1002F7DBD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/HockeySDK.strings; sourceTree = "<group>"; };
+		A9B27EFA23BE9FF1002F7DBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HockeySDK.strings; sourceTree = "<group>"; };
+		A9B27EFB23BE9FF1002F7DBD /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/HockeySDK.strings; sourceTree = "<group>"; };
+		A9B27EFC23BE9FF1002F7DBD /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/HockeySDK.strings; sourceTree = "<group>"; };
+		A9B27EFE23BE9FF1002F7DBD /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/HockeySDK.strings; sourceTree = "<group>"; };
+		A9B27EFF23BE9FF1002F7DBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A9B27F0023BE9FF1002F7DBD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/HockeySDK.strings; sourceTree = "<group>"; };
+		A9B27F0123BE9FF1002F7DBD /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/HockeySDK.strings; sourceTree = "<group>"; };
 		A9CBBB511D11BA8100972398 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugsplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FCA90F1C68CF530012D025 /* BugsplatMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugsplatMac.h; sourceTree = "<group>"; };
@@ -205,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				A940B4711CA9738900D97621 /* Info.plist */,
+				A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 			children = (
 				A921E3852374F6B5009C6B7E /* BetaDistribution */,
 				A969D8E82354974200F0D3C8 /* CrashReporting */,
+				A9B27EF623BE9FF1002F7DBD /* Resources */,
 				A969D8FE2354974200F0D3C8 /* Helper */,
 				A969D8E72354974200F0D3C8 /* HockeySDK.h */,
 				A969D8E52354974200F0D3C8 /* HockeySDKPrivate.h */,
@@ -326,6 +341,15 @@
 				A969D9582354976400F0D3C8 /* PLCrashReportSymbolInfo.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		A9B27EF623BE9FF1002F7DBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A9B27EF723BE9FF1002F7DBD /* HockeySDK.strings */,
+				A9B27EFF23BE9FF1002F7DBD /* Images.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A9B572A52017FFEB002F9448 /* Frameworks */ = {
@@ -479,6 +503,13 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				ja,
+				nb,
+				it,
+				sv,
+				fr,
+				fi,
 			);
 			mainGroup = A9FCA9021C68CF530012D025;
 			productRefGroup = A9FCA90D1C68CF530012D025 /* Products */;
@@ -495,7 +526,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B27EF523BE9CD3002F7DBD /* buildnumber.xcconfig in Resources */,
 				A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */,
+				A9B27F0523BE9FF1002F7DBD /* Images.xcassets in Resources */,
+				A9B27F0323BE9FF1002F7DBD /* HockeySDK.strings in Resources */,
 				A969D9222354974200F0D3C8 /* BITCrashReportUI.xib in Resources */,
 				A9A57AA41E58DCC500AE61D8 /* upload-archive-cl.sh in Resources */,
 			);
@@ -534,9 +568,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		A9B27EF723BE9FF1002F7DBD /* HockeySDK.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9B27EF823BE9FF1002F7DBD /* de */,
+				A9B27EF923BE9FF1002F7DBD /* ja */,
+				A9B27EFA23BE9FF1002F7DBD /* en */,
+				A9B27EFB23BE9FF1002F7DBD /* nb */,
+				A9B27EFC23BE9FF1002F7DBD /* it */,
+				A9B27EFE23BE9FF1002F7DBD /* sv */,
+				A9B27F0023BE9FF1002F7DBD /* fr */,
+				A9B27F0123BE9FF1002F7DBD /* fi */,
+			);
+			name = HockeySDK.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		A9FCA9121C68CF530012D025 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -596,6 +649,7 @@
 		};
 		A9FCA9131C68CF530012D025 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -651,14 +705,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "${BUILD_NUMBER}";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Supporting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -667,7 +719,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
+				MARKETING_VERSION = "${VERSION_STRING}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = NO;
 			};
@@ -678,14 +731,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "${BUILD_NUMBER}";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Supporting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -694,7 +745,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplatsoftware.BugsplatMac;
+				MARKETING_VERSION = "${VERSION_STRING}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = NO;
 			};
