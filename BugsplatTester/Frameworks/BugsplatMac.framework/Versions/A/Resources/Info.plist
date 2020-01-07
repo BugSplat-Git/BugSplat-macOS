@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>BugsplatMac</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.bugsplatsoftware.BugsplatMac</string>
+	<string>com.bugsplat.BugsplatMac</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.14</string>
+	<string>1.0.16</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
