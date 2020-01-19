@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = 'BugsplatMac'
   s.version      = '1.0.16'
   s.license      = 'MIT'
-  s.homepage	 = 'http://bugsplatsoftware.com'
+  s.homepage	 = 'http://bugsplat.com'
   s.summary      = 'Bugsplat macOS framework'
   s.author       = 'Geoff Raeder'
   s.source 		 = { :http => "https://github.com/BugSplatGit/BugsplatMac/releases/download/#{s.version}/BugsplatMac.framework.zip" }
