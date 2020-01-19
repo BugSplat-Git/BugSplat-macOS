@@ -352,20 +352,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A9B572A52017FFEB002F9448 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		A9FCA9021C68CF530012D025 = {
 			isa = PBXGroup;
 			children = (
 				A9CBBB511D11BA8100972398 /* README.md */,
 				A9FCA90E1C68CF530012D025 /* BugsplatMac */,
 				A940B4701CA9738900D97621 /* Supporting */,
-				A9B572A52017FFEB002F9448 /* Frameworks */,
 				A9FCA90D1C68CF530012D025 /* Products */,
 			);
 			sourceTree = "<group>";
