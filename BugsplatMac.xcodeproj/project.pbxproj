@@ -711,7 +711,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
-				MARKETING_VERSION = "${VERSION_STRING}";
+				MARKETING_VERSION = 1.0.17;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = NO;
@@ -737,7 +737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
-				MARKETING_VERSION = "${VERSION_STRING}";
+				MARKETING_VERSION = 1.0.17;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
 				SKIP_INSTALL = NO;
