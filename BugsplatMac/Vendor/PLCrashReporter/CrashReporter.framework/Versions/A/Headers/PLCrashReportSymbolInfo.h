@@ -1,7 +1,7 @@
 /*
- * Author: Landon Fuller <landonf@plausiblelabs.com>
+ * Author: Landon Fuller <landonf@plausible.coop>
  *
- * Copyright (c) 2008-2009 Plausible Labs Cooperative, Inc.
+ * Copyright (c) 2012-2013 Plausible Labs Cooperative, Inc.
  * All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person
@@ -27,39 +27,35 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "PLCrashReportThreadInfo.h"
 
-
-@interface PLCrashReportExceptionInfo : NSObject {
+@interface PLCrashReportSymbolInfo : NSObject {
 @private
-    /** Name */
-    NSString *_name;
-
-    /** Reason */
-    NSString *_reason;
-
-    /** Ordered list of PLCrashReportStackFrame instances, or nil if unavailable. */
-    NSArray *_stackFrames;
+    /** The symbol name. */
+    __strong NSString *_symbolName;
+    
+    /** The symbol start address. */
+    uint64_t _startAddress;
+    
+    /** The symbol end address, if explicitly defined. Will be 0 if unknown. */
+    uint64_t _endAddress;
 }
 
-- (id) initWithExceptionName: (NSString *) name reason: (NSString *) reason;
+- (id) initWithSymbolName: (NSString *) symbolName
+             startAddress: (uint64_t) startAddress
+               endAddress: (uint64_t) endAddress;
 
-- (id) initWithExceptionName: (NSString *) name 
-                      reason: (NSString *) reason
-                 stackFrames: (NSArray *) stackFrames;
+/** The symbol name. */
+@property(nonatomic, readonly, strong) NSString *symbolName;
 
-/**
- * The exception name.
+/** The symbol start address. */
+@property(nonatomic, readonly) uint64_t startAddress;
+
+/* The symbol end address, if explicitly defined. This will only be included if the end address is
+ * explicitly defined (eg, by DWARF debugging information), will not be derived by best-guess
+ * heuristics.
+ *
+ * If unknown, the address will be 0.
  */
-@property(nonatomic, readonly) NSString *exceptionName;
-
-/**
- * The exception reason.
- */
-@property(nonatomic, readonly) NSString *exceptionReason;
-
-/* The exception's original call stack, as an array of PLCrashReportStackFrameInfo instances, or nil if unavailable.
- * This may be preserved across rethrow of an exception, and can be used to determine the original call stack. */
-@property(nonatomic, readonly) NSArray *stackFrames;
+@property(nonatomic, readonly) uint64_t endAddress;
 
 @end

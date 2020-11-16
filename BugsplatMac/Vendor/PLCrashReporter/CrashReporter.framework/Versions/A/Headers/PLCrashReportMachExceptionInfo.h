@@ -1,7 +1,7 @@
 /*
- * Author: Landon Fuller <landonf@plausible.coop>
+ * Author: Landon Fuller <landonf@plausiblelabs.com>
  *
- * Copyright (c) 2008-2013 Plausible Labs Cooperative, Inc.
+ * Copyright (c) 2013 Plausible Labs Cooperative, Inc.
  * All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person
@@ -28,25 +28,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PLCrashReportRegisterInfo : NSObject {
+@interface PLCrashReportMachExceptionInfo : NSObject {
 @private
-    /** Register name */
-    NSString *_registerName;
+    /** The Mach exception type. */
+    uint64_t _type;
     
-    /** Register value */
-    uint64_t _registerValue;
+    /** The Mach exception codes, represented as an ordered array of NSNumber instances. */
+    __strong NSArray *_codes;
 }
 
-- (id) initWithRegisterName: (NSString *) registerName registerValue: (uint64_t) registerValue;
+- (id) initWithType: (uint64_t) type codes: (NSArray *) codes;
 
-/**
- * Register name.
- */
-@property(nonatomic, readonly) NSString *registerName;
+/** The Mach exception type. */
+@property(nonatomic, readonly) uint64_t type;
 
-/**
- * Register value.
- */
-@property(nonatomic, readonly) uint64_t registerValue;
+/** The Mach exception codes, represented as an ordered array of 64-bit unsigned NSNumber instances. */
+@property(nonatomic, readonly, strong) NSArray *codes;
 
 @end

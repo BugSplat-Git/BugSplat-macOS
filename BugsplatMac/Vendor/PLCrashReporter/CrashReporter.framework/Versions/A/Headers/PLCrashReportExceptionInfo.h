@@ -27,51 +27,39 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "PLCrashReportThreadInfo.h"
 
-#import "PLCrashReportStackFrameInfo.h"
-#import "PLCrashReportRegisterInfo.h"
 
-@interface PLCrashReportThreadInfo : NSObject {
+@interface PLCrashReportExceptionInfo : NSObject {
 @private
-    /** The thread number. Should be unique within a given crash log. */
-    NSInteger _threadNumber;
+    /** Name */
+    __strong NSString *_name;
 
-    /** Ordered list of PLCrashReportStackFrame instances */
-    NSArray *_stackFrames;
+    /** Reason */
+    __strong NSString *_reason;
 
-    /** YES if this thread crashed. */
-    BOOL _crashed;
-
-    /** List of PLCrashReportRegister instances. Will be empty if _crashed is NO. */
-    NSArray *_registers;
+    /** Ordered list of PLCrashReportStackFrame instances, or nil if unavailable. */
+    __strong NSArray *_stackFrames;
 }
 
-- (id) initWithThreadNumber: (NSInteger) threadNumber
-                stackFrames: (NSArray *) stackFrames
-                    crashed: (BOOL) crashed
-                  registers: (NSArray *) registers;
+- (id) initWithExceptionName: (NSString *) name reason: (NSString *) reason;
+
+- (id) initWithExceptionName: (NSString *) name 
+                      reason: (NSString *) reason
+                 stackFrames: (NSArray *) stackFrames;
 
 /**
- * Application thread number.
+ * The exception name.
  */
-@property(nonatomic, readonly) NSInteger threadNumber;
+@property(nonatomic, readonly, strong) NSString *exceptionName;
 
 /**
- * Thread backtrace. Provides an array of PLCrashReportStackFrameInfo instances.
- * The array is ordered, last callee to first.
+ * The exception reason.
  */
-@property(nonatomic, readonly) NSArray *stackFrames;
+@property(nonatomic, readonly, strong) NSString *exceptionReason;
 
-/**
- * If this thread crashed, set to YES.
- */
-@property(nonatomic, readonly) BOOL crashed;
-
-/**
- * State of the general purpose and related registers, as a list of
- * PLCrashReportRegister instances. If this thead did not crash (crashed returns NO),
- * this list will be empty.
- */
-@property(nonatomic, readonly) NSArray *registers;
+/* The exception's original call stack, as an array of PLCrashReportStackFrameInfo instances, or nil if unavailable.
+ * This may be preserved across rethrow of an exception, and can be used to determine the original call stack. */
+@property(nonatomic, readonly, strong) NSArray *stackFrames;
 
 @end

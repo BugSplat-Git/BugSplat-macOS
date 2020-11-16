@@ -1,7 +1,7 @@
 /*
- * Author: Landon Fuller <landonf@plausiblelabs.com>
+ * Author: Landon Fuller <landonf@plausible.coop>
  *
- * Copyright (c) 2008-2009 Plausible Labs Cooperative, Inc.
+ * Copyright (c) 2008-2013 Plausible Labs Cooperative, Inc.
  * All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person
@@ -27,34 +27,26 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "PLCrashReportSymbolInfo.h"
 
-@interface PLCrashReportSignalInfo : NSObject {
+@interface PLCrashReportStackFrameInfo : NSObject {
 @private
-    /** Signal name */
-    NSString *_name;
-    
-    /** Signal code */
-    NSString *_code;
+    /** Frame instruction pointer. */
+    uint64_t _instructionPointer;
 
-    /** Fauling instruction or address */
-    uint64_t _address;
+    /** Symbol information, if available. Otherwise, will be nil. */
+    __strong PLCrashReportSymbolInfo *_symbolInfo;
 }
 
-- (id) initWithSignalName: (NSString *) name code: (NSString *) code address: (uint64_t) address;
+- (id) initWithInstructionPointer: (uint64_t) instructionPointer symbolInfo: (PLCrashReportSymbolInfo *) symbolInfo;
 
 /**
- * The signal name.
+ * Frame's instruction pointer.
  */
-@property(nonatomic, readonly) NSString *name;
+@property(nonatomic, readonly) uint64_t instructionPointer;
 
-/**
- * The signal code.
- */
-@property(nonatomic, readonly) NSString *code;
-
-/**
- * The faulting instruction or address.
- */
-@property(nonatomic, readonly) uint64_t address;
+/** Symbol information for this frame.
+ * This may be unavailable, and this property will be nil. */
+@property(nonatomic, readonly) PLCrashReportSymbolInfo *symbolInfo;
 
 @end
