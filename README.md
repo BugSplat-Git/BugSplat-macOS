@@ -246,7 +246,7 @@ We have provided BugsplatTester as a sample application for you to test BugSplat
 
 4. Fill out the crash dialog and submit the crash report.
 
-5. Visit BugSplat's [All Crash](https://app.bugsplat.com/allcrash/) page. When prompted for credentials enter user "Fred" and password "Flintstone". The crash you posted from BugsplatTester should be at the top of the list of crashes.
+5. Visit BugSplat's [Crashes](https://app.bugsplat.com/v2/crashes) page. When prompted for credentials enter user "fred@bugsplat.com" and password "Flintstone". The crash you posted from BugsplatTester should be at the top of the list of crashes.
 
 6. Click the link in the "Crash Id" column to view more details about your crash.
 
