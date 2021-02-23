@@ -68,6 +68,11 @@
 @property (nonatomic, assign) NSTimeInterval expirationTimeInterval;
 
 /**
+ *  Application key used to load specific support response
+ */
+@property (nonatomic, assign, nullable) NSString *applicationKey;
+
+/**
  *  Represents user's full name
  */
 @property (nonatomic, copy, nullable) NSString *userName;

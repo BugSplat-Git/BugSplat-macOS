@@ -104,6 +104,11 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
     [[[BITHockeyManager sharedHockeyManager] crashManager] setAutoSubmitCrashReport:self.autoSubmitCrashReport];
 }
 
+- (void)setAppKey:(NSString *)applicationKey
+{
+    _applicationKey = applicationKey;
+}
+
 - (void)setUserName:(NSString *)userName
 {
     _userName = userName;
@@ -146,6 +151,10 @@ NSString *const kHockeyIdentifierPlaceholder = @"b0cf675cb9334a3e96eda0764f95e38
 
 - (NSString *)applicationKeyForCrashManager:(BITCrashManager *)crashManager signal:(NSString *)signal exceptionName:(NSString *)exceptionName exceptionReason:(NSString *)exceptionReason
 {
+    if (_applicationKey) {
+        return _applicationKey;
+    }
+    
     if ([_delegate respondsToSelector:@selector(applicationKeyForBugsplatStartupManager:signal:exceptionName:exceptionReason:)])
     {
         return [_delegate applicationKeyForBugsplatStartupManager:self signal:signal exceptionName:exceptionName exceptionReason:exceptionReason];
