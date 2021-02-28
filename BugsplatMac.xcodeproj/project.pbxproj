@@ -6,692 +6,489 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"BugSplatMac::BugSplatMacPackageTests::ProductTarget" /* BugSplatMacPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_36 /* Build configuration list for PBXAggregateTarget "BugSplatMacPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_39 /* PBXTargetDependency */,
+			);
+			name = BugSplatMacPackageTests;
+			productName = BugSplatMacPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		A91E85481E883EAE00C88210 /* BugsplatAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = A91E85461E883EAE00C88210 /* BugsplatAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A91E85491E883EAE00C88210 /* BugsplatAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E85471E883EAE00C88210 /* BugsplatAttachment.m */; };
-		A921E3892374F6B5009C6B7E /* BITSystemProfilePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A921E3862374F6B5009C6B7E /* BITSystemProfilePrivate.h */; };
-		A921E38A2374F6B5009C6B7E /* BITSystemProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = A921E3872374F6B5009C6B7E /* BITSystemProfile.m */; };
-		A921E38B2374F6B5009C6B7E /* BITSystemProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = A921E3882374F6B5009C6B7E /* BITSystemProfile.h */; };
-		A95B96B91E882BAA00314A10 /* BugsplatStartupManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */ = {isa = PBXBuildFile; fileRef = A961B08C1C89BDCC004D212F /* upload-archive.sh */; };
-		A969D8E22354972E00F0D3C8 /* BITHockeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8DF2354972E00F0D3C8 /* BITHockeyManager.m */; };
-		A969D8E32354972E00F0D3C8 /* BITHockeyManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8E02354972E00F0D3C8 /* BITHockeyManagerDelegate.h */; };
-		A969D8E42354972E00F0D3C8 /* BITHockeyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8E12354972E00F0D3C8 /* BITHockeyManager.h */; };
-		A969D9142354974200F0D3C8 /* HockeySDKPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8E52354974200F0D3C8 /* HockeySDKPrivate.h */; };
-		A969D9152354974200F0D3C8 /* HockeySDKPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8E62354974200F0D3C8 /* HockeySDKPrivate.m */; };
-		A969D9162354974200F0D3C8 /* HockeySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8E72354974200F0D3C8 /* HockeySDK.h */; };
-		A969D9172354974200F0D3C8 /* BITCrashReportTextFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8E92354974200F0D3C8 /* BITCrashReportTextFormatter.m */; };
-		A969D9182354974200F0D3C8 /* BITCrashReportUI.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8EA2354974200F0D3C8 /* BITCrashReportUI.m */; };
-		A969D9192354974200F0D3C8 /* BITHockeyAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8EB2354974200F0D3C8 /* BITHockeyAttachment.h */; };
-		A969D91A2354974200F0D3C8 /* BITCrashMetaData.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8EC2354974200F0D3C8 /* BITCrashMetaData.h */; };
-		A969D91B2354974200F0D3C8 /* BITCrashManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8ED2354974200F0D3C8 /* BITCrashManager.h */; };
-		A969D91C2354974200F0D3C8 /* BITCrashDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8EE2354974200F0D3C8 /* BITCrashDetails.m */; };
-		A969D91D2354974200F0D3C8 /* BITCrashCXXExceptionHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = A969D8EF2354974200F0D3C8 /* BITCrashCXXExceptionHandler.mm */; };
-		A969D91E2354974200F0D3C8 /* BITCrashExceptionApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8F02354974200F0D3C8 /* BITCrashExceptionApplication.h */; };
-		A969D91F2354974200F0D3C8 /* BITCrashDetailsPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8F12354974200F0D3C8 /* BITCrashDetailsPrivate.h */; };
-		A969D9202354974200F0D3C8 /* BITCrashCXXExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8F22354974200F0D3C8 /* BITCrashCXXExceptionHandler.h */; };
-		A969D9212354974200F0D3C8 /* BITCrashReportTextFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8F32354974200F0D3C8 /* BITCrashReportTextFormatter.h */; };
-		A969D9222354974200F0D3C8 /* BITCrashReportUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = A969D8F42354974200F0D3C8 /* BITCrashReportUI.xib */; };
-		A969D9232354974200F0D3C8 /* BITHockeyAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8F52354974200F0D3C8 /* BITHockeyAttachment.m */; };
-		A969D9242354974200F0D3C8 /* BITCrashReportUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8F62354974200F0D3C8 /* BITCrashReportUI.h */; };
-		A969D9252354974200F0D3C8 /* BITCrashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8F72354974200F0D3C8 /* BITCrashManager.m */; };
-		A969D9262354974200F0D3C8 /* BITCrashMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8F82354974200F0D3C8 /* BITCrashMetaData.m */; };
-		A969D9272354974200F0D3C8 /* BITCrashReportTextFormatterPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8F92354974200F0D3C8 /* BITCrashReportTextFormatterPrivate.h */; };
-		A969D9282354974200F0D3C8 /* BITCrashManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8FA2354974200F0D3C8 /* BITCrashManagerDelegate.h */; };
-		A969D9292354974200F0D3C8 /* BITCrashExceptionApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8FB2354974200F0D3C8 /* BITCrashExceptionApplication.m */; };
-		A969D92A2354974200F0D3C8 /* BITCrashManagerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8FC2354974200F0D3C8 /* BITCrashManagerPrivate.h */; };
-		A969D92B2354974200F0D3C8 /* BITCrashDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D8FD2354974200F0D3C8 /* BITCrashDetails.h */; };
-		A969D92C2354974200F0D3C8 /* BITHockeyBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D8FF2354974200F0D3C8 /* BITHockeyBaseManager.m */; };
-		A969D92D2354974200F0D3C8 /* BITSDKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D9002354974200F0D3C8 /* BITSDKTextView.m */; };
-		A969D92E2354974200F0D3C8 /* BITKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9012354974200F0D3C8 /* BITKeychainItem.h */; };
-		A969D92F2354974200F0D3C8 /* BITHockeyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D9022354974200F0D3C8 /* BITHockeyHelper.m */; };
-		A969D9302354974200F0D3C8 /* BITSDKColoredView.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D9032354974200F0D3C8 /* BITSDKColoredView.m */; };
-		A969D9312354974200F0D3C8 /* BITHockeyLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9042354974200F0D3C8 /* BITHockeyLogger.h */; };
-		A969D9322354974200F0D3C8 /* BITSDKTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D9052354974200F0D3C8 /* BITSDKTextFieldCell.m */; };
-		A969D9332354974200F0D3C8 /* BITHockeyBaseManagerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9062354974200F0D3C8 /* BITHockeyBaseManagerPrivate.h */; };
-		A969D9342354974200F0D3C8 /* BITSDKTextViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9072354974200F0D3C8 /* BITSDKTextViewDelegate.h */; };
-		A969D9352354974200F0D3C8 /* BITHockeyAppClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9082354974200F0D3C8 /* BITHockeyAppClient.h */; };
-		A969D9362354974200F0D3C8 /* BITHockeyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9092354974200F0D3C8 /* BITHockeyHelper.h */; };
-		A969D9372354974200F0D3C8 /* BITKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D90A2354974200F0D3C8 /* BITKeychainItem.m */; };
-		A969D9382354974200F0D3C8 /* BITSDKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D90B2354974200F0D3C8 /* BITSDKTextView.h */; };
-		A969D9392354974200F0D3C8 /* BITHockeyBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D90C2354974200F0D3C8 /* BITHockeyBaseManager.h */; };
-		A969D93A2354974200F0D3C8 /* BITHockeyLoggerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D90D2354974200F0D3C8 /* BITHockeyLoggerPrivate.h */; };
-		A969D93B2354974200F0D3C8 /* HockeySDKEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D90E2354974200F0D3C8 /* HockeySDKEnums.h */; };
-		A969D93C2354974200F0D3C8 /* HockeySDKNullability.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D90F2354974200F0D3C8 /* HockeySDKNullability.h */; };
-		A969D93D2354974200F0D3C8 /* BITSDKColoredView.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9102354974200F0D3C8 /* BITSDKColoredView.h */; };
-		A969D93E2354974200F0D3C8 /* BITSDKTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A969D9112354974200F0D3C8 /* BITSDKTextFieldCell.h */; };
-		A969D93F2354974200F0D3C8 /* BITHockeyLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D9122354974200F0D3C8 /* BITHockeyLogger.m */; };
-		A969D9402354974200F0D3C8 /* BITHockeyAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A969D9132354974200F0D3C8 /* BITHockeyAppClient.m */; };
-		A96AE64B255B6A86004F5006 /* CrashReporter.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A973AAA0255AB10700ADEBB3 /* CrashReporter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A973AAA1255AB10700ADEBB3 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A973AAA0255AB10700ADEBB3 /* CrashReporter.framework */; };
-		A9A57AA41E58DCC500AE61D8 /* upload-archive-cl.sh in Resources */ = {isa = PBXBuildFile; fileRef = A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */; };
-		A9B27F0323BE9FF1002F7DBD /* HockeySDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9B27EF723BE9FF1002F7DBD /* HockeySDK.strings */; };
-		A9B27F0523BE9FF1002F7DBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B27EFF23BE9FF1002F7DBD /* Images.xcassets */; };
-		A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA90F1C68CF530012D025 /* BugsplatMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */; };
+		OBJ_27 /* BugSplatMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* BugSplatMac.swift */; };
+		OBJ_34 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_45 /* BugSplatMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* BugSplatMacTests.swift */; };
+		OBJ_46 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
+		OBJ_48 /* BugSplatMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "BugSplatMac::BugSplatMac::Product" /* BugSplatMac.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		A96AE64A255B6A75004F5006 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A96AE64B255B6A86004F5006 /* CrashReporter.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		6C900A7B25EBD1FA0021A8E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "BugSplatMac::BugSplatMac";
+			remoteInfo = BugSplatMac;
 		};
-/* End PBXCopyFilesBuildPhase section */
+		6C900A7E25EBD1FC0021A8E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "BugSplatMac::BugSplatMacTests";
+			remoteInfo = BugSplatMacTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A91E85461E883EAE00C88210 /* BugsplatAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatAttachment.h; sourceTree = "<group>"; };
-		A91E85471E883EAE00C88210 /* BugsplatAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsplatAttachment.m; sourceTree = "<group>"; };
-		A921E3862374F6B5009C6B7E /* BITSystemProfilePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSystemProfilePrivate.h; sourceTree = "<group>"; };
-		A921E3872374F6B5009C6B7E /* BITSystemProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSystemProfile.m; sourceTree = "<group>"; };
-		A921E3882374F6B5009C6B7E /* BITSystemProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSystemProfile.h; sourceTree = "<group>"; };
-		A940B4711CA9738900D97621 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManagerDelegate.h; sourceTree = "<group>"; };
-		A961B08C1C89BDCC004D212F /* upload-archive.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "upload-archive.sh"; path = "../upload-archive.sh"; sourceTree = "<group>"; };
-		A969D8DF2354972E00F0D3C8 /* BITHockeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHockeyManager.m; sourceTree = "<group>"; };
-		A969D8E02354972E00F0D3C8 /* BITHockeyManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyManagerDelegate.h; sourceTree = "<group>"; };
-		A969D8E12354972E00F0D3C8 /* BITHockeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyManager.h; sourceTree = "<group>"; };
-		A969D8E52354974200F0D3C8 /* HockeySDKPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HockeySDKPrivate.h; sourceTree = "<group>"; };
-		A969D8E62354974200F0D3C8 /* HockeySDKPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HockeySDKPrivate.m; sourceTree = "<group>"; };
-		A969D8E72354974200F0D3C8 /* HockeySDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HockeySDK.h; sourceTree = "<group>"; };
-		A969D8E92354974200F0D3C8 /* BITCrashReportTextFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITCrashReportTextFormatter.m; sourceTree = "<group>"; };
-		A969D8EA2354974200F0D3C8 /* BITCrashReportUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITCrashReportUI.m; sourceTree = "<group>"; };
-		A969D8EB2354974200F0D3C8 /* BITHockeyAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyAttachment.h; sourceTree = "<group>"; };
-		A969D8EC2354974200F0D3C8 /* BITCrashMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashMetaData.h; sourceTree = "<group>"; };
-		A969D8ED2354974200F0D3C8 /* BITCrashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashManager.h; sourceTree = "<group>"; };
-		A969D8EE2354974200F0D3C8 /* BITCrashDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITCrashDetails.m; sourceTree = "<group>"; };
-		A969D8EF2354974200F0D3C8 /* BITCrashCXXExceptionHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BITCrashCXXExceptionHandler.mm; sourceTree = "<group>"; };
-		A969D8F02354974200F0D3C8 /* BITCrashExceptionApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashExceptionApplication.h; sourceTree = "<group>"; };
-		A969D8F12354974200F0D3C8 /* BITCrashDetailsPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashDetailsPrivate.h; sourceTree = "<group>"; };
-		A969D8F22354974200F0D3C8 /* BITCrashCXXExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashCXXExceptionHandler.h; sourceTree = "<group>"; };
-		A969D8F32354974200F0D3C8 /* BITCrashReportTextFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashReportTextFormatter.h; sourceTree = "<group>"; };
-		A969D8F42354974200F0D3C8 /* BITCrashReportUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITCrashReportUI.xib; sourceTree = "<group>"; };
-		A969D8F52354974200F0D3C8 /* BITHockeyAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHockeyAttachment.m; sourceTree = "<group>"; };
-		A969D8F62354974200F0D3C8 /* BITCrashReportUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashReportUI.h; sourceTree = "<group>"; };
-		A969D8F72354974200F0D3C8 /* BITCrashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITCrashManager.m; sourceTree = "<group>"; };
-		A969D8F82354974200F0D3C8 /* BITCrashMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITCrashMetaData.m; sourceTree = "<group>"; };
-		A969D8F92354974200F0D3C8 /* BITCrashReportTextFormatterPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashReportTextFormatterPrivate.h; sourceTree = "<group>"; };
-		A969D8FA2354974200F0D3C8 /* BITCrashManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashManagerDelegate.h; sourceTree = "<group>"; };
-		A969D8FB2354974200F0D3C8 /* BITCrashExceptionApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITCrashExceptionApplication.m; sourceTree = "<group>"; };
-		A969D8FC2354974200F0D3C8 /* BITCrashManagerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashManagerPrivate.h; sourceTree = "<group>"; };
-		A969D8FD2354974200F0D3C8 /* BITCrashDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashDetails.h; sourceTree = "<group>"; };
-		A969D8FF2354974200F0D3C8 /* BITHockeyBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHockeyBaseManager.m; sourceTree = "<group>"; };
-		A969D9002354974200F0D3C8 /* BITSDKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSDKTextView.m; sourceTree = "<group>"; };
-		A969D9012354974200F0D3C8 /* BITKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITKeychainItem.h; sourceTree = "<group>"; };
-		A969D9022354974200F0D3C8 /* BITHockeyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHockeyHelper.m; sourceTree = "<group>"; };
-		A969D9032354974200F0D3C8 /* BITSDKColoredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSDKColoredView.m; sourceTree = "<group>"; };
-		A969D9042354974200F0D3C8 /* BITHockeyLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyLogger.h; sourceTree = "<group>"; };
-		A969D9052354974200F0D3C8 /* BITSDKTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSDKTextFieldCell.m; sourceTree = "<group>"; };
-		A969D9062354974200F0D3C8 /* BITHockeyBaseManagerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyBaseManagerPrivate.h; sourceTree = "<group>"; };
-		A969D9072354974200F0D3C8 /* BITSDKTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSDKTextViewDelegate.h; sourceTree = "<group>"; };
-		A969D9082354974200F0D3C8 /* BITHockeyAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyAppClient.h; sourceTree = "<group>"; };
-		A969D9092354974200F0D3C8 /* BITHockeyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyHelper.h; sourceTree = "<group>"; };
-		A969D90A2354974200F0D3C8 /* BITKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITKeychainItem.m; sourceTree = "<group>"; };
-		A969D90B2354974200F0D3C8 /* BITSDKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSDKTextView.h; sourceTree = "<group>"; };
-		A969D90C2354974200F0D3C8 /* BITHockeyBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyBaseManager.h; sourceTree = "<group>"; };
-		A969D90D2354974200F0D3C8 /* BITHockeyLoggerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyLoggerPrivate.h; sourceTree = "<group>"; };
-		A969D90E2354974200F0D3C8 /* HockeySDKEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HockeySDKEnums.h; sourceTree = "<group>"; };
-		A969D90F2354974200F0D3C8 /* HockeySDKNullability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HockeySDKNullability.h; sourceTree = "<group>"; };
-		A969D9102354974200F0D3C8 /* BITSDKColoredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSDKColoredView.h; sourceTree = "<group>"; };
-		A969D9112354974200F0D3C8 /* BITSDKTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSDKTextFieldCell.h; sourceTree = "<group>"; };
-		A969D9122354974200F0D3C8 /* BITHockeyLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHockeyLogger.m; sourceTree = "<group>"; };
-		A969D9132354974200F0D3C8 /* BITHockeyAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHockeyAppClient.m; sourceTree = "<group>"; };
-		A973AAA0255AB10700ADEBB3 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
-		A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-archive-cl.sh"; sourceTree = SOURCE_ROOT; };
-		A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
-		A9B27EF823BE9FF1002F7DBD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9B27EF923BE9FF1002F7DBD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9B27EFA23BE9FF1002F7DBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9B27EFB23BE9FF1002F7DBD /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9B27EFC23BE9FF1002F7DBD /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9B27EFE23BE9FF1002F7DBD /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9B27EFF23BE9FF1002F7DBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A9B27F0023BE9FF1002F7DBD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9B27F0123BE9FF1002F7DBD /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/HockeySDK.strings; sourceTree = "<group>"; };
-		A9CBBB511D11BA8100972398 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugsplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9FCA90F1C68CF530012D025 /* BugsplatMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugsplatMac.h; sourceTree = "<group>"; };
-		A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsplatStartupManager.h; sourceTree = "<group>"; };
-		A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsplatStartupManager.m; sourceTree = "<group>"; };
+		"BugSplatMac::BugSplatMac::Product" /* BugSplatMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BugSplatMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"BugSplatMac::BugSplatMacTests::Product" /* BugSplatMacTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = BugSplatMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* BugSplatMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugSplatMacTests.swift; sourceTree = "<group>"; };
+		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_19 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_21 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* BugSplatMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugSplatMac.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A9FCA9081C68CF530012D025 /* Frameworks */ = {
+		OBJ_28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				A973AAA1255AB10700ADEBB3 /* CrashReporter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_48 /* BugSplatMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A921E3852374F6B5009C6B7E /* BetaDistribution */ = {
+		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A921E3862374F6B5009C6B7E /* BITSystemProfilePrivate.h */,
-				A921E3882374F6B5009C6B7E /* BITSystemProfile.h */,
-				A921E3872374F6B5009C6B7E /* BITSystemProfile.m */,
+				OBJ_11 /* BugSplatMacTests */,
 			);
-			path = BetaDistribution;
-			sourceTree = "<group>";
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
 		};
-		A940B4701CA9738900D97621 /* Supporting */ = {
+		OBJ_11 /* BugSplatMacTests */ = {
 			isa = PBXGroup;
 			children = (
-				A940B4711CA9738900D97621 /* Info.plist */,
-				A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */,
+				OBJ_12 /* BugSplatMacTests.swift */,
+				OBJ_13 /* XCTestManifests.swift */,
 			);
-			path = Supporting;
-			sourceTree = "<group>";
+			name = BugSplatMacTests;
+			path = Tests/BugSplatMacTests;
+			sourceTree = SOURCE_ROOT;
 		};
-		A969D8DD235496F000F0D3C8 /* Vendor */ = {
+		OBJ_14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A969D9412354976400F0D3C8 /* PLCrashReporter */,
-				A969D8DE2354971000F0D3C8 /* Hockey */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		A969D8DE2354971000F0D3C8 /* Hockey */ = {
-			isa = PBXGroup;
-			children = (
-				A921E3852374F6B5009C6B7E /* BetaDistribution */,
-				A969D8E82354974200F0D3C8 /* CrashReporting */,
-				A9B27EF623BE9FF1002F7DBD /* Resources */,
-				A969D8FE2354974200F0D3C8 /* Helper */,
-				A969D8E72354974200F0D3C8 /* HockeySDK.h */,
-				A969D8E52354974200F0D3C8 /* HockeySDKPrivate.h */,
-				A969D8E62354974200F0D3C8 /* HockeySDKPrivate.m */,
-				A969D8E12354972E00F0D3C8 /* BITHockeyManager.h */,
-				A969D8DF2354972E00F0D3C8 /* BITHockeyManager.m */,
-				A969D8E02354972E00F0D3C8 /* BITHockeyManagerDelegate.h */,
-			);
-			path = Hockey;
-			sourceTree = "<group>";
-		};
-		A969D8E82354974200F0D3C8 /* CrashReporting */ = {
-			isa = PBXGroup;
-			children = (
-				A969D8F92354974200F0D3C8 /* BITCrashReportTextFormatterPrivate.h */,
-				A969D8F32354974200F0D3C8 /* BITCrashReportTextFormatter.h */,
-				A969D8E92354974200F0D3C8 /* BITCrashReportTextFormatter.m */,
-				A969D8F62354974200F0D3C8 /* BITCrashReportUI.h */,
-				A969D8EA2354974200F0D3C8 /* BITCrashReportUI.m */,
-				A969D8F42354974200F0D3C8 /* BITCrashReportUI.xib */,
-				A969D8F12354974200F0D3C8 /* BITCrashDetailsPrivate.h */,
-				A969D8FD2354974200F0D3C8 /* BITCrashDetails.h */,
-				A969D8EE2354974200F0D3C8 /* BITCrashDetails.m */,
-				A969D8F22354974200F0D3C8 /* BITCrashCXXExceptionHandler.h */,
-				A969D8EF2354974200F0D3C8 /* BITCrashCXXExceptionHandler.mm */,
-				A969D8F02354974200F0D3C8 /* BITCrashExceptionApplication.h */,
-				A969D8FB2354974200F0D3C8 /* BITCrashExceptionApplication.m */,
-				A969D8EB2354974200F0D3C8 /* BITHockeyAttachment.h */,
-				A969D8F52354974200F0D3C8 /* BITHockeyAttachment.m */,
-				A969D8FC2354974200F0D3C8 /* BITCrashManagerPrivate.h */,
-				A969D8ED2354974200F0D3C8 /* BITCrashManager.h */,
-				A969D8F72354974200F0D3C8 /* BITCrashManager.m */,
-				A969D8EC2354974200F0D3C8 /* BITCrashMetaData.h */,
-				A969D8F82354974200F0D3C8 /* BITCrashMetaData.m */,
-				A969D8FA2354974200F0D3C8 /* BITCrashManagerDelegate.h */,
-			);
-			path = CrashReporting;
-			sourceTree = "<group>";
-		};
-		A969D8FE2354974200F0D3C8 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				A969D9062354974200F0D3C8 /* BITHockeyBaseManagerPrivate.h */,
-				A969D90C2354974200F0D3C8 /* BITHockeyBaseManager.h */,
-				A969D8FF2354974200F0D3C8 /* BITHockeyBaseManager.m */,
-				A969D9112354974200F0D3C8 /* BITSDKTextFieldCell.h */,
-				A969D9052354974200F0D3C8 /* BITSDKTextFieldCell.m */,
-				A969D9072354974200F0D3C8 /* BITSDKTextViewDelegate.h */,
-				A969D90B2354974200F0D3C8 /* BITSDKTextView.h */,
-				A969D9002354974200F0D3C8 /* BITSDKTextView.m */,
-				A969D9012354974200F0D3C8 /* BITKeychainItem.h */,
-				A969D90A2354974200F0D3C8 /* BITKeychainItem.m */,
-				A969D9092354974200F0D3C8 /* BITHockeyHelper.h */,
-				A969D9022354974200F0D3C8 /* BITHockeyHelper.m */,
-				A969D9102354974200F0D3C8 /* BITSDKColoredView.h */,
-				A969D9032354974200F0D3C8 /* BITSDKColoredView.m */,
-				A969D9042354974200F0D3C8 /* BITHockeyLogger.h */,
-				A969D9122354974200F0D3C8 /* BITHockeyLogger.m */,
-				A969D9082354974200F0D3C8 /* BITHockeyAppClient.h */,
-				A969D9132354974200F0D3C8 /* BITHockeyAppClient.m */,
-				A969D90D2354974200F0D3C8 /* BITHockeyLoggerPrivate.h */,
-				A969D90E2354974200F0D3C8 /* HockeySDKEnums.h */,
-				A969D90F2354974200F0D3C8 /* HockeySDKNullability.h */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		A969D9412354976400F0D3C8 /* PLCrashReporter */ = {
-			isa = PBXGroup;
-			children = (
-				A973AAA0255AB10700ADEBB3 /* CrashReporter.framework */,
-			);
-			path = PLCrashReporter;
-			sourceTree = "<group>";
-		};
-		A9B27EF623BE9FF1002F7DBD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A9B27EF723BE9FF1002F7DBD /* HockeySDK.strings */,
-				A9B27EFF23BE9FF1002F7DBD /* Images.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		A9FCA9021C68CF530012D025 = {
-			isa = PBXGroup;
-			children = (
-				A9CBBB511D11BA8100972398 /* README.md */,
-				A9FCA90E1C68CF530012D025 /* BugsplatMac */,
-				A940B4701CA9738900D97621 /* Supporting */,
-				A9FCA90D1C68CF530012D025 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		A9FCA90D1C68CF530012D025 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */,
+				"BugSplatMac::BugSplatMacTests::Product" /* BugSplatMacTests.xctest */,
+				"BugSplatMac::BugSplatMac::Product" /* BugSplatMac.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A9FCA90E1C68CF530012D025 /* BugsplatMac */ = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				A9FCA90F1C68CF530012D025 /* BugsplatMac.h */,
-				A9FCA91F1C68D4BA0012D025 /* BugsplatStartupManager.h */,
-				A9FCA9201C68D4BA0012D025 /* BugsplatStartupManager.m */,
-				A95B96B81E882BAA00314A10 /* BugsplatStartupManagerDelegate.h */,
-				A91E85461E883EAE00C88210 /* BugsplatAttachment.h */,
-				A91E85471E883EAE00C88210 /* BugsplatAttachment.m */,
-				A961B08C1C89BDCC004D212F /* upload-archive.sh */,
-				A9A57AA31E58DCC500AE61D8 /* upload-archive-cl.sh */,
-				A969D8DD235496F000F0D3C8 /* Vendor */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_10 /* Tests */,
+				OBJ_14 /* Products */,
+				OBJ_19 /* README.md */,
+				OBJ_21 /* LICENSE.txt */,
 			);
-			path = BugsplatMac;
+			name = "";
 			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* BugSplatMac */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* BugSplatMac */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* BugSplatMac.swift */,
+			);
+			name = BugSplatMac;
+			path = Sources/BugSplatMac;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		A9FCA9091C68CF530012D025 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A969D9332354974200F0D3C8 /* BITHockeyBaseManagerPrivate.h in Headers */,
-				A969D9192354974200F0D3C8 /* BITHockeyAttachment.h in Headers */,
-				A969D92B2354974200F0D3C8 /* BITCrashDetails.h in Headers */,
-				A921E3892374F6B5009C6B7E /* BITSystemProfilePrivate.h in Headers */,
-				A969D9202354974200F0D3C8 /* BITCrashCXXExceptionHandler.h in Headers */,
-				A969D92A2354974200F0D3C8 /* BITCrashManagerPrivate.h in Headers */,
-				A969D9242354974200F0D3C8 /* BITCrashReportUI.h in Headers */,
-				A969D9382354974200F0D3C8 /* BITSDKTextView.h in Headers */,
-				A969D93C2354974200F0D3C8 /* HockeySDKNullability.h in Headers */,
-				A969D91A2354974200F0D3C8 /* BITCrashMetaData.h in Headers */,
-				A969D91B2354974200F0D3C8 /* BITCrashManager.h in Headers */,
-				A921E38B2374F6B5009C6B7E /* BITSystemProfile.h in Headers */,
-				A969D93E2354974200F0D3C8 /* BITSDKTextFieldCell.h in Headers */,
-				A969D9312354974200F0D3C8 /* BITHockeyLogger.h in Headers */,
-				A969D92E2354974200F0D3C8 /* BITKeychainItem.h in Headers */,
-				A969D9342354974200F0D3C8 /* BITSDKTextViewDelegate.h in Headers */,
-				A969D93D2354974200F0D3C8 /* BITSDKColoredView.h in Headers */,
-				A969D93A2354974200F0D3C8 /* BITHockeyLoggerPrivate.h in Headers */,
-				A969D91E2354974200F0D3C8 /* BITCrashExceptionApplication.h in Headers */,
-				A9FCA9211C68D4BA0012D025 /* BugsplatStartupManager.h in Headers */,
-				A969D9142354974200F0D3C8 /* HockeySDKPrivate.h in Headers */,
-				A91E85481E883EAE00C88210 /* BugsplatAttachment.h in Headers */,
-				A969D93B2354974200F0D3C8 /* HockeySDKEnums.h in Headers */,
-				A969D9392354974200F0D3C8 /* BITHockeyBaseManager.h in Headers */,
-				A969D8E32354972E00F0D3C8 /* BITHockeyManagerDelegate.h in Headers */,
-				A969D8E42354972E00F0D3C8 /* BITHockeyManager.h in Headers */,
-				A969D9352354974200F0D3C8 /* BITHockeyAppClient.h in Headers */,
-				A969D9282354974200F0D3C8 /* BITCrashManagerDelegate.h in Headers */,
-				A969D9362354974200F0D3C8 /* BITHockeyHelper.h in Headers */,
-				A969D9272354974200F0D3C8 /* BITCrashReportTextFormatterPrivate.h in Headers */,
-				A95B96B91E882BAA00314A10 /* BugsplatStartupManagerDelegate.h in Headers */,
-				A969D91F2354974200F0D3C8 /* BITCrashDetailsPrivate.h in Headers */,
-				A969D9162354974200F0D3C8 /* HockeySDK.h in Headers */,
-				A9FCA9101C68CF530012D025 /* BugsplatMac.h in Headers */,
-				A969D9212354974200F0D3C8 /* BITCrashReportTextFormatter.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		A9FCA90B1C68CF530012D025 /* BugsplatMac */ = {
+		"BugSplatMac::BugSplatMac" /* BugSplatMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "BugsplatMac" */;
+			buildConfigurationList = OBJ_23 /* Build configuration list for PBXNativeTarget "BugSplatMac" */;
 			buildPhases = (
-				A9FCA9071C68CF530012D025 /* Sources */,
-				A9FCA9081C68CF530012D025 /* Frameworks */,
-				A9FCA9091C68CF530012D025 /* Headers */,
-				A9FCA90A1C68CF530012D025 /* Resources */,
-				A96AE64A255B6A75004F5006 /* Copy Frameworks */,
+				OBJ_26 /* Sources */,
+				OBJ_28 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BugsplatMac;
-			productName = Bugsplat;
-			productReference = A9FCA90C1C68CF530012D025 /* BugsplatMac.framework */;
+			name = BugSplatMac;
+			productName = BugSplatMac;
+			productReference = "BugSplatMac::BugSplatMac::Product" /* BugSplatMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"BugSplatMac::BugSplatMacTests" /* BugSplatMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_41 /* Build configuration list for PBXNativeTarget "BugSplatMacTests" */;
+			buildPhases = (
+				OBJ_44 /* Sources */,
+				OBJ_47 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_49 /* PBXTargetDependency */,
+			);
+			name = BugSplatMacTests;
+			productName = BugSplatMacTests;
+			productReference = "BugSplatMac::BugSplatMacTests::Product" /* BugSplatMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"BugSplatMac::SwiftPMPackageDescription" /* BugSplatMacPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_30 /* Build configuration list for PBXNativeTarget "BugSplatMacPackageDescription" */;
+			buildPhases = (
+				OBJ_33 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BugSplatMacPackageDescription;
+			productName = BugSplatMacPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A9FCA9031C68CF530012D025 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1220;
-				ORGANIZATIONNAME = Bugsplat;
-				TargetAttributes = {
-					A9FCA90B1C68CF530012D025 = {
-						CreatedOnToolsVersion = 7.2.1;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = A9FCA9061C68CF530012D025 /* Build configuration list for PBXProject "BugsplatMac" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "BugsplatMac" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
-				de,
-				ja,
-				nb,
-				it,
-				sv,
-				fr,
-				fi,
 			);
-			mainGroup = A9FCA9021C68CF530012D025;
-			productRefGroup = A9FCA90D1C68CF530012D025 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9FCA90B1C68CF530012D025 /* BugsplatMac */,
+				"BugSplatMac::BugSplatMac" /* BugSplatMac */,
+				"BugSplatMac::SwiftPMPackageDescription" /* BugSplatMacPackageDescription */,
+				"BugSplatMac::BugSplatMacPackageTests::ProductTarget" /* BugSplatMacPackageTests */,
+				"BugSplatMac::BugSplatMacTests" /* BugSplatMacTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		A9FCA90A1C68CF530012D025 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
 			files = (
-				A961B08D1C89BDCC004D212F /* upload-archive.sh in Resources */,
-				A9B27F0523BE9FF1002F7DBD /* Images.xcassets in Resources */,
-				A9B27F0323BE9FF1002F7DBD /* HockeySDK.strings in Resources */,
-				A969D9222354974200F0D3C8 /* BITCrashReportUI.xib in Resources */,
-				A9A57AA41E58DCC500AE61D8 /* upload-archive-cl.sh in Resources */,
+				OBJ_27 /* BugSplatMac.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		A9FCA9071C68CF530012D025 /* Sources */ = {
+		OBJ_33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				A969D9232354974200F0D3C8 /* BITHockeyAttachment.m in Sources */,
-				A969D9252354974200F0D3C8 /* BITCrashManager.m in Sources */,
-				A969D9302354974200F0D3C8 /* BITSDKColoredView.m in Sources */,
-				A921E38A2374F6B5009C6B7E /* BITSystemProfile.m in Sources */,
-				A91E85491E883EAE00C88210 /* BugsplatAttachment.m in Sources */,
-				A969D9152354974200F0D3C8 /* HockeySDKPrivate.m in Sources */,
-				A969D9292354974200F0D3C8 /* BITCrashExceptionApplication.m in Sources */,
-				A969D8E22354972E00F0D3C8 /* BITHockeyManager.m in Sources */,
-				A969D92F2354974200F0D3C8 /* BITHockeyHelper.m in Sources */,
-				A969D9262354974200F0D3C8 /* BITCrashMetaData.m in Sources */,
-				A9FCA9221C68D4BA0012D025 /* BugsplatStartupManager.m in Sources */,
-				A969D92D2354974200F0D3C8 /* BITSDKTextView.m in Sources */,
-				A969D91C2354974200F0D3C8 /* BITCrashDetails.m in Sources */,
-				A969D9172354974200F0D3C8 /* BITCrashReportTextFormatter.m in Sources */,
-				A969D92C2354974200F0D3C8 /* BITHockeyBaseManager.m in Sources */,
-				A969D91D2354974200F0D3C8 /* BITCrashCXXExceptionHandler.mm in Sources */,
-				A969D9322354974200F0D3C8 /* BITSDKTextFieldCell.m in Sources */,
-				A969D9372354974200F0D3C8 /* BITKeychainItem.m in Sources */,
-				A969D9402354974200F0D3C8 /* BITHockeyAppClient.m in Sources */,
-				A969D93F2354974200F0D3C8 /* BITHockeyLogger.m in Sources */,
-				A969D9182354974200F0D3C8 /* BITCrashReportUI.m in Sources */,
+				OBJ_34 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_45 /* BugSplatMacTests.swift in Sources */,
+				OBJ_46 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		A9B27EF723BE9FF1002F7DBD /* HockeySDK.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9B27EF823BE9FF1002F7DBD /* de */,
-				A9B27EF923BE9FF1002F7DBD /* ja */,
-				A9B27EFA23BE9FF1002F7DBD /* en */,
-				A9B27EFB23BE9FF1002F7DBD /* nb */,
-				A9B27EFC23BE9FF1002F7DBD /* it */,
-				A9B27EFE23BE9FF1002F7DBD /* sv */,
-				A9B27F0023BE9FF1002F7DBD /* fr */,
-				A9B27F0123BE9FF1002F7DBD /* fi */,
-			);
-			name = HockeySDK.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		OBJ_39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "BugSplatMac::BugSplatMacTests" /* BugSplatMacTests */;
+			targetProxy = 6C900A7E25EBD1FC0021A8E4 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+		OBJ_49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "BugSplatMac::BugSplatMac" /* BugSplatMac */;
+			targetProxy = 6C900A7B25EBD1FA0021A8E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A9FCA9121C68CF530012D025 /* Debug */ = {
+		OBJ_24 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = BugSplatMac.xcodeproj/BugSplatMac_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BugSplatMac;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = BugSplatMac;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		A9FCA9131C68CF530012D025 /* Release */ = {
+		OBJ_25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9B27EF423BE9CD3002F7DBD /* buildnumber.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = BugSplatMac.xcodeproj/BugSplatMac_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BugSplatMac;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = BugSplatMac;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
-		A9FCA9151C68CF530012D025 /* Debug */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "${BUILD_NUMBER}";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
 				);
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Supporting/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
-				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
-				PRODUCT_NAME = BugsplatMac;
-				SKIP_INSTALL = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		A9FCA9161C68CF530012D025 /* Release */ = {
+		OBJ_31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "${BUILD_NUMBER}";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Supporting/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = BugSplatMac.xcodeproj/BugSplatMacTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = BugSplatMacTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
-				PRODUCT_NAME = BugsplatMac;
-				SKIP_INSTALL = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = BugSplatMac.xcodeproj/BugSplatMacTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = BugSplatMacTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9FCA9061C68CF530012D025 /* Build configuration list for PBXProject "BugsplatMac" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "BugsplatMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9FCA9121C68CF530012D025 /* Debug */,
-				A9FCA9131C68CF530012D025 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9FCA9141C68CF530012D025 /* Build configuration list for PBXNativeTarget "BugsplatMac" */ = {
+		OBJ_23 /* Build configuration list for PBXNativeTarget "BugSplatMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9FCA9151C68CF530012D025 /* Debug */,
-				A9FCA9161C68CF530012D025 /* Release */,
+				OBJ_24 /* Debug */,
+				OBJ_25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_30 /* Build configuration list for PBXNativeTarget "BugSplatMacPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_31 /* Debug */,
+				OBJ_32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_36 /* Build configuration list for PBXAggregateTarget "BugSplatMacPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_37 /* Debug */,
+				OBJ_38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_41 /* Build configuration list for PBXNativeTarget "BugSplatMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_42 /* Debug */,
+				OBJ_43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A9FCA9031C68CF530012D025 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
