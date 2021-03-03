@@ -56,6 +56,9 @@ github "BugsplatGit/BugsplatMac"
 
 Run `carthage` to build the framework and drag the built `BugsplatMac.framework` into your Xcode project.
 
+### Swift Package Manager
+BugsplatMac framework binaries are also now distributed via Swift Package Manager. You can now add BugsplatMac as a dependency in the Swift Packages configuration in your Xcode project by pointing to <https://github.com/BugSplat-Git/BugSplatMac-SP>
+
 ### Manual Setup
 
 To use this library in your project manually you may:  
