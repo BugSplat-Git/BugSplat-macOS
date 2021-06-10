@@ -5,7 +5,7 @@ The BugsplatMac macOS framework enables posting crash reports from Cocoa applica
 ## 1. Requirements
 
 * BugsplatMac supports macOS 10.9 and later.
-* BugsplatMac supports x86_64 applications only.
+* BugsplatMac supports x86_64 and Apple silicon applications.
 
 ## 2. Integration
 
