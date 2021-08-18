@@ -193,7 +193,7 @@ BOOL bit_addStringValueToKeychain(NSString *stringValue, NSString *key) {
   if (!key || !stringValue)
     return NO;
   
-  NSString *serviceName = [NSString stringWithFormat:@"%@.HockeySDK", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]];
+  NSString *serviceName = [NSString stringWithFormat:@"%@.BugsplatMac", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]];
   
   BITGenericKeychainItem *item = [BITGenericKeychainItem genericKeychainItemForService:serviceName withUsername:key];
   
@@ -213,7 +213,7 @@ NSString *bit_stringValueFromKeychainForKey(NSString *key) {
   if (!key)
     return nil;
   
-  NSString *serviceName = [NSString stringWithFormat:@"%@.HockeySDK", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]];
+  NSString *serviceName = [NSString stringWithFormat:@"%@.BugsplatMac", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]];
   
   BITGenericKeychainItem *item = [BITGenericKeychainItem genericKeychainItemForService:serviceName withUsername:key];
   if (item) {
@@ -225,7 +225,7 @@ NSString *bit_stringValueFromKeychainForKey(NSString *key) {
 }
 
 BOOL bit_removeKeyFromKeychain(NSString *key) {
-  NSString *serviceName = [NSString stringWithFormat:@"%@.HockeySDK", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]];
+  NSString *serviceName = [NSString stringWithFormat:@"%@.BugsplatMac", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]];
   
   BITGenericKeychainItem *item = [BITGenericKeychainItem genericKeychainItemForService:serviceName withUsername:key];
   if (item) {

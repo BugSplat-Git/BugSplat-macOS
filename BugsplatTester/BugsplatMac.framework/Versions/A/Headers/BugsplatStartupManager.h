@@ -20,7 +20,7 @@
 + (nonnull instancetype)sharedManager;
 
 /*!
- *  Configures and starts crash reporting service.  All Bugsplat configuration properties below should be set prior to calling start.
+ *  Configures and starts crash reporting service
  */
 - (void)start;
 

@@ -32,6 +32,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [[BugsplatStartupManager sharedManager] setDelegate:self];
+    [[BugsplatStartupManager sharedManager] setPersistUserDetails:YES];
     [[BugsplatStartupManager sharedManager] start];
 }
 

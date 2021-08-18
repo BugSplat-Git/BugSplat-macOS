@@ -1117,6 +1117,7 @@ __attribute__((noreturn)) static void uncaught_cxx_exception_handler(const BITCr
 #pragma mark - Networking
 
 - (NSData *)postBodyWithXML:(NSString *)xml attachments:(NSArray<BITHockeyAttachment *> *)attachments boundary:(NSString *)boundary {
+    NSLog(@"xml: %@", xml);
     NSMutableData *postBody =  [NSMutableData data];
 
     //  [postBody appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
