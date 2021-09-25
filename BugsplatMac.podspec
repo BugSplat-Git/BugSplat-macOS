@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'BugsplatMac'
-  s.version      = '1.1'
+  s.version      = '1.1.1'
   s.license      = 'MIT'
   s.homepage	 = 'http://bugsplat.com'
   s.summary      = 'Bugsplat macOS framework'
