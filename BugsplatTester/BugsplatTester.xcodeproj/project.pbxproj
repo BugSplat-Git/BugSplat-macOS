@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C4A97D526B0173300268C75 /* BugsplatMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A97D426B0173300268C75 /* BugsplatMac.framework */; };
-		6C4EB66426CD7C04001E018B /* BugsplatMac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C4A97D426B0173300268C75 /* BugsplatMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C6A622C26FF4C7E003A6C09 /* BugsplatMac in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6A622B26FF4C7E003A6C09 /* BugsplatMac */; };
 		A977E76920BB29B200169D8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977E76820BB29B200169D8B /* AppDelegate.swift */; };
 		A977E76B20BB29B300169D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A977E76A20BB29B300169D8B /* Assets.xcassets */; };
 		A977E76E20BB29B300169D8B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A977E76C20BB29B300169D8B /* MainMenu.xib */; };
@@ -25,14 +24,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6C4EB66426CD7C04001E018B /* BugsplatMac.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6C4A97D426B0173300268C75 /* BugsplatMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BugsplatMac.framework; sourceTree = "<group>"; };
 		A977E76620BB29B100169D8B /* BugsplatTesterSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugsplatTesterSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A977E76820BB29B200169D8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A977E76A20BB29B300169D8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,21 +57,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C4A97D526B0173300268C75 /* BugsplatMac.framework in Frameworks */,
+				6C6A622C26FF4C7E003A6C09 /* BugsplatMac in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6CD1948D25EFF4A700DACCE9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6C4A97D426B0173300268C75 /* BugsplatMac.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A977E76720BB29B200169D8B /* BugsplatTesterSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +82,6 @@
 				A9ED22182020A00E00B7FDE4 /* BugsplatTester */,
 				A977E76720BB29B200169D8B /* BugsplatTesterSwift */,
 				A9ED22172020A00E00B7FDE4 /* Products */,
-				6CD1948D25EFF4A700DACCE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +145,7 @@
 			);
 			name = BugsplatTester;
 			packageProductDependencies = (
+				6C6A622B26FF4C7E003A6C09 /* BugsplatMac */,
 			);
 			productName = BugsplatTester;
 			productReference = A9ED22162020A00E00B7FDE4 /* BugsplatTester.app */;
@@ -192,6 +181,7 @@
 			);
 			mainGroup = A9ED220D2020A00D00B7FDE4;
 			packageReferences = (
+				6C6A622A26FF4C7E003A6C09 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */,
 			);
 			productRefGroup = A9ED22172020A00E00B7FDE4 /* Products */;
 			projectDirPath = "";
@@ -296,7 +286,10 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = BugsplatTesterSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTesterSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -321,10 +314,14 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = BugsplatTesterSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTesterSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -445,7 +442,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = BugsplatTester/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -464,7 +464,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = BugsplatTester/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -501,6 +504,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C6A622A26FF4C7E003A6C09 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BugSplat-Git/BugSplatMac-SP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C6A622B26FF4C7E003A6C09 /* BugsplatMac */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C6A622A26FF4C7E003A6C09 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */;
+			productName = BugsplatMac;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9ED220E2020A00D00B7FDE4 /* Project object */;
 }
