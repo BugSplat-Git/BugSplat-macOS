@@ -1,5 +1,5 @@
 /*
- * Author: Landon Fuller <landonf@plausible.coop>
+ * Author: Landon Fuller <landonf@plausiblelabs.com>
  *
  * Copyright (c) 2008-2013 Plausible Labs Cooperative, Inc.
  * All rights reserved.
@@ -27,26 +27,29 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "PLCrashReportSymbolInfo.h"
 
-@interface PLCrashReportStackFrameInfo : NSObject {
-@private
-    /** Frame instruction pointer. */
-    uint64_t _instructionPointer;
-
-    /** Symbol information, if available. Otherwise, will be nil. */
-    __strong PLCrashReportSymbolInfo *_symbolInfo;
-}
-
-- (id) initWithInstructionPointer: (uint64_t) instructionPointer symbolInfo: (PLCrashReportSymbolInfo *) symbolInfo;
+#if __has_include(<CrashReporter/PLCrashReport.h>)
+#import <CrashReporter/PLCrashReport.h>
+#else
+#import "PLCrashReport.h"
+#endif
 
 /**
- * Frame's instruction pointer.
+ * A crash report formatter accepts a PLCrashReport instance, formats it according to implementation-specified rules,
+ * (such as implementing text output support), and returns the result.
  */
-@property(nonatomic, readonly) uint64_t instructionPointer;
+@protocol PLCrashReportFormatter
 
-/** Symbol information for this frame.
- * This may be unavailable, and this property will be nil. */
-@property(nonatomic, readonly) PLCrashReportSymbolInfo *symbolInfo;
+/**
+ * Format the provided @a report.
+ *
+ * @param report Report to be formatted.
+ * @param outError A pointer to an NSError object variable. If an error occurs, this pointer will contain an error
+ * object indicating why the pending crash report could not be formatted. If no error occurs, this parameter will
+ * be left unmodified. You may specify nil for this parameter, and no error information will be provided.
+ *
+ * @return Returns the formatted report data on success, or nil on failure.
+ */
+- (NSData *) formatReport: (PLCrashReport *) report error: (NSError **) outError;
 
 @end

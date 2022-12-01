@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-#import <CrashReporter/CrashReporter.h>
+#import "CrashReporter.h"
 
 // Dictionary keys for array elements returned by arrayOfAppUUIDsForCrashReport:
 #ifndef kBITBinaryImageKeyUUID

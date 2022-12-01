@@ -3,7 +3,7 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
 #pragma clang diagnostic ignored "-Wdocumentation-deprecated-sync"
-#import <CrashReporter/CrashReporter.h>
+#import "CrashReporter.h"
 #pragma clang diagnostic pop
 
 // stores the set of crashreports that have been approved but aren't sent yet
