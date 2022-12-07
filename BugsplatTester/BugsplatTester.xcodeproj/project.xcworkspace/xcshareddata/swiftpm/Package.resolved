@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "BugsplatMac",
-        "repositoryURL": "https://github.com/BugSplat-Git/BugSplatMac-SP",
-        "state": {
-          "branch": null,
-          "revision": "b5dbd059703ce2564f9e86926c833b88a82b4543",
-          "version": "1.1.0"
-        }
+  "pins" : [
+    {
+      "identity" : "bugsplatmac-sp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BugSplat-Git/BugSplatMac-SP",
+      "state" : {
+        "revision" : "b5dbd059703ce2564f9e86926c833b88a82b4543",
+        "version" : "1.1.0"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

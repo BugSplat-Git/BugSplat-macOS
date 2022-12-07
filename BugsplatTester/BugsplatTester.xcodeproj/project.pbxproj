@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C6A622C26FF4C7E003A6C09 /* BugsplatMac in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6A622B26FF4C7E003A6C09 /* BugsplatMac */; };
+		6CC4415E2940D03300BDB3F4 /* BugsplatMac in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC4415D2940D03300BDB3F4 /* BugsplatMac */; };
+		6CC441612940D06800BDB3F4 /* BugsplatMac in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC441602940D06800BDB3F4 /* BugsplatMac */; };
 		A977E76920BB29B200169D8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977E76820BB29B200169D8B /* AppDelegate.swift */; };
 		A977E76B20BB29B300169D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A977E76A20BB29B300169D8B /* Assets.xcassets */; };
 		A977E76E20BB29B300169D8B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A977E76C20BB29B300169D8B /* MainMenu.xib */; };
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC441612940D06800BDB3F4 /* BugsplatMac in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,13 +59,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6A622C26FF4C7E003A6C09 /* BugsplatMac in Frameworks */,
+				6CC4415E2940D03300BDB3F4 /* BugsplatMac in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CC4415F2940D06800BDB3F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A977E76720BB29B200169D8B /* BugsplatTesterSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +91,7 @@
 				A9ED22182020A00E00B7FDE4 /* BugsplatTester */,
 				A977E76720BB29B200169D8B /* BugsplatTesterSwift */,
 				A9ED22172020A00E00B7FDE4 /* Products */,
+				6CC4415F2940D06800BDB3F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +135,7 @@
 			);
 			name = BugsplatTesterSwift;
 			packageProductDependencies = (
+				6CC441602940D06800BDB3F4 /* BugsplatMac */,
 			);
 			productName = BugsplatTesterSwift;
 			productReference = A977E76620BB29B100169D8B /* BugsplatTesterSwift.app */;
@@ -145,7 +156,7 @@
 			);
 			name = BugsplatTester;
 			packageProductDependencies = (
-				6C6A622B26FF4C7E003A6C09 /* BugsplatMac */,
+				6CC4415D2940D03300BDB3F4 /* BugsplatMac */,
 			);
 			productName = BugsplatTester;
 			productReference = A9ED22162020A00E00B7FDE4 /* BugsplatTester.app */;
@@ -181,7 +192,7 @@
 			);
 			mainGroup = A9ED220D2020A00D00B7FDE4;
 			packageReferences = (
-				6C6A622A26FF4C7E003A6C09 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */,
+				6CC4415C2940D03300BDB3F4 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */,
 			);
 			productRefGroup = A9ED22172020A00E00B7FDE4 /* Products */;
 			projectDirPath = "";
@@ -506,7 +517,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6C6A622A26FF4C7E003A6C09 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */ = {
+		6CC4415C2940D03300BDB3F4 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/BugSplat-Git/BugSplatMac-SP";
 			requirement = {
@@ -517,9 +528,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6C6A622B26FF4C7E003A6C09 /* BugsplatMac */ = {
+		6CC4415D2940D03300BDB3F4 /* BugsplatMac */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6C6A622A26FF4C7E003A6C09 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */;
+			package = 6CC4415C2940D03300BDB3F4 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */;
+			productName = BugsplatMac;
+		};
+		6CC441602940D06800BDB3F4 /* BugsplatMac */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CC4415C2940D03300BDB3F4 /* XCRemoteSwiftPackageReference "BugSplatMac-SP" */;
 			productName = BugsplatMac;
 		};
 /* End XCSwiftPackageProductDependency section */

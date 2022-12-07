@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,7 +33,7 @@
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="602" y="592" width="481" height="768"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="362">
                 <rect key="frame" x="0.0" y="0.0" width="481" height="768"/>
@@ -42,7 +42,7 @@
                     <box fixedFrame="YES" boxType="oldStyle" borderType="none" title="Title" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="364">
                         <rect key="frame" x="21" y="76" width="439" height="285"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                        <view key="contentView" ambiguous="YES" id="xBX-Ic-j5g">
+                        <view key="contentView" id="xBX-Ic-j5g">
                             <rect key="frame" x="0.0" y="0.0" width="439" height="285"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -58,11 +58,11 @@
                                 <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="378">
                                     <rect key="frame" x="0.0" y="8" width="439" height="255"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="nOp-S1-6U0">
+                                    <clipView key="contentView" drawsBackground="NO" id="nOp-S1-6U0">
                                         <rect key="frame" x="1" y="1" width="437" height="253"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <textView toolTip="Please describe any steps needed to trigger the problem" ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" smartInsertDelete="YES" id="391">
+                                            <textView toolTip="Please describe any steps needed to trigger the problem" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" smartInsertDelete="YES" id="391">
                                                 <rect key="frame" x="0.0" y="0.0" width="437" height="253"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -278,7 +278,7 @@ DQ
                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="365">
                         <rect key="frame" x="20" y="638" width="441" height="110"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo2x" id="376"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bugsplat-logo" id="376"/>
                     </imageView>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="477">
                         <rect key="frame" x="18" y="21" width="355" height="11"/>
@@ -300,6 +300,6 @@ DQ
         <userDefaultsController representsSharedInstance="YES" id="440"/>
     </objects>
     <resources>
-        <image name="logo2x" width="350" height="149.5"/>
+        <image name="bugsplat-logo" width="714" height="230"/>
     </resources>
 </document>
