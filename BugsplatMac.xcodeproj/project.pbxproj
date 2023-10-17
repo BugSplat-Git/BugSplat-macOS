@@ -728,6 +728,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
@@ -757,6 +758,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BugsplatMac/Vendor/PLCrashReporter",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsplat.BugsplatMac;
 				PRODUCT_NAME = BugsplatMac;
