@@ -1,95 +1,54 @@
+[![bugsplat-github-banner-basic-outline](https://user-images.githubusercontent.com/20464226/149019306-3186103c-5315-4dad-a499-4fd1df408475.png)](https://bugsplat.com)
+<br/>
+# <div align="center">BugSplat</div> 
+### **<div align="center">Crash and error reporting built for busy developers.</div>**
+<div align="center">
+    <a href="https://twitter.com/BugSplatCo">
+        <img alt="Follow @bugsplatco on Twitter" src="https://img.shields.io/twitter/follow/bugsplatco?label=Follow%20BugSplat&style=social">
+    </a>
+    <a href="https://discord.gg/K4KjjRV5ve">
+        <img alt="Join BugSplat on Discord" src="https://img.shields.io/discord/664965194799251487?label=Join%20Discord&logo=Discord&style=social">
+    </a>
+</div>
+<br>
+
 ## Introduction
 
 The BugsplatMac macOS framework enables posting crash reports from Cocoa applications to Bugsplat. Visit http://www.bugsplat.com for more information and to sign up for an account. 
 
 ## 1. Requirements
 
-* BugsplatMac supports macOS 10.9 and later.
+* BugsplatMac supports macOS 10.13 and later.
 * BugsplatMac supports x86_64 and Apple silicon applications.
 
 ## 2. Integration
 
 BugsplatMac supports multiple methods for installing the library in a project.
 
-### Installation with CocoaPods
-
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like BugsplatMac in your projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
-#### Podfile
-
-To integrate BugsplatMac into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-target 'TargetName' do
-pod 'BugsplatMac'
-end
-```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
-
-The pod install command creates an xcworkspace file next to your application's xcodeproj file. Open the xcworkspace file in lieu of the xcodeproj file to ensure BugsplatMac.framework is included in your build.
-
-### Installation with Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate BugsplatMac into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "BugsplatGit/BugsplatMac"
-```
-
-Run `carthage` to build the framework and drag the built `BugsplatMac.framework` into your Xcode project.
-
 ### Swift Package Manager
-BugsplatMac framework binaries are also now distributed via Swift Package Manager. You can now add BugsplatMac as a dependency in the Swift Packages configuration in your Xcode project by pointing to <https://github.com/BugSplat-Git/BugSplatMac-SP>
 
-### Manual Setup
+We recommend you install BugSplat via Swift Package Manager. You can add BugsplatMac as a dependency in the Swift Packages configuration in your Xcode project by pointing to <https://github.com/BugSplat-Git/BugSplatMac-SP>.
 
-To use this library in your project manually you may:  
+### CocoaPods, Carthage, or Manual Installation
 
-1. Download the latest release from https://github.com/BugSplatGit/BugsplatMac/releases which is provided as a zip file
-2. Unzip the archive and add BugsplatMac.framework to your Xcode project
-3. Drag & drop `BugsplatMac.framework` from your window in the `Finder` into your project in Xcode and move it to the desired location in the `Project Navigator`
-4. A popup will appear. Select `Create groups for any added folders` and set the checkmark for your target. Then click `Finish`.
-5. Configure the framework to be copied into your app bundle:
-- Click on your project in the `Project Navigator` (⌘+1).
-- Click your target in the project editor.
-- Click on the `Build Phases` tab.
-- Click the `Add Build Phase` button at the bottom and choose `Add Copy Files`.
-- Click the disclosure triangle next to the new build phase.
-- Choose `Frameworks` from the Destination list.
-- Drag `BugsplatMac` from the Project Navigator left sidebar to the list in the new Copy Files phase.
+For instructions on how to install via CocoaPods, Carthage, or install manually, please see this repo's [Wiki](https://github.com/BugSplat-Git/BugSplat-macOS/wiki/Installation).
 
 ## 3. Usage
 
-#### Configuration
+### Configuration
 
 BugsplatMac requires a few configuration steps in order integrate the framework with your Bugsplat account
 
-- Add the following key to your app's Info.plist replacing DATABASE_NAME with your BugSplat database name
+- Add the following key to your app's Info.plist replacing `DATABASE_NAME` with your BugSplat database name
 
     ```
     <key>BugsplatServerURL</key>
     <string>https://DATABASE_NAME.bugsplat.com/</string>
     ```
     
-    ##### Symbol Upload
+- Enable `Outgoing Connections (client)` if you're using the App Sandbox
+
+#### Symbol Upload
 
 - You must upload an archive containing your app's binary and symbols to the Bugsplat server in order to symbolicate crash reports. There are scripts to help  with this.  
     - Create a ~/.bugsplat.conf file to store your Bugsplat credentials
@@ -101,9 +60,9 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
     - One option is to use `upload-symbols.sh` to upload a zip containing the app and dSYM files. This can be run on the command line or integrated into your build/CI process.
     - Another option is to upload an xcarchive generated by Xcode by adding the upload-archive.sh script located in `${PROJECT_DIR}/Pods/BugsplatMac/BugsplatMac/Bugsplat.framework/Versions/A/Resources` as an Archive post-action in your build scheme. Set the "Provide build settings from" target in the dropdown so that the `${PROJECT_DIR}` environment variable can be used to locate upload-archive.sh. The script will be invoked when archiving completes which will upload the xcarchive to Bugsplat for processing. You can view the script output in `/tmp/bugsplat-upload.log`.  To share amongst your team, mark the scheme as 'Shared'.
 
-        ![Alt text](/BugsplatTester/post-archive-script.png?raw=true)
+        ![xcode archive post action](/BugsplatTester/post-archive-script.png?raw=true)
 
-#### Initialization
+### Initialization
 ```objc
 @import BugsplatMac;
 ```
@@ -117,7 +76,7 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 1. Custom banner image
 	- Bugsplat provides the ability to configure a custom image to be displayed in the crash reporter UI for branding purposes.  The image view dimensions are 440x110 and will scale down proportionately. There are 2 ways developers can provide an image:
 		1. Set the image property directly on BugsplatStartupManager 
-		2. Provide an image named `bugsplat-logo` in the main app bundle or asset calalog
+		2. Provide an image named `bugsplat-logo` in the main app bundle or asset catalog
 
 2. User details
 	- Set `askUserDetails` to `NO` in order to prevent the name and email fields from displaying in the crash reporter UI. Defaults to `YES`.
@@ -130,7 +89,6 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
    		[[BugsplatStartupManager sharedManager] start];
 	}
 	```
-	
 
 3. Auto submit
 	- Set `autoSubmitCrashReport` to `YES` in order to send crash reports to the server automatically without presenting the crash reporter dialogue. Defaults to `NO`.
@@ -189,13 +147,14 @@ BugsplatMac requires a few configuration steps in order integrate the framework 
 	    for (NSUInteger i = 0; i < 4; i++)
 	    {
 	        BugsplatAttachment *attachment = [[BugsplatAttachment alloc] initWithFilename:[NSString stringWithFormat:@"generated%@.json", @(i)]
-	                                                                       attachmentData:data
-	                                                                          contentType:@"application/json"];
+
+			attachmentData:data
+
+			contentType:@"application/json"];
 	        
 	        [attachments addObject:attachment];
 	    }
-	    
-	    
+	      
 	    return attachments;
 	}
 	
