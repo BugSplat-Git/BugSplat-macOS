@@ -65,10 +65,10 @@ echo "UUID found: ${UUID_CMD_OUT}" > $LOG 2>&1
 echo "Signing into bugsplat and storing session cookie for use in upload" >> $LOG 2>&1
 
 COOKIEPATH="/tmp/bugsplat-cookie.txt"
-LOGIN_URL="${BUGSPLAT_SERVER_URL}/browse/login.php"
+LOGIN_URL="${BUGSPLAT_SERVER_URL}/api/authenticatev3.php"
 echo "Login URL: ${LOGIN_URL}"
 rm "${COOKIEPATH}"
-curl -b "${COOKIEPATH}" -c "${COOKIEPATH}" --data-urlencode "currusername=${BUGSPLAT_USER}" --data-urlencode "currpasswd=${BUGSPLAT_PASS}" "${LOGIN_URL}"
+curl -b "${COOKIEPATH}" -c "${COOKIEPATH}" --data-urlencode "email=${BUGSPLAT_USER}" --data-urlencode "password=${BUGSPLAT_PASS}" "${LOGIN_URL}"
 
 echo "Uploading /tmp/${PRODUCT_NAME}.xcarchive.zip to ${UPLOAD_URL}" >> $LOG 2>&1
 
