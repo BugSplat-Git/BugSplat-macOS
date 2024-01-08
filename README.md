@@ -27,7 +27,7 @@ BugsplatMac supports multiple methods for installing the library in a project.
 
 ### Swift Package Manager
 
-We recommend you install BugSplat via Swift Package Manager. You can add BugsplatMac as a dependency in the Swift Packages configuration in your Xcode project by pointing to <https://github.com/BugSplat-Git/BugSplatMac-SP>.
+We recommend you install BugSplat via Swift Package Manager. You can add `BugsplatMac` as a dependency in the Swift Packages configuration in your Xcode project by pointing to <https://github.com/BugSplat-Git/bugsplat-macos>.
 
 ### CocoaPods, Carthage, or Manual Installation
 
