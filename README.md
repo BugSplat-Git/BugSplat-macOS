@@ -13,7 +13,7 @@
 <br>
 
 > [!WARNING]  
-> This SDK has been deprecated. For BugSplat's new unified macOS/iOS SDK please see [bugsplat-apple](https://github.com/BugSplat-Git/bugsplat-apple).
+> This SDK has been deprecated. Please use BugSplat's new unified macOS/iOS SDK [bugsplat-apple](https://github.com/BugSplat-Git/bugsplat-apple).
 
 ## Introduction
 
