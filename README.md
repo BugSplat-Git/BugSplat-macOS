@@ -12,6 +12,9 @@
 </div>
 <br>
 
+> [!WARNING]  
+> This SDK has been deprecated. Please use BugSplat's new unified macOS/iOS SDK [bugsplat-apple](https://github.com/BugSplat-Git/bugsplat-apple).
+
 ## Introduction
 
 The BugsplatMac macOS framework enables posting crash reports from Cocoa applications to Bugsplat. Visit http://www.bugsplat.com for more information and to sign up for an account. 
